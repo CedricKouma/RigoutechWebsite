@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Rigoutech – Équipe d’élite en Dev, DevOps/Platform, IA & Sécurité</title>
+  <meta name="description" content="Rigoutech aide les organisations publiques et privées à innover, performer et sécuriser leurs systèmes grâce à nos expertises en développement, DevOps/Platform Engineering, IA/Data, DevSecOps, FinOps et architecture Cloud.">
+  <meta name="keywords" content="Rigoutech, développement logiciel, DevOps, Platform Engineering, IA, ML, Data, DevSecOps, FinOps, Cloud, sécurité, SRE, 2025, IDP, Zero Trust, automatisation, R&D, projets confidentiels">
+  <meta name="theme-color" content="#2563eb">
 
-  <title>Rigoutech</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-<link rel="manifest" href="assets/img/site.webmanifest">
-
-  <!-- Favicons -->
-  <!--link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"-->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="manifest" href="assets/img/site.webmanifest">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700|Poppins:300,400,500,600,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -32,282 +28,675 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Day - v4.1.0
-  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0b1220;
+      --muted: #6b7280;
+      --surface: #f5f7fb;
+      --surface-2: #eef2ff;
+      --primary: #2563eb;
+      --primary-contrast: #ffffff;
+      --accent: #10b981;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+      --radius: 14px;
+      --radius-sm: 10px;
+    }
+    [data-theme="dark"] {
+      --bg: #0b1220;
+      --text: #e6eaf2;
+      --muted: #9aa4b2;
+      --surface: #111827;
+      --surface-2: #0f172a;
+      --primary: #60a5fa;
+      --primary-contrast: #0b1220;
+      --accent: #34d399;
+      --border: #1f2937;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+    }
+
+    /* Topbar & Header */
+    #topbar {
+      background: var(--surface);
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      padding: 8px 0;
+    }
+    #topbar a { color: var(--text); text-decoration: none; }
+    #header {
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    [data-theme="dark"] #header {
+      background: rgba(11,18,32,0.6);
+    }
+
+    /* Navbar */
+    #navbar ul li a {
+      color: var(--text);
+      font-weight: 500;
+    }
+    #navbar .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      margin-left: 12px;
+      background: var(--surface);
+      transition: transform .2s ease, background .2s ease;
+    }
+    #navbar .theme-toggle:hover { transform: translateY(-2px); }
+
+    /* Hero */
+    #hero {
+      position: relative;
+      padding: 140px 0 100px;
+      background:
+        radial-gradient(1200px 500px at 10% -10%, rgba(37,99,235,.18), transparent 40%),
+        radial-gradient(1000px 600px at 90% 10%, rgba(16,185,129,.14), transparent 45%),
+        linear-gradient(180deg, var(--surface-2) 0%, var(--bg) 60%);
+      border-bottom: 1px solid var(--border);
+    }
+    #hero .container h1 {
+      font-family: Poppins, Inter, sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--text);
+    }
+    #hero .lead {
+      color: var(--muted);
+      font-size: 1.125rem;
+    }
+    .rt-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      padding: 12px 18px;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      font-weight: 600;
+    }
+    .rt-cta-primary {
+      background: var(--primary);
+      color: var(--primary-contrast);
+      box-shadow: var(--shadow);
+      border-color: transparent;
+    }
+    .rt-cta-primary:hover { transform: translateY(-2px); }
+    .rt-cta-outline {
+      background: transparent;
+      color: var(--text);
+    }
+    .rt-cta-outline:hover { background: var(--surface); transform: translateY(-2px); }
+
+    /* Sections */
+    .section-title span {
+      color: var(--primary);
+    }
+    .section-title h2 {
+      color: var(--text);
+      font-weight: 700;
+    }
+    .rt-section {
+      padding: 70px 0;
+    }
+    .rt-badge {
+      display: inline-block;
+      font-size: .85rem;
+      color: var(--primary);
+      background: color-mix(in srgb, var(--primary) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    /* Cards */
+    .rt-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      height: 100%;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .rt-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(2,6,23,.12);
+      border-color: color-mix(in srgb, var(--primary) 30%, var(--border));
+    }
+    .rt-icon {
+      width: 48px; height: 48px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--primary) 12%, transparent);
+      color: var(--primary);
+      margin-bottom: 14px;
+      font-size: 1.4rem;
+    }
+    .rt-metric {
+      font-weight: 700; color: var(--text); font-size: 1.25rem;
+    }
+    .rt-muted { color: var(--muted); }
+
+    /* Lists with check */
+    .rt-list {
+      list-style: none; padding: 0; margin: 0;
+    }
+    .rt-list li {
+      display: flex; gap: 10px; align-items: baseline; margin-bottom: 10px; color: var(--text);
+    }
+    .rt-list .bi {
+      color: var(--accent);
+    }
+
+    /* Footer */
+    #footer {
+      background: var(--surface);
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    #footer h3, #footer h4 { color: var(--text); }
+    #footer a { color: var(--text); text-decoration: none; }
+
+    /* Map iframe border radius */
+    iframe { border-radius: var(--radius); }
+
+    /* Utilities */
+    .gap-14 { gap: 14px; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mt-6 { margin-top: 1.5rem; }
+    .mt-8 { margin-top: 2rem; }
+
+    @media (max-width: 991px) {
+      #hero { padding: 110px 0 70px; }
+    }
+  </style>
+
 </head>
 
 <body>
 
-  <!-- ======= Top Bar ======= -->
+  <!-- Top Bar -->
   <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">info@rigoutech.com</a>
-        <!--i class="bi bi-phone-fill phone-icon"></i-->
+      <div class="contact-info d-flex align-items-center gap-14">
+        <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+        <a href="mailto:info@rigoutech.com" aria-label="Envoyer un email à Rigoutech">info@rigoutech.com</a>
       </div>
-      <!--div class="social-links d-none d-md-block">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div-->
     </div>
   </section>
 
-  <!-- ======= Header ======= -->
+  <!-- Header -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-
-
-
-
-      <h1 class="image"><a href="index.html"><img class="image" width="220" height="60" src="assets/img/logo3.png"></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <h1 class="image m-0">
+        <a href="#hero" aria-label="Retour à l’accueil"><img class="image" width="220" height="60" src="assets/img/logo3.png" alt="Rigoutech"></a>
+      </h1>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Why Us</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
+          <li><a class="nav-link scrollto" href="#expertises">Expertises</a></li>
+          <li><a class="nav-link scrollto" href="#pourquoi">Pourquoi nous</a></li>
+          <li><a class="nav-link scrollto" href="#rd">R&amp;D</a></li>
+          <li><a class="nav-link scrollto" href="#confidentiel">Projets sensibles</a></li>
+          <li><a class="nav-link scrollto" href="#tendances">Tendances 2025</a></li>
+          <li><a class="nav-link scrollto" href="#temoignages">Témoignages</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
+        <button id="themeToggle" class="theme-toggle" aria-label="Basculer thème">
+          <i class="bi bi-moon-stars" id="themeIcon"></i>
+        </button>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
+  <!-- Hero -->
   <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
-      <h1>Welcome to Rigoutech</h1>
-      <h2>Helping you realize your IT project</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="150">
+      <span class="rt-badge mb-3">Petite équipe. Impact d’élite.</span>
+      <h1 class="mb-3">Nous concevons, industrialisons et sécurisons vos plateformes.</h1>
+      <p class="lead mb-4">
+        Rigoutech aide les organisations publiques et privées à innover, performer et sécuriser leurs systèmes grâce à nos expertises en
+        développement logiciel, DevOps/Platform Engineering, IA/Data, DevSecOps, FinOps et architecture Cloud.
+      </p>
+      <div class="d-flex gap-14">
+        <a href="#contact" class="rt-cta rt-cta-primary">
+          <i class="bi bi-chat-dots"></i> Discuter de votre projet
+        </a>
+        <a href="#expertises" class="rt-cta rt-cta-outline">
+          <i class="bi bi-grid"></i> Voir nos expertises
+        </a>
+      </div>
+      <div class="mt-6 rt-muted">Nous acceptons des contrats de toutes tailles — du sprint ciblé au programme pluriannuel.</div>
     </div>
-  </section><!-- End Hero -->
+  </section>
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <!-- Expertises -->
+    <section id="expertises" class="rt-section">
       <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-            <h3>Rigoutech is a team of experts whose primary mission is to support you throughout the realization of your IT projects.</h3>
-            <p class="fst-italic">
-              We intervene in all stages of the realization of your project: Starting from the analysis to the realizations
-            </p>
-            <p>
-              We are also able to gain an overview of the organizational needs of your organization and make recommendations to you.
-              We study your company's software flow and identify areas that can be improved.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Why Us Section ======= -->
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
         <div class="section-title">
-          <span>Why Us</span>
-          <h2>Whys Us</h2>
-          <p>Customer satisfaction being our priority, this is what sets us apart</p>
+          <span>Expertises</span>
+          <h2>Ce que nous maîtrisons</h2>
+          <p class="rt-muted">Des compétences complémentaires pour accélérer la valeur, réduire les risques et contrôler les coûts.</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-user-voice"></i></div>
-              <h4><a href="">Listening to your needs</a></h4>
-              <p>Our experts are available to understand your needs and find a solution adapted to your reality as quickly as possible.</p>
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-braces"></i></div>
+              <h4>Développement logiciel</h4>
+              <p class="rt-muted">Applications web, API, intégrations, modernisation et qualité (CI/CD, tests, observabilité).</p>
+              <ul class="rt-list mt-3">
+                <li><i class="bi bi-check2-circle"></i> Microservices, APIs, intégrations</li>
+                <li><i class="bi bi-check2-circle"></i> Qualité, tests, performance</li>
+                <li><i class="bi bi-check2-circle"></i> SRE et observabilité</li>
+              </ul>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-dollar"></i></div>
-              <h4><a href="">Offer you the most competitive prices on the market</a></h4>
-              <p>Small budget for your project ? <br>Do not worry because our approach and our business model allow us to offer you the best prices.</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-diagram-3"></i></div>
+              <h4>DevOps & Platform Engineering</h4>
+              <p class="rt-muted">Plateformes internes (IDP), pipelines reproductibles, GitOps, outillage développeurs.</p>
+              <ul class="rt-list mt-3">
+                <li><i class="bi bi-check2-circle"></i> Kubernetes, IaC (Terraform, Crossplane)</li>
+                <li><i class="bi bi-check2-circle"></i> GitOps (Argo CD, Flux), golden paths</li>
+                <li><i class="bi bi-check2-circle"></i> Self-service, portails développeurs</li>
+              </ul>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class=" bx bx-wallet"></i></div>
-              <h4><a href="">A solution adapted to your budget and your reality</a></h4>
-              <p>The agility and flexibility we demonstrate allows us to adapt to all kinds of realities and budgets</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-cpu"></i></div>
+              <h4>IA & Data</h4>
+              <p class="rt-muted">IA/ML pour l’automatisation, MLOps, RAG, intégration LLM et gouvernance des données.</p>
+              <ul class="rt-list mt-3">
+                <li><i class="bi bi-check2-circle"></i> MLOps, pipelines de données</li>
+                <li><i class="bi bi-check2-circle"></i> LLM/RAG, copilotes métier</li>
+                <li><i class="bi bi-check2-circle"></i> Qualité et traçabilité des données</li>
+              </ul>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="450">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-calendar-event"></i></div>
-              <h4><a href="">Respect of your deadlines</a></h4>
-              <p>At Rigoutech, the solutions offered take your deadlines into consideration. In this way we guarantee you to meet your schedule</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-shield-lock"></i></div>
+              <h4>DevSecOps</h4>
+              <p class="rt-muted">Sécurité intégrée dès la conception: SAST/DAST, SBOM, supply chain, secrets, Zero Trust.</p>
+              <ul class="rt-list mt-3">
+                <li><i class="bi bi-check2-circle"></i> Threat modeling, security by design</li>
+                <li><i class="bi bi-check2-circle"></i> SBOM, durcissement, conformité</li>
+                <li><i class="bi bi-check2-circle"></i> Surveillance et réponse (MTTR)</li>
+              </ul>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-happy"></i></div>
-              <h4><a href="">Rigorous towards our commitments</a></h4>
-              <p>Our team is made up of experts who work rigorously to meet your objectives. We are 100% committed to meeting customer's expectations</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-cash-coin"></i></div>
+              <h4>FinOps</h4>
+              <p class="rt-muted">Pilotage des coûts cloud, optimisation de l’usage et gouvernance budgétaire.</p>
+              <ul class="rt-list mt-3">
+                <li><i class="bi bi-check2-circle"></i> Mesure, allocation et alerts</li>
+                <li><i class="bi bi-check2-circle"></i> Optimisation et réservations</li>
+                <li><i class="bi bi-check2-circle"></i> Culture coût/valeur</li>
+              </ul>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="750">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxs-check-shield"></i></div>
-              <h4><a href="">Quality, Performance and Security</a></h4>
-              <p>We know that the security and performance of solutions is important to you. Reason why we offer you solutions that meet the requirements of your organization</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-cloud-check"></i></div>
+              <h4>Architecture Cloud & SRE</h4>
+              <p class="rt-muted">Conception résiliente, sécurisée et performante multi-cloud/hybride.</p>
+              <ul class="rt-list mt-3">
+                <li><i class="bi bi-check2-circle"></i> Haute dispo, DR, scalabilité</li>
+                <li><i class="bi bi-check2-circle"></i> Observabilité full-stack</li>
+                <li><i class="bi bi-check2-circle"></i> Gouvernance & conformité</li>
+              </ul>
             </div>
           </div>
-
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>
 
+    <!-- Pourquoi nous -->
+    <section id="pourquoi" class="services rt-section">
+      <div class="container">
+        <div class="section-title">
+          <span>Pourquoi Rigoutech</span>
+          <h2>De l’impact mesurable, rapidement et en sécurité</h2>
+          <p class="rt-muted">Satisfaction client, exécution d’élite et sécurité opérationnelle sont au cœur de notre approche.</p>
+        </div>
 
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-graph-up-arrow"></i></div>
+              <h4>Résultats concrets</h4>
+              <p class="rt-muted">Des objectifs clairs et mesurés: délais, qualité, performance, coûts et sécurité.</p>
+              <div class="rt-metric mt-3">-70% time-to-deploy</div>
+              <div class="rt-muted">observé sur des missions récentes</div>
+            </div>
+          </div>
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-lightning-charge"></i></div>
+              <h4>Exécution rapide</h4>
+              <p class="rt-muted">Petite équipe senior, forte autonomie. Nous livrons en semaines, pas en mois.</p>
+              <ul class="rt-list mt-2">
+                <li><i class="bi bi-check2-circle"></i> Sprints à forte valeur</li>
+                <li><i class="bi bi-check2-circle"></i> Standards et patterns éprouvés</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-shield-check"></i></div>
+              <h4>Sécurité by design</h4>
+              <p class="rt-muted">Sécurité intégrée à chaque étape: code, pipelines, plateformes et opérations.</p>
+              <ul class="rt-list mt-2">
+                <li><i class="bi bi-check2-circle"></i> DevSecOps complet</li>
+                <li><i class="bi bi-check2-circle"></i> Conformité: bonnes pratiques NIST, CIS, OWASP</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-wallet2"></i></div>
+              <h4>Transparence & FinOps</h4>
+              <p class="rt-muted">Visibilité coûts/valeur, optimisation continue, maîtrise budgétaire.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-people"></i></div>
+              <h4>Partenaire de confiance</h4>
+              <p class="rt-muted">Nous travaillons en co-construction avec vos équipes et vos contraintes opérationnelles.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-award"></i></div>
+              <h4>Qualité et pérennité</h4>
+              <p class="rt-muted">Architecture propre, automatisation, documentation et transfert de compétences.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- R&D -->
+    <section id="rd" class="rt-section">
+      <div class="container">
+        <div class="section-title">
+          <span>R&amp;D</span>
+          <h2>Notre recherche au service de vos projets</h2>
+          <p class="rt-muted">Nous investissons en continu pour rester à l’avant-garde et accélérer vos résultats.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-robot"></i></div>
+              <h4>IA pour l’automatisation</h4>
+              <p class="rt-muted">Génération d’infrastructures IaC assistée, amélioration de tests, copilotes développeurs, AIOps.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-lock-fill"></i></div>
+              <h4>Supply chain et Zero Trust</h4>
+              <p class="rt-muted">SBOM, attestation, durcissement, isolation et signatures pour renforcer la chaîne logicielle.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-speedometer2"></i></div>
+              <h4>Observabilité moderne</h4>
+              <p class="rt-muted">eBPF, traces distribuées, SLO/SLI et réduction du bruit d’alertes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets confidentiels -->
+    <section id="confidentiel" class="rt-section">
+      <div class="container">
+        <div class="section-title">
+          <span>Projets sensibles</span>
+          <h2>Expérience en environnements confidentiels (défense/sécurité)</h2>
+          <p class="rt-muted">Nous intervenons dans des contextes à fortes exigences de confidentialité et de résilience.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-shield-shaded"></i></div>
+              <h4>Contraintes strictes</h4>
+              <p class="rt-muted">Accès restreints, réseaux isolés, gestion des secrets, surveillance renforcée, journaux immuables.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-diagram-2"></i></div>
+              <h4>Procédures et traçabilité</h4>
+              <p class="rt-muted">Processus auditable de bout en bout, conformité aux bonnes pratiques sectorielles.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-box-seam"></i></div>
+              <h4>Livrables sécurisés</h4>
+              <p class="rt-muted">Packaging hermétique, SBOM, reproductibilité et maîtrise de la supply chain.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <a href="#contact" class="rt-cta rt-cta-primary"><i class="bi bi-lock"></i> Discuter d’un besoin sensible</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tendances 2025 -->
+    <section id="tendances" class="rt-section">
+      <div class="container">
+        <div class="section-title">
+          <span>Tendances 2025</span>
+          <h2>Anticiper aujourd’hui les standards de demain</h2>
+          <p class="rt-muted">Nous maîtrisons les tendances qui font la différence en 2025.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-robot"></i></div>
+              <h4>IA/ML pour l’automatisation</h4>
+              <p class="rt-muted">Copilotes, génération assistée, AIOps et détection proactive d’incidents.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-shield-lock"></i></div>
+              <h4>Sécurité intégrée dès la conception</h4>
+              <p class="rt-muted">Threat modeling, SBOM, Zero Trust, sécurité des pipelines et de l’exécution.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="rt-card">
+              <div class="rt-icon"><i class="bi bi-grid-1x2"></i></div>
+              <h4>Plateformes internes (IDP)</h4>
+              <p class="rt-muted">Golden paths, self-service, DX soignée et gouvernance scalable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Témoignages et preuves -->
+    <section id="temoignages" class="rt-section">
+      <div class="container">
+        <div class="section-title">
+          <span>Preuves</span>
+          <h2>Exemples et témoignages</h2>
+          <p class="rt-muted">Quelques résultats récents livrés par notre équipe.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="rt-card">
+              <p class="rt-muted">Secteur public — modernisation CI/CD</p>
+              <div class="rt-metric mt-2">-70% time-to-deploy</div>
+              <p class="mt-2">Mise en place d’un IDP et de pipelines GitOps sécurisés, avec SBOM et politiques automatisées.</p>
+              <div class="mt-2"><i class="bi bi-chat-quote"></i> “Livraisons prévisibles et auditables en quelques semaines.”</div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="rt-card">
+              <p class="rt-muted">Industrie — fiabilité applicative</p>
+              <div class="rt-metric mt-2">-50% MTTR</div>
+              <p class="mt-2">SLO/SLI, alerting eBPF et traces distribuées, playbooks d’intervention standardisés.</p>
+              <div class="mt-2"><i class="bi bi-chat-quote"></i> “Une visibilité inédite et des incidents résolus 2× plus vite.”</div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="rt-card">
+              <p class="rt-muted">Services — optimisation Cloud</p>
+              <div class="rt-metric mt-2">-30% coûts Cloud</div>
+              <p class="mt-2">FinOps: budgets, alertes, rightsizing et réservations. Processus d’arbitrage coût/valeur.</p>
+              <div class="mt-2"><i class="bi bi-chat-quote"></i> “Des économies tangibles sans compromis sur la performance.”</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <a href="#contact" class="rt-cta rt-cta-primary"><i class="bi bi-envelope-paper"></i> Obtenir une estimation</a>
+          <a href="mailto:info@rigoutech.com" class="rt-cta rt-cta-outline"><i class="bi bi-send"></i> info@rigoutech.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact rt-section">
       <div class="container">
 
         <div class="section-title">
           <span>Contact</span>
-          <h2>Contact</h2>
-          <p>Contact us today for all your software development needs</p>
+          <h2>Parlons de vos objectifs</h2>
+          <p class="rt-muted">Expliquez-nous votre contexte: nous proposons une approche adaptée à votre budget et à vos délais.</p>
         </div>
 
-        <div class="row" data-aos="fade-up">
+        <div class="row gy-4" data-aos="fade-up">
           <div class="col-lg-6">
-            <div class="info-box mb-4">
+            <div class="rt-card">
               <i class="bx bx-map"></i>
-              <h3>Our Address</h3>
-              <p>Québec, QC, Canada</p>
+              <h4 class="mt-2">Adresse</h4>
+              <p class="rt-muted">Québec, QC, Canada</p>
+              <div class="mt-3">
+                <i class="bx bx-envelope"></i>
+                <h4 class="mt-2">Email</h4>
+                <p><a href="mailto:info@rigoutech.com">info@rigoutech.com</a></p>
+              </div>
+              <p class="mt-3 rt-muted">Nous répondons sous 24–48h ouvrées.</p>
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6">
-            <div class="info-box  mb-4">
-              <i class="bx bx-envelope"></i>
-              <h3>Email Us</h3>
-              <p>info@rigoutech.com</p>
+          <div class="col-lg-6">
+            <div class="rt-card">
+              <iframe title="Carte de Québec" class="mb-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d174614.29110027023!2d-71.48177461775562!3d46.85651774265026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8968a05db8893%3A0x8fc52d63f0e83a03!2zUXXDqWJlYywgUUM!5e0!3m2!1sfr!2sca!4v1618645401979!5m2!1sfr!2sca" frameborder="0" style="border:0; width: 100%; height: 280px;" allowfullscreen></iframe>
             </div>
           </div>
-
-          <!--div class="col-lg-3 col-md-6">
-            <div class="info-box  mb-4">
-              <i class="bx bx-phone-call"></i>
-              <h3>Call Us</h3>
-              <p>+1 438 887 0698</p>
-            </div>
-          </div-->
-
         </div>
 
-        <div class="row" data-aos="fade-up">
-
-          <div class="col-lg-30">
-            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d174614.29110027023!2d-71.48177461775562!3d46.85651774265026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8968a05db8893%3A0x8fc52d63f0e83a03!2zUXXDqWJlYywgUUM!5e0!3m2!1sfr!2sca!4v1618645401979!5m2!1sfr!2sca" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+        <div class="row mt-4" data-aos="fade-up">
+          <div class="col-12">
+            <div class="rt-card d-flex flex-wrap align-items-center justify-content-between gap-14">
+              <div>
+                <strong>Prêt à démarrer?</strong> Nous acceptons des contrats de toutes tailles, en régie ou au forfait.
+              </div>
+              <div>
+                <a href="mailto:info@rigoutech.com?subject=Contact%20Rigoutech" class="rt-cta rt-cta-primary"><i class="bi bi-briefcase"></i> Lancer une conversation</a>
+              </div>
+            </div>
           </div>
-
-          <!--div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div-->
-
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section>
 
-  </main><!-- End #main -->
+  </main>
 
-  <!-- ======= Footer ======= -->
+  <!-- Footer -->
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-30 col-md-30">
+          <div class="col-12">
             <div class="footer-info">
-              <h4><i class="bx bxs-quote-alt-left"></i>The Internet is like a big unused land. Our mission is to help you build your property there <i class="bx bxs-quote-alt-right"> </i> </h4>
-
+              <h4>
+                <i class="bx bxs-quote-alt-left"></i>
+                Notre mission: transformer vos idées en plateformes fiables, sécurisées et performantes.
+                <i class="bx bxs-quote-alt-right"></i>
+              </h4>
               <h3>Rigoutech</h3>
               <p>
                 Québec, QC, Canada<br>
-                <strong>Email:</strong> info@rigoutech.com<br>
+                <strong>Email:</strong> <a href="mailto:info@rigoutech.com">info@rigoutech.com</a><br>
               </p>
-              <!--div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div-->
             </div>
           </div>
-
-          <!--div class="col-lg-2 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div-->
-
 
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container py-3">
       <div class="copyright">
-        &copy; Copyright <strong><span>Rigoutech Inc</span></strong>. All Rights Reserved
+        &copy; <span id="year"></span> <strong><span>Rigoutech Inc.</span></strong> — Tous droits réservés.
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Haut de page"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader" aria-hidden="true"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -317,9 +706,38 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Template Main JS File -->
+  <!-- Main JS + Theme -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const stored = localStorage.getItem('rt-theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        root.setAttribute('data-theme', 'dark');
+        themeIcon.className = 'bi bi-sun';
+      } else {
+        root.setAttribute('data-theme', 'light');
+        themeIcon.className = 'bi bi-moon-stars';
+      }
+    }
+
+    applyTheme(stored ? stored : (prefersDark ? 'dark' : 'light'));
+
+    themeToggle.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('rt-theme', next);
+    });
+  </script>
 
 </body>
-
 </html>
