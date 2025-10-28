@@ -1,25 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Rigoutech — Ingénierie logicielle, DevOps, IA et sécurité</title>
+  <meta name="description" content="Rigoutech accompagne la transformation numérique des entreprises. Développement (.NET, C++, Python), DevOps/Platform Engineering, IA/Data, sécurité (DevSecOps). Projets de toutes tailles, R&D et défense en environnements sensibles.">
+  <meta name="keywords" content="Rigoutech, développement, .NET, C++, Python, DevOps, Platform Engineering, IA, Data, Sécurité, DevSecOps, R&D, défense, transformation numérique">
 
-  <title>Rigoutech</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-<link rel="manifest" href="assets/img/site.webmanifest">
-
-  <!-- Favicons -->
-  <!--link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"-->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="manifest" href="assets/img/site.webmanifest">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700|Poppins:300,400,500,600,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -32,281 +27,528 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Day - v4.1.0
-  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Custom Modern Theme Overrides -->
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f7f8fa;
+      --text: #0b1220;
+      --muted: #667085;
+      --primary: #2b59ff;
+      --primary-600: #244de0;
+      --accent: #22c55e;
+      --border: #e6e8ee;
+      --shadow: 0 10px 30px rgba(2, 8, 20, 0.08);
+      --radius: 16px;
+      color-scheme: light;
+    }
+    html[data-theme="dark"] {
+      --bg: #0b0f1a;
+      --surface: #111827;
+      --text: #f2f5f9;
+      --muted: #9aa4b2;
+      --primary: #6ea8ff;
+      --primary-600: #5c94ea;
+      --accent: #34d399;
+      --border: #1f2937;
+      --shadow: 0 12px 30px rgba(0,0,0,0.35);
+      color-scheme: dark;
+    }
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      scroll-behavior: smooth;
+    }
+    a { color: var(--primary); }
+    a:hover { color: var(--primary-600); }
+    #topbar {
+      background: transparent;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      backdrop-filter: saturate(180%) blur(8px);
+    }
+    #topbar .contact-info a { color: var(--muted); }
+    #header {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      transition: background .3s ease, border-color .3s ease;
+    }
+    html[data-theme="dark"] #header {
+      background: rgba(11, 15, 26, 0.55);
+    }
+    .navbar a {
+      color: var(--text);
+      font-weight: 500;
+    }
+    .navbar .get-started {
+      background: var(--primary);
+      color: #fff !important;
+      padding: 10px 16px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: transform .2s ease, background .2s ease;
+      margin-left: 10px;
+    }
+    .navbar .get-started:hover {
+      background: var(--primary-600);
+      transform: translateY(-1px);
+    }
+    .theme-toggle {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 8px 10px;
+      line-height: 1;
+      transition: background .2s ease, transform .2s ease, border-color .2s ease;
+      margin-left: 16px;
+    }
+    .theme-toggle:hover { transform: translateY(-1px); }
+    #hero {
+      background: radial-gradient(1200px 600px at 20% 20%, rgba(43, 89, 255, 0.14), transparent 60%),
+                  radial-gradient(800px 400px at 80% 10%, rgba(34, 197, 94, 0.12), transparent 60%),
+                  linear-gradient(180deg, var(--surface), var(--bg));
+      color: var(--text);
+      padding: 140px 0 100px;
+    }
+    #hero h1 {
+      font-size: 48px;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    #hero h2 {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 720px;
+      margin: 18px 0 28px;
+    }
+    .btn-primary-modern {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn-primary-modern:hover {
+      transform: translateY(-2px);
+      background: var(--primary-600);
+    }
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 12px 18px;
+      border-radius: 12px;
+      transition: background .2s ease, border-color .2s ease, transform .2s ease;
+    }
+    .btn-ghost:hover {
+      background: var(--surface);
+      transform: translateY(-2px);
+    }
+    .badge-soft {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(34, 197, 94, 0.12);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      border: 1px solid var(--border);
+    }
+    section {
+      background: var(--bg);
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .section-title h2 {
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+    .card-elevated {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      height: 100%;
+      box-shadow: var(--shadow);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .card-elevated:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 45px rgba(2, 8, 20, 0.12);
+    }
+    .icon-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(43, 89, 255, 0.12);
+      color: var(--primary);
+      margin-bottom: 14px;
+      font-size: 22px;
+    }
+    .icon-green { background: rgba(34,197,94,0.12); color: var(--accent); }
+    .icon-yellow { background: rgba(250,204,21,0.15); color: #f59e0b; }
+    .muted { color: var(--muted); }
+    .about img {
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+    #contact .info-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform .2s ease;
+    }
+    #contact .info-box:hover { transform: translateY(-3px); }
+    #footer {
+      background: var(--surface);
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    #footer h3, #footer h4 { color: var(--text); }
+    .back-to-top {
+      background: var(--primary);
+      color: #fff;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    /* Smaller hero title on mobile */
+    @media (max-width: 768px) {
+      #hero h1 { font-size: 34px; }
+      .navbar .get-started { display: none; }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- ======= Top Bar ======= -->
+  <!-- Top Bar -->
   <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">info@rigoutech.com</a>
-        <!--i class="bi bi-phone-fill phone-icon"></i-->
+        <i class="bi bi-envelope-fill me-2"></i>
+        <a href="mailto:info@rigoutech.com?subject=Contact%20Rigoutech">info@rigoutech.com</a>
       </div>
-      <!--div class="social-links d-none d-md-block">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div-->
+      <div class="d-none d-md-flex align-items-center gap-2">
+        <a class="btn btn-sm btn-primary-modern" href="#contact"><i class="bi bi-chat-dots me-1"></i> Nous contacter</a>
+      </div>
     </div>
   </section>
 
-  <!-- ======= Header ======= -->
+  <!-- Header -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-
-
-
-
-      <h1 class="image"><a href="index.html"><img class="image" width="220" height="60" src="assets/img/logo3.png"></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <h1 class="image m-0">
+        <a href="#hero" aria-label="Rigoutech Accueil"><img class="image" width="220" height="60" src="assets/img/logo3.png" alt="Rigoutech"></a>
+      </h1>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Why Us</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
+          <li><a class="nav-link scrollto" href="#about">À propos</a></li>
+          <li><a class="nav-link scrollto" href="#expertises">Expertises</a></li>
+          <li><a class="nav-link scrollto" href="#trends">Tendances 2025</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="get-started scrollto" href="#contact"><i class="bi bi-telephone-outbound me-1"></i>Parlons de votre projet</a></li>
+          <li>
+            <button id="themeToggle" class="theme-toggle" aria-label="Basculer clair/sombre">
+              <i class="bi bi-moon-stars" id="themeIcon"></i>
+            </button>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
+  <!-- Hero -->
   <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
-      <h1>Welcome to Rigoutech</h1>
-      <h2>Helping you realize your IT project</h2>
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="150">
+      <span class="badge-soft"><i class="bi bi-lightning-charge-fill"></i> Projets de toutes tailles acceptés</span>
+      <h1 class="mt-3">Ingénierie logicielle, plateforme, IA et sécurité pour accélérer votre transformation numérique</h1>
+      <h2>Nous concevons, construisons et opérons des solutions robustes et sécurisées. Du conseil à la mise en production, en passant par la R&D et des projets de défense dans des environnements sensibles.</h2>
+      <div class="d-flex gap-3 flex-wrap">
+        <a href="#contact" class="btn btn-primary-modern"><i class="bi bi-send me-1"></i> Obtenir une consultation</a>
+        <a href="#expertises" class="btn btn-ghost"><i class="bi bi-grid me-1"></i> Voir nos expertises</a>
+      </div>
     </div>
-  </section><!-- End Hero -->
+  </section>
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
+    <!-- À propos -->
     <section id="about" class="about">
       <div class="container">
-
-        <div class="row">
+        <div class="row align-items-center gy-4">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="Équipe Rigoutech en action">
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-            <h3>Rigoutech is a team of experts whose primary mission is to support you throughout the realization of your IT projects.</h3>
-            <p class="fst-italic">
-              We intervene in all stages of the realization of your project: Starting from the analysis to the realizations
+          <div class="col-lg-6 pt-2 order-2 order-lg-1 content" data-aos="fade-right">
+            <div class="section-title text-start">
+              <h2>À propos</h2>
+            </div>
+            <h3 class="mb-3">Votre partenaire de confiance pour des solutions modernes, performantes et sécurisées</h3>
+            <p class="muted">
+              Rigoutech est une équipe d’experts qui accompagne les organisations à chaque étape de leurs projets numériques:
+              cadrage, architecture, développement, intégration, déploiement et exploitation.
             </p>
-            <p>
-              We are also able to gain an overview of the organizational needs of your organization and make recommendations to you.
-              We study your company's software flow and identify areas that can be improved.
+            <p class="muted">
+              Nous intervenons également en R&amp;D et sur des programmes de défense, avec des processus adaptés aux
+              environnements à fortes contraintes et à la sécurité renforcée.
             </p>
+            <ul class="mt-3">
+              <li><i class="bi bi-check2-circle text-success me-2"></i>Vision bout‑en‑bout, de la stratégie à l’opérationnel</li>
+              <li><i class="bi bi-check2-circle text-success me-2"></i>Culture qualité, performance et DevSecOps</li>
+              <li><i class="bi bi-check2-circle text-success me-2"></i>Engagement sur les délais et la valeur livrée</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertises -->
+    <section id="expertises" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nos expertises</h2>
+          <p class="muted">Des compétences de pointe pour vos applications, plateformes et données</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up">
+            <div class="card-elevated w-100">
+              <div class="icon-circle"><i class="bi bi-code-slash"></i></div>
+              <h4>Développement logiciel</h4>
+              <p class="muted">Conception et développement d’applications critiques et cloud‑native.</p>
+              <ul class="mt-2">
+                <li>.NET / C#</li>
+                <li>C++ (performance, embarqué)</li>
+                <li>Python (API, data, scripting)</li>
+                <li>Architecture hexagonale, DDD, tests</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-elevated w-100">
+              <div class="icon-circle"><i class="bi bi-diagram-3"></i></div>
+              <h4>DevOps & Platform Engineering</h4>
+              <p class="muted">Des plateformes fiables pour livrer plus vite et à grande échelle.</p>
+              <ul class="mt-2">
+                <li>CI/CD, GitOps</li>
+                <li>Kubernetes, containers</li>
+                <li>Infrastructure as Code (Terraform)</li>
+                <li>Observabilité, SRE</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-elevated w-100">
+              <div class="icon-circle icon-green"><i class="bi bi-cpu"></i></div>
+              <h4>IA & Data</h4>
+              <p class="muted">Exploitez vos données pour automatiser et décider.</p>
+              <ul class="mt-2">
+                <li>IA pour l’automatisation</li>
+                <li>Data Engineering & pipelines</li>
+                <li>ML Ops et déploiement de modèles</li>
+                <li>LLM, NLP, vision</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-elevated w-100">
+              <div class="icon-circle icon-yellow"><i class="bi bi-shield-lock"></i></div>
+              <h4>Sécurité & DevSecOps</h4>
+              <p class="muted">Sécurité intégrée dès la conception jusqu’à l’exploitation.</p>
+              <ul class="mt-2">
+                <li>Shift‑left security</li>
+                <li>Threat modeling, SAST/DAST</li>
+                <li>Conformité et gouvernance</li>
+                <li>Hardening, secrets, IAM</li>
+              </ul>
+            </div>
           </div>
         </div>
 
+        <div class="text-center mt-4">
+          <a href="#contact" class="btn btn-primary-modern"><i class="bi bi-calendar2-check me-1"></i> Discuter de votre besoin</a>
+        </div>
       </div>
-    </section><!-- End About Section -->
+    </section>
 
-    <!-- ======= Why Us Section ======= -->
-    <!-- ======= Services Section ======= -->
+    <!-- Pourquoi nous -->
     <section id="services" class="services">
       <div class="container">
-
         <div class="section-title">
-          <span>Why Us</span>
-          <h2>Whys Us</h2>
-          <p>Customer satisfaction being our priority, this is what sets us apart</p>
+          <h2>Pourquoi nous choisir</h2>
+          <p class="muted">Satisfaction client, expertise prouvée et livraison fiable</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-user-voice"></i></div>
-              <h4><a href="">Listening to your needs</a></h4>
-              <p>Our experts are available to understand your needs and find a solution adapted to your reality as quickly as possible.</p>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up">
+            <div class="card-elevated w-100">
+              <div class="icon-circle"><i class="bx bx-user-voice"></i></div>
+              <h4>Écoute et co‑construction</h4>
+              <p class="muted">Nous comprenons vos enjeux et construisons des solutions adaptées à votre réalité.</p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-dollar"></i></div>
-              <h4><a href="">Offer you the most competitive prices on the market</a></h4>
-              <p>Small budget for your project ? <br>Do not worry because our approach and our business model allow us to offer you the best prices.</p>
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-elevated w-100">
+              <div class="icon-circle"><i class="bx bx-rocket"></i></div>
+              <h4>Livraison prévisible</h4>
+              <p class="muted">Engagés sur la qualité et les délais avec une approche agile pragmatique.</p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class=" bx bx-wallet"></i></div>
-              <h4><a href="">A solution adapted to your budget and your reality</a></h4>
-              <p>The agility and flexibility we demonstrate allows us to adapt to all kinds of realities and budgets</p>
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-elevated w-100">
+              <div class="icon-circle"><i class="bx bxs-check-shield"></i></div>
+              <h4>Performance et sécurité</h4>
+              <p class="muted">Des solutions robustes, performantes et sécurisées pour vos contraintes métiers.</p>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="450">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-calendar-event"></i></div>
-              <h4><a href="">Respect of your deadlines</a></h4>
-              <p>At Rigoutech, the solutions offered take your deadlines into consideration. In this way we guarantee you to meet your schedule</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-happy"></i></div>
-              <h4><a href="">Rigorous towards our commitments</a></h4>
-              <p>Our team is made up of experts who work rigorously to meet your objectives. We are 100% committed to meeting customer's expectations</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="750">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxs-check-shield"></i></div>
-              <h4><a href="">Quality, Performance and Security</a></h4>
-              <p>We know that the security and performance of solutions is important to you. Reason why we offer you solutions that meet the requirements of your organization</p>
-            </div>
-          </div>
-
         </div>
-
       </div>
-    </section><!-- End Services Section -->
+    </section>
 
+    <!-- Tendances 2025 -->
+    <section id="trends" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Tendances 2025</h2>
+          <p class="muted">Ce qui façonne les systèmes modernes</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up">
+            <div class="card-elevated w-100">
+              <div class="icon-circle icon-green"><i class="bi bi-robot"></i></div>
+              <h4>IA pour l’automatisation</h4>
+              <p class="muted">Réduction des tâches manuelles, copilotes et assistants métiers, optimisation des opérations.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-elevated w-100">
+              <div class="icon-circle"><i class="bi bi-shield-check"></i></div>
+              <h4>Shift‑left security</h4>
+              <p class="muted">Sécurité dès la conception et tout au long du cycle de vie, outillée et automatisée.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-elevated w-100">
+              <div class="icon-circle"><i class="bi bi-diagram-2-fill"></i></div>
+              <h4>Platform Engineering</h4>
+              <p class="muted">Plateformes produits orientées développeurs, golden paths, et experience dev accélérée.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <span class="muted">Nous accompagnons des projets de toutes tailles — du POC à l’industrialisation à l’échelle.</span>
+        </div>
+      </div>
+    </section>
 
-
-    <!-- ======= Contact Section ======= -->
+    <!-- Contact -->
     <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
-          <span>Contact</span>
           <h2>Contact</h2>
-          <p>Contact us today for all your software development needs</p>
+          <p class="muted">Parlez‑nous de vos objectifs. Nous revenons vers vous rapidement.</p>
         </div>
 
         <div class="row" data-aos="fade-up">
-          <div class="col-lg-6">
-            <div class="info-box mb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="info-box mb-4 p-4">
               <i class="bx bx-map"></i>
-              <h3>Our Address</h3>
+              <h3>Adresse</h3>
               <p>Québec, QC, Canada</p>
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6">
-            <div class="info-box  mb-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="info-box mb-4 p-4">
               <i class="bx bx-envelope"></i>
-              <h3>Email Us</h3>
-              <p>info@rigoutech.com</p>
+              <h3>Email</h3>
+              <p><a href="mailto:info@rigoutech.com?subject=Contact%20Rigoutech">info@rigoutech.com</a></p>
             </div>
           </div>
 
-          <!--div class="col-lg-3 col-md-6">
-            <div class="info-box  mb-4">
-              <i class="bx bx-phone-call"></i>
-              <h3>Call Us</h3>
-              <p>+1 438 887 0698</p>
+          <div class="col-lg-4 col-md-12">
+            <div class="info-box mb-4 p-4">
+              <i class="bx bx-time-five"></i>
+              <h3>Démarrer</h3>
+              <p>Audit express, atelier d’architecture, ou mise en route projet sous 10 jours.</p>
             </div>
-          </div-->
-
+          </div>
         </div>
 
         <div class="row" data-aos="fade-up">
-
-          <div class="col-lg-30">
-            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d174614.29110027023!2d-71.48177461775562!3d46.85651774265026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8968a05db8893%3A0x8fc52d63f0e83a03!2zUXXDqWJlYywgUUM!5e0!3m2!1sfr!2sca!4v1618645401979!5m2!1sfr!2sca" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          <div class="col-12">
+            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d174614.29110027023!2d-71.48177461775562!3d46.85651774265026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8968a05db8893%3A0x8fc52d63f0e83a03!2zUXXDqWJlYywgUUM!5e0!3m2!1sfr!2sca!4v1618645401979!5m2!1sfr!2sca"
+              frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen title="Carte Rigoutech"></iframe>
           </div>
+        </div>
 
-          <!--div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div-->
-
+        <div class="text-center mt-4" data-aos="fade-up">
+          <a class="btn btn-primary-modern" href="mailto:info@rigoutech.com?subject=Contact%20Rigoutech&body=Bonjour%20Rigoutech%2C%0A%0AJe%20souhaite%20vous%20parler%20de%20mon%20projet%20..."><i class="bi bi-envelope-open me-1"></i> Écrire à Rigoutech</a>
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section>
 
-  </main><!-- End #main -->
+  </main>
 
-  <!-- ======= Footer ======= -->
+  <!-- Footer -->
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
-          <div class="col-lg-30 col-md-30">
+          <div class="col-12">
             <div class="footer-info">
-              <h4><i class="bx bxs-quote-alt-left"></i>The Internet is like a big unused land. Our mission is to help you build your property there <i class="bx bxs-quote-alt-right"> </i> </h4>
-
+              <h4>
+                <i class="bx bxs-quote-alt-left"></i>
+                Le numérique est un levier stratégique. Notre mission est de vous aider à bâtir des solutions durables, performantes et sûres.
+                <i class="bx bxs-quote-alt-right"></i>
+              </h4>
               <h3>Rigoutech</h3>
               <p>
                 Québec, QC, Canada<br>
-                <strong>Email:</strong> info@rigoutech.com<br>
+                <strong>Email:</strong> <a href="mailto:info@rigoutech.com">info@rigoutech.com</a><br>
               </p>
-              <!--div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div-->
             </div>
           </div>
-
-          <!--div class="col-lg-2 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div-->
-
-
         </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Rigoutech Inc</span></strong>. All Rights Reserved
+    <div class="container py-3">
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <div class="copyright">
+          &copy; <span id="year"></span> <strong><span>Rigoutech Inc</span></strong>. Tous droits réservés.
+        </div>
+        <div class="muted small mt-2 mt-md-0">
+          Développement, DevOps/Platform Engineering, IA/Data et Sécurité (DevSecOps)
+        </div>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Retour en haut"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
@@ -317,9 +559,44 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+  <!-- Theme + small enhancements -->
+  <script>
+    // AOS
+    AOS.init({ once: true, duration: 700, easing: 'ease-out-cubic' });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme handling
+    (function() {
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const icon = document.getElementById('themeIcon');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+      function setTheme(mode) {
+        root.setAttribute('data-theme', mode);
+        icon.className = mode === 'dark' ? 'bi bi-sun' : 'bi bi-moon-stars';
+        localStorage.setItem('rt-theme', mode);
+      }
+
+      const saved = localStorage.getItem('rt-theme');
+      if (saved) setTheme(saved);
+      else setTheme(prefersDark.matches ? 'dark' : 'light');
+
+      toggle.addEventListener('click', () => {
+        const mode = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        setTheme(mode);
+      });
+
+      prefersDark.addEventListener('change', (e) => {
+        if (!localStorage.getItem('rt-theme')) setTheme(e.matches ? 'dark' : 'light');
+      });
+    })();
+  </script>
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
