@@ -1,0 +1,230 @@
+/**
+ * Base Styles - Normalization & Global Defaults
+ * Typography, base elements, utility classes
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--rt-bg);
+  color: var(--rt-text);
+  font-family: var(--rt-font-primary);
+  font-size: var(--rt-font-size-base);
+  line-height: 1.6;
+  transition: background-color var(--rt-transition-smooth), color var(--rt-transition-smooth);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--rt-font-heading);
+  font-weight: var(--rt-font-weight-bold);
+  line-height: 1.2;
+  color: var(--rt-text);
+}
+
+h1 {
+  font-size: var(--rt-font-size-5xl);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--rt-font-size-4xl);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: var(--rt-font-size-3xl);
+}
+
+h4 {
+  font-size: var(--rt-font-size-2xl);
+}
+
+h5 {
+  font-size: var(--rt-font-size-xl);
+}
+
+h6 {
+  font-size: var(--rt-font-size-lg);
+}
+
+/* Links */
+a {
+  color: var(--rt-primary);
+  text-decoration: none;
+  transition: color var(--rt-transition-normal);
+}
+
+a:hover {
+  color: var(--rt-accent);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--rt-primary);
+  outline-offset: 2px;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: var(--rt-spacing-md);
+  line-height: 1.6;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: var(--rt-spacing-md);
+  padding-left: var(--rt-spacing-lg);
+}
+
+ul li, ol li {
+  margin-bottom: var(--rt-spacing-sm);
+}
+
+/* Blockquotes */
+blockquote {
+  padding-left: var(--rt-spacing-lg);
+  border-left: 4px solid var(--rt-primary);
+  color: var(--rt-text-muted);
+  font-style: italic;
+  margin: var(--rt-spacing-lg) 0;
+}
+
+/* Horizontal Rules */
+hr {
+  border: none;
+  border-top: 1px solid var(--rt-border);
+  margin: var(--rt-spacing-2xl) 0;
+}
+
+/* Code */
+code {
+  background: var(--rt-surface);
+  color: var(--rt-text);
+  padding: 0.25em 0.5em;
+  border-radius: var(--rt-radius-sm);
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--rt-surface);
+  color: var(--rt-text);
+  padding: var(--rt-spacing-lg);
+  border-radius: var(--rt-radius);
+  overflow-x: auto;
+  margin-bottom: var(--rt-spacing-lg);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Images & Media */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+iframe {
+  border-radius: var(--rt-radius);
+}
+
+/* Buttons Base */
+button, input[type="button"], input[type="submit"] {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+}
+
+button:focus-visible, input[type="button"]:focus-visible, input[type="submit"]:focus-visible {
+  outline: 2px solid var(--rt-primary);
+  outline-offset: 2px;
+}
+
+/* Forms Base */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--rt-primary);
+  outline-offset: 2px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--rt-text-muted);
+  opacity: 1;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--rt-spacing-lg);
+}
+
+/* Text Utilities */
+.rt-text--muted {
+  color: var(--rt-text-muted);
+}
+
+.rt-text--small {
+  font-size: var(--rt-font-size-sm);
+}
+
+.rt-text--large {
+  font-size: var(--rt-font-size-lg);
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--rt-font-size-3xl);
+  }
+  
+  h2 {
+    font-size: var(--rt-font-size-2xl);
+  }
+  
+  h3 {
+    font-size: var(--rt-font-size-xl);
+  }
+  
+  .container {
+    padding: 0 var(--rt-spacing-md);
+  }
+}
