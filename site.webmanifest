@@ -1,11 +1,11 @@
 {
   "name": "Rigoutech",
   "short_name": "Rigoutech",
-  "lang": "en-US",
+  "lang": "fr-CA",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "theme_color": "#ffffff",
+  "theme_color": "#2563eb",
   "background_color": "#ffffff",
   "icons": [
     {

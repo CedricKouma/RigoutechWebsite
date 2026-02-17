@@ -22,33 +22,13 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  min-height: 40px;
 }
 
-.rt-topbar__banner {
-  display: flex;
+.rt-topbar__contact {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.rt-logo--banner {
-  width: 100%;
-  height: auto;
-  max-height: 150px;
-  display: block;
-  object-fit: contain;
-}
-
-.rt-logo--banner-dark {
-  display: none;
-}
-
-[data-theme="dark"] .rt-logo--banner-light {
-  display: none;
-}
-
-[data-theme="dark"] .rt-logo--banner-dark {
-  display: block;
+  gap: var(--rt-spacing-sm);
 }
 
 /* Header Main */
@@ -65,25 +45,41 @@
   background: rgba(11, 18, 32, 0.6);
 }
 
+.rt-header--scrolled {
+  position: sticky;
+  top: 0;
+  background: color-mix(in srgb, var(--rt-bg) 85%, transparent);
+}
+
 .rt-header__content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: var(--rt-spacing-lg);
   padding: var(--rt-spacing-md) 0;
 }
 
 .rt-header__logo {
   flex-shrink: 0;
+  line-height: 0;
 }
 
 .rt-header__logo img {
-  height: 44px;
+  height: 40px;
   width: auto;
   display: block;
 }
-[data-theme="dark"] .rt-header__logo img {
-  filter: invert(1) brightness(1.1);
+
+.rt-header__logo-img--dark {
+  display: none;
+}
+
+[data-theme="dark"] .rt-header__logo-img--light {
+  display: none;
+}
+
+[data-theme="dark"] .rt-header__logo-img--dark {
+  display: block;
 }
 
 /* Navigation */
@@ -92,7 +88,7 @@
   align-items: center;
   gap: var(--rt-spacing-lg);
   flex-grow: 1;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .rt-nav__menu {
@@ -101,6 +97,7 @@
   gap: var(--rt-spacing-xs);
   margin: 0;
   padding: 0;
+  justify-content: center;
 }
 
 .rt-nav__link {
@@ -159,10 +156,14 @@
   font-size: var(--rt-font-size-2xl);
 }
 
+.rt-nav__toggle[aria-expanded="true"] {
+  color: var(--rt-primary);
+}
+
 /* Hero Section */
 .rt-hero {
   position: relative;
-  padding: 140px 0 100px;
+  padding: 92px 0 64px;
   background:
     radial-gradient(1200px 500px at 10% -10%, rgba(37, 99, 235, 0.18), transparent 40%),
     radial-gradient(1000px 600px at 90% 10%, rgba(16, 185, 129, 0.14), transparent 45%),
@@ -206,7 +207,11 @@
 
 /* Sections */
 .rt-section {
-  padding: var(--rt-spacing-3xl) 0;
+  padding: var(--rt-spacing-2xl) 0;
+}
+
+main > .rt-section:first-child {
+  padding-top: calc(var(--rt-spacing-2xl) - var(--rt-spacing-md));
 }
 
 .rt-section--expertises {
@@ -239,7 +244,7 @@
 
 .rt-section__header {
   text-align: center;
-  margin-bottom: var(--rt-spacing-3xl);
+  margin-bottom: var(--rt-spacing-xl);
 }
 
 .rt-section__label {
@@ -293,17 +298,42 @@
 }
 
 .rt-footer__top {
-  padding: var(--rt-spacing-3xl) 0 var(--rt-spacing-2xl);
+  padding: var(--rt-spacing-2xl) 0 var(--rt-spacing-xl);
 }
 
 .rt-footer__content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--rt-spacing-2xl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .rt-footer__info {
   text-align: center;
+  width: fit-content;
+  max-width: 420px;
+  padding: 0 var(--rt-spacing-md);
+}
+
+.rt-footer__logo-link {
+  display: inline-block;
+  margin-bottom: var(--rt-spacing-lg);
+}
+
+.rt-footer__logo {
+  width: min(100%, 240px);
+  height: auto;
+}
+
+.rt-footer__logo--dark {
+  display: none;
+}
+
+[data-theme="dark"] .rt-footer__logo--light {
+  display: none;
+}
+
+[data-theme="dark"] .rt-footer__logo--dark {
+  display: inline-block;
 }
 
 .rt-footer__mission {
@@ -455,13 +485,17 @@
   .rt-nav__menu.active {
     display: flex;
   }
+
+  body.rt-no-scroll {
+    overflow: hidden;
+  }
   
   .rt-nav__toggle {
     display: flex;
   }
   
   .rt-hero {
-    padding: 100px 0 70px;
+    padding: 72px 0 48px;
   }
   
   .rt-hero__title {
@@ -474,11 +508,11 @@
   }
   
   .rt-section {
-    padding: var(--rt-spacing-2xl) 0;
+    padding: var(--rt-spacing-xl) 0;
   }
   
   .rt-section__header {
-    margin-bottom: var(--rt-spacing-2xl);
+    margin-bottom: var(--rt-spacing-xl);
   }
   
   .rt-section__title {

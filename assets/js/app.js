@@ -74,6 +74,7 @@ class Navigation {
     this.navMenu = DOM.select('.rt-nav__menu');
     this.scrollLinks = DOM.select('.rt-scrollto', true);
     this.header = DOM.select('#header');
+    this.firstNavLink = null;
 
     this.init();
   }
@@ -86,6 +87,7 @@ class Navigation {
   }
 
   setupMobileToggle() {
+    this.firstNavLink = this.navMenu ? this.navMenu.querySelector('.rt-nav__link') : null;
     DOM.on(this.navToggle, 'click', () => this.toggleMobileMenu());
     
     // Close menu when clicking outside
@@ -97,14 +99,42 @@ class Navigation {
         this.closeMobileMenu();
       }
     });
+
+    DOM.on(document, 'keydown', (e) => {
+      if (e.key === 'Escape' && DOM.hasClass(this.navMenu, 'active')) {
+        this.closeMobileMenu();
+        if (this.navToggle) this.navToggle.focus();
+      }
+    });
+
+    // Close mobile menu on any navigation link click
+    DOM.onAll('.rt-nav__link', 'click', () => {
+      if (DOM.hasClass(this.navMenu, 'active')) {
+        this.closeMobileMenu();
+      }
+    });
   }
 
   toggleMobileMenu() {
-    DOM.toggleClass(this.navMenu, 'active');
+    if (!this.navMenu) return;
+
+    const isOpen = DOM.hasClass(this.navMenu, 'active');
+    if (isOpen) {
+      this.closeMobileMenu();
+    } else {
+      DOM.addClass(this.navMenu, 'active');
+      if (this.navToggle) this.navToggle.setAttribute('aria-expanded', 'true');
+      if (this.navToggle) this.navToggle.setAttribute('aria-label', 'Fermer le menu mobile');
+      document.body.classList.add('rt-no-scroll');
+      if (this.firstNavLink) this.firstNavLink.focus();
+    }
   }
 
   closeMobileMenu() {
     DOM.removeClass(this.navMenu, 'active');
+    if (this.navToggle) this.navToggle.setAttribute('aria-expanded', 'false');
+    if (this.navToggle) this.navToggle.setAttribute('aria-label', 'Ouvrir le menu mobile');
+    document.body.classList.remove('rt-no-scroll');
   }
 
   setupScrollLinks() {
@@ -218,11 +248,65 @@ class Preloader {
   }
 }
 
+// Mailto Forms
+class MailtoForms {
+  constructor() {
+    this.forms = DOM.select('[data-mailto-form]', true);
+    this.targetEmail = 'info@rigoutech.com';
+    this.init();
+  }
+
+  init() {
+    if (!this.forms.length) return;
+    this.forms.forEach((form) => {
+      DOM.on(form, 'submit', (e) => this.handleSubmit(e, form));
+    });
+  }
+
+  handleSubmit(event, form) {
+    event.preventDefault();
+
+    const feedback = form.querySelector('.rt-form__feedback');
+    const honeypot = form.querySelector('.rt-honeypot');
+    if (honeypot && honeypot.value.trim() !== '') {
+      if (feedback) feedback.textContent = 'Soumission bloquée.';
+      return;
+    }
+
+    if (!form.checkValidity()) {
+      if (feedback) feedback.textContent = 'Merci de compléter tous les champs requis.';
+      form.reportValidity();
+      return;
+    }
+
+    const subject = form.getAttribute('data-subject') || 'Nouveau message - Rigoutech';
+    const data = new FormData(form);
+    const lines = [];
+
+    data.forEach((value, key) => {
+      if (!value || key === 'site_web') return;
+      const label = key.replaceAll('_', ' ');
+      lines.push(`${label}: ${String(value).trim()}`);
+    });
+
+    const body = lines.join('\n');
+    const mailto = `mailto:${this.targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+
+    if (feedback) {
+      feedback.textContent = 'Votre client email va s’ouvrir. Si rien ne se passe, contactez info@rigoutech.com.';
+    }
+
+    form.reset();
+  }
+}
+
 // Initialize on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
   new Navigation();
   new BackToTop();
   new Preloader();
+  new MailtoForms();
 
   // Initialize AOS if available
   if (typeof AOS !== 'undefined') {

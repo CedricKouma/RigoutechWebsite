@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Us - Rigoutech : échanges investisseurs, chercheurs et clients.">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="author" content="Rigoutech Inc.">
+  <title>Rigoutech | Contact Us</title>
+  <link rel="canonical" href="https://www.rigoutech.com/contact.html">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700|Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <link href="assets/css/base.css" rel="stylesheet">
+  <link href="assets/css/components.css" rel="stylesheet">
+  <link href="assets/css/layout.css" rel="stylesheet">
+  <link href="assets/css/pages.css" rel="stylesheet">
+</head>
+<body>
+
+  <header id="header" class="rt-header" role="banner">
+    <div class="container">
+      <div class="rt-header__content">
+        <nav id="navbar" class="rt-nav" role="navigation" aria-label="Navigation principale">
+          <ul class="rt-nav__menu" id="rt-nav-menu">
+            <li><a href="index.html" class="rt-nav__link">Accueil</a></li>
+            <li><a href="rd.html" class="rt-nav__link">R&D</a></li>
+            <li><a href="produits.html" class="rt-nav__link">Produits</a></li>
+            <li><a href="contact.html" class="rt-nav__link rt-nav__link--active">Contact Us</a></li>
+          </ul>
+          <button id="themeToggle" class="rt-nav__theme-toggle" aria-label="Basculer le thème clair/sombre" aria-pressed="false"><i class="bi bi-moon-stars" id="themeIcon" aria-hidden="true"></i></button>
+          <button class="rt-nav__toggle" aria-label="Ouvrir le menu mobile" aria-controls="rt-nav-menu" aria-expanded="false" aria-haspopup="true"><i class="bi bi-list" aria-hidden="true"></i></button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section class="rt-section rt-section--contact">
+      <div class="container">
+        <header class="rt-section__header">
+          <span class="rt-section__label">Contact Us</span>
+          <h1 class="rt-section__title">Contact Us - Investisseurs, chercheurs, clients</h1>
+          <p class="rt-section__description">Discutons de financement, de collaboration scientifique ou de besoins de consultation.</p>
+        </header>
+
+        <div class="rt-grid rt-grid--3">
+          <article class="rt-card" data-aos="fade-up">
+            <div class="rt-card__icon"><i class="bi bi-cash-coin" aria-hidden="true"></i></div>
+            <h2 class="rt-card__title">Investisseurs / Financement</h2>
+            <p class="rt-card__description">Échanges sur le développement de RigouEarth et la feuille de route de recherche.</p>
+            <a class="rt-btn rt-btn--outline" href="mailto:info@rigoutech.com?subject=Echange%20Investisseur%20-%20Rigoutech">Initier un échange</a>
+          </article>
+
+          <article class="rt-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="rt-card__icon"><i class="bi bi-mortarboard" aria-hidden="true"></i></div>
+            <h2 class="rt-card__title">Chercheurs / Académique</h2>
+            <p class="rt-card__description">Collaborations de recherche, co-développement de méthodes et validation scientifique.</p>
+            <a class="rt-btn rt-btn--outline" href="mailto:info@rigoutech.com?subject=Collaboration%20Recherche%20-%20Rigoutech">Proposer une collaboration</a>
+          </article>
+
+          <article class="rt-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="rt-card__icon"><i class="bi bi-briefcase" aria-hidden="true"></i></div>
+            <h2 class="rt-card__title">Clients</h2>
+            <p class="rt-card__description">Consultation pour organisations publiques/privées en environnements réglementés.</p>
+            <a class="rt-btn rt-btn--outline" href="mailto:info@rigoutech.com?subject=Demande%20Client%20-%20Rigoutech">Parler à un expert</a>
+          </article>
+        </div>
+
+        <div class="rt-section__cta rt-section__cta--wide">
+          <article class="rt-card">
+            <form class="rt-form" data-mailto-form data-subject="Demande de contact - Rigoutech" novalidate>
+              <div class="rt-form__grid">
+                <label class="rt-form__field">
+                  <span>Nom complet</span>
+                  <input type="text" name="nom_complet" required>
+                </label>
+                <label class="rt-form__field">
+                  <span>Email</span>
+                  <input type="email" name="email" required>
+                </label>
+                <label class="rt-form__field">
+                  <span>Profil</span>
+                  <select name="profil" required>
+                    <option value="">Sélectionner</option>
+                    <option value="Investisseur">Investisseur</option>
+                    <option value="Chercheur">Chercheur</option>
+                    <option value="Client">Client</option>
+                  </select>
+                </label>
+                <label class="rt-form__field">
+                  <span>Sujet</span>
+                  <input type="text" name="sujet" required>
+                </label>
+                <label class="rt-form__field rt-form__field--full">
+                  <span>Message</span>
+                  <textarea name="message" rows="5" required></textarea>
+                </label>
+              </div>
+              <input class="rt-honeypot" type="text" name="site_web" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <div class="rt-form__actions">
+                <button type="submit" class="rt-btn rt-btn--primary"><i class="bi bi-send" aria-hidden="true"></i> Envoyer</button>
+              </div>
+              <p class="rt-form__feedback" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="rt-footer" role="contentinfo">
+    <div class="rt-footer__top"><div class="container"><div class="rt-footer__content"><article class="rt-footer__info"><a class="rt-footer__logo-link" href="index.html" aria-label="Rigoutech - Retour à l'accueil"><img class="rt-footer__logo rt-footer__logo--light" src="assets/img/logo-banner-light-320.png" alt="Logo complet Rigoutech" width="240" height="66" loading="lazy" decoding="async"><img class="rt-footer__logo rt-footer__logo--dark" src="assets/img/logo-banner-dark-320.png" alt="Logo complet Rigoutech" width="240" height="66" loading="lazy" decoding="async"></a><address class="rt-footer__contact"><p>Québec, QC, Canada<br><strong>Email:</strong> <a href="mailto:info@rigoutech.com">info@rigoutech.com</a></p></address></article></div></div></div>
+    <div class="rt-footer__bottom"><div class="container"><div class="rt-footer__copyright">&copy; <span id="year"></span> <strong>Rigoutech Inc.</strong> - Tous droits réservés.</div></div></div>
+  </footer>
+
+  <a href="#" class="rt-back-to-top" aria-label="Retourner au haut de la page"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
+  <div id="preloader" aria-hidden="true"></div>
+
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/theme.js"></script>
+</body>
+</html>

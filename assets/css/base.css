@@ -210,6 +210,21 @@ input::placeholder, textarea::placeholder {
   border-width: 0;
 }
 
+.rt-skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: var(--rt-primary);
+  color: var(--rt-primary-contrast);
+  padding: var(--rt-spacing-sm) var(--rt-spacing-md);
+  border-radius: var(--rt-radius-sm);
+  z-index: calc(var(--rt-z-modal) + 1);
+}
+
+.rt-skip-link:focus {
+  top: 10px;
+}
+
 /* Responsive Media Queries */
 @media (max-width: 768px) {
   h1 {
