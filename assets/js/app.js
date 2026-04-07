@@ -3,7 +3,9 @@
  * Navigation, scrolling, DOM manipulation
  */
 
-'use strict';
+"use strict";
+
+/* global AOS */
 
 // DOM utility functions
 const DOM = {
@@ -22,7 +24,7 @@ const DOM = {
   onAll: (selector, event, listener, options = false) => {
     const elements = DOM.select(selector, true);
     if (elements.length) {
-      elements.forEach(el => DOM.on(el, event, listener, options));
+      elements.forEach((el) => DOM.on(el, event, listener, options));
     }
   },
 
@@ -52,12 +54,12 @@ const Scroll = {
     const elementPosition = target.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({
       top: elementPosition - offset,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   },
 
   addListener: (callback) => {
-    window.addEventListener('scroll', callback, { passive: true });
+    window.addEventListener("scroll", callback, { passive: true });
   },
 
   getElementOffset: (element) => {
@@ -67,13 +69,13 @@ const Scroll = {
 };
 
 // Navigation Management
-class Navigation {
+class SiteNavigation {
   constructor() {
-    this.navbar = DOM.select('#navbar');
-    this.navToggle = DOM.select('.rt-nav__toggle');
-    this.navMenu = DOM.select('.rt-nav__menu');
-    this.scrollLinks = DOM.select('.rt-scrollto', true);
-    this.header = DOM.select('#header');
+    this.navbar = DOM.select("#navbar");
+    this.navToggle = DOM.select(".rt-nav__toggle");
+    this.navMenu = DOM.select(".rt-nav__menu");
+    this.scrollLinks = DOM.select(".rt-scrollto", true);
+    this.header = DOM.select("#header");
     this.firstNavLink = null;
 
     this.init();
@@ -87,29 +89,31 @@ class Navigation {
   }
 
   setupMobileToggle() {
-    this.firstNavLink = this.navMenu ? this.navMenu.querySelector('.rt-nav__link') : null;
-    DOM.on(this.navToggle, 'click', () => this.toggleMobileMenu());
-    
+    this.firstNavLink = this.navMenu
+      ? this.navMenu.querySelector(".rt-nav__link")
+      : null;
+    DOM.on(this.navToggle, "click", () => this.toggleMobileMenu());
+
     // Close menu when clicking outside
-    DOM.on(document, 'click', (e) => {
-      const isToggle = e.target.closest('.rt-nav__toggle');
-      const isMenu = e.target.closest('.rt-nav__menu');
-      
-      if (!isToggle && !isMenu && DOM.hasClass(this.navMenu, 'active')) {
+    DOM.on(document, "click", (e) => {
+      const isToggle = e.target.closest(".rt-nav__toggle");
+      const isMenu = e.target.closest(".rt-nav__menu");
+
+      if (!isToggle && !isMenu && DOM.hasClass(this.navMenu, "active")) {
         this.closeMobileMenu();
       }
     });
 
-    DOM.on(document, 'keydown', (e) => {
-      if (e.key === 'Escape' && DOM.hasClass(this.navMenu, 'active')) {
+    DOM.on(document, "keydown", (e) => {
+      if (e.key === "Escape" && DOM.hasClass(this.navMenu, "active")) {
         this.closeMobileMenu();
         if (this.navToggle) this.navToggle.focus();
       }
     });
 
     // Close mobile menu on any navigation link click
-    DOM.onAll('.rt-nav__link', 'click', () => {
-      if (DOM.hasClass(this.navMenu, 'active')) {
+    DOM.onAll(".rt-nav__link", "click", () => {
+      if (DOM.hasClass(this.navMenu, "active")) {
         this.closeMobileMenu();
       }
     });
@@ -118,29 +122,31 @@ class Navigation {
   toggleMobileMenu() {
     if (!this.navMenu) return;
 
-    const isOpen = DOM.hasClass(this.navMenu, 'active');
+    const isOpen = DOM.hasClass(this.navMenu, "active");
     if (isOpen) {
       this.closeMobileMenu();
     } else {
-      DOM.addClass(this.navMenu, 'active');
-      if (this.navToggle) this.navToggle.setAttribute('aria-expanded', 'true');
-      if (this.navToggle) this.navToggle.setAttribute('aria-label', 'Fermer le menu mobile');
-      document.body.classList.add('rt-no-scroll');
+      DOM.addClass(this.navMenu, "active");
+      if (this.navToggle) this.navToggle.setAttribute("aria-expanded", "true");
+      if (this.navToggle)
+        this.navToggle.setAttribute("aria-label", "Fermer le menu mobile");
+      document.body.classList.add("rt-no-scroll");
       if (this.firstNavLink) this.firstNavLink.focus();
     }
   }
 
   closeMobileMenu() {
-    DOM.removeClass(this.navMenu, 'active');
-    if (this.navToggle) this.navToggle.setAttribute('aria-expanded', 'false');
-    if (this.navToggle) this.navToggle.setAttribute('aria-label', 'Ouvrir le menu mobile');
-    document.body.classList.remove('rt-no-scroll');
+    DOM.removeClass(this.navMenu, "active");
+    if (this.navToggle) this.navToggle.setAttribute("aria-expanded", "false");
+    if (this.navToggle)
+      this.navToggle.setAttribute("aria-label", "Ouvrir le menu mobile");
+    document.body.classList.remove("rt-no-scroll");
   }
 
   setupScrollLinks() {
-    DOM.onAll('.rt-scrollto', 'click', (e) => {
-      const href = e.currentTarget.getAttribute('href');
-      if (!href.startsWith('#')) return;
+    DOM.onAll(".rt-scrollto", "click", (e) => {
+      const href = e.currentTarget.getAttribute("href");
+      if (!href.startsWith("#")) return;
 
       e.preventDefault();
 
@@ -169,8 +175,8 @@ class Navigation {
     const scrollPosition = Scroll.getScrollPosition() + 200;
 
     this.scrollLinks.forEach((link) => {
-      const href = link.getAttribute('href');
-      if (!href.startsWith('#')) return;
+      const href = link.getAttribute("href");
+      if (!href.startsWith("#")) return;
 
       const section = DOM.select(href);
       if (!section) return;
@@ -180,9 +186,11 @@ class Navigation {
 
       if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
         // Remove active from all
-        this.scrollLinks.forEach(l => DOM.removeClass(l, 'rt-nav__link--active'));
+        this.scrollLinks.forEach((l) =>
+          DOM.removeClass(l, "rt-nav__link--active"),
+        );
         // Add to current
-        DOM.addClass(link, 'rt-nav__link--active');
+        DOM.addClass(link, "rt-nav__link--active");
       }
     });
   }
@@ -192,9 +200,9 @@ class Navigation {
 
     Scroll.addListener(() => {
       if (Scroll.getScrollPosition() >= headerOffset) {
-        DOM.addClass(this.header, 'rt-header--scrolled');
+        DOM.addClass(this.header, "rt-header--scrolled");
       } else {
-        DOM.removeClass(this.header, 'rt-header--scrolled');
+        DOM.removeClass(this.header, "rt-header--scrolled");
       }
     });
   }
@@ -203,7 +211,7 @@ class Navigation {
 // Back to Top Button
 class BackToTop {
   constructor() {
-    this.button = DOM.select('.rt-back-to-top');
+    this.button = DOM.select(".rt-back-to-top");
     this.threshold = 100;
 
     if (this.button) {
@@ -212,7 +220,7 @@ class BackToTop {
   }
 
   init() {
-    DOM.on(this.button, 'click', (e) => {
+    DOM.on(this.button, "click", (e) => {
       e.preventDefault();
       Scroll.smoothScroll(document.documentElement, 0);
     });
@@ -222,9 +230,9 @@ class BackToTop {
 
   toggle() {
     if (Scroll.getScrollPosition() > this.threshold) {
-      DOM.addClass(this.button, 'active');
+      DOM.addClass(this.button, "active");
     } else {
-      DOM.removeClass(this.button, 'active');
+      DOM.removeClass(this.button, "active");
     }
   }
 }
@@ -232,14 +240,14 @@ class BackToTop {
 // Preloader
 class Preloader {
   constructor() {
-    this.preloader = DOM.select('#preloader');
+    this.preloader = DOM.select("#preloader");
     this.init();
   }
 
   init() {
     if (this.preloader) {
-      window.addEventListener('load', () => {
-        this.preloader.style.display = 'none';
+      window.addEventListener("load", () => {
+        this.preloader.style.display = "none";
         setTimeout(() => {
           this.preloader.remove();
         }, 500);
@@ -251,50 +259,53 @@ class Preloader {
 // Mailto Forms
 class MailtoForms {
   constructor() {
-    this.forms = DOM.select('[data-mailto-form]', true);
-    this.targetEmail = 'info@rigoutech.com';
+    this.forms = DOM.select("[data-mailto-form]", true);
+    this.targetEmail = "info@rigoutech.com";
     this.init();
   }
 
   init() {
     if (!this.forms.length) return;
     this.forms.forEach((form) => {
-      DOM.on(form, 'submit', (e) => this.handleSubmit(e, form));
+      DOM.on(form, "submit", (e) => this.handleSubmit(e, form));
     });
   }
 
   handleSubmit(event, form) {
     event.preventDefault();
 
-    const feedback = form.querySelector('.rt-form__feedback');
-    const honeypot = form.querySelector('.rt-honeypot');
-    if (honeypot && honeypot.value.trim() !== '') {
-      if (feedback) feedback.textContent = 'Soumission bloquée.';
+    const feedback = form.querySelector(".rt-form__feedback");
+    const honeypot = form.querySelector(".rt-honeypot");
+    if (honeypot && honeypot.value.trim() !== "") {
+      if (feedback) feedback.textContent = "Soumission bloquée.";
       return;
     }
 
     if (!form.checkValidity()) {
-      if (feedback) feedback.textContent = 'Merci de compléter tous les champs requis.';
+      if (feedback)
+        feedback.textContent = "Merci de compléter tous les champs requis.";
       form.reportValidity();
       return;
     }
 
-    const subject = form.getAttribute('data-subject') || 'Nouveau message - Rigoutech';
+    const subject =
+      form.getAttribute("data-subject") || "Nouveau message - Rigoutech";
     const data = new FormData(form);
     const lines = [];
 
     data.forEach((value, key) => {
-      if (!value || key === 'site_web') return;
-      const label = key.replaceAll('_', ' ');
+      if (!value || key === "site_web") return;
+      const label = key.replaceAll("_", " ");
       lines.push(`${label}: ${String(value).trim()}`);
     });
 
-    const body = lines.join('\n');
+    const body = lines.join("\n");
     const mailto = `mailto:${this.targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailto;
 
     if (feedback) {
-      feedback.textContent = 'Votre client email va s’ouvrir. Si rien ne se passe, contactez info@rigoutech.com.';
+      feedback.textContent =
+        "Votre client email va s’ouvrir. Si rien ne se passe, contactez info@rigoutech.com.";
     }
 
     form.reset();
@@ -302,18 +313,18 @@ class MailtoForms {
 }
 
 // Initialize on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', () => {
-  new Navigation();
+document.addEventListener("DOMContentLoaded", () => {
+  new SiteNavigation();
   new BackToTop();
   new Preloader();
   new MailtoForms();
 
   // Initialize AOS if available
-  if (typeof AOS !== 'undefined') {
+  if (typeof AOS !== "undefined") {
     setTimeout(() => {
       AOS.init({
         duration: 1000,
-        easing: 'ease-in-out',
+        easing: "ease-in-out",
         once: true,
         mirror: false,
       });
@@ -321,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Set current year in footer
-  const yearElement = document.getElementById('year');
+  const yearElement = document.getElementById("year");
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   }

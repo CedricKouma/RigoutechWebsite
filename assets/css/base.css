@@ -21,11 +21,18 @@ body {
   font-family: var(--rt-font-primary);
   font-size: var(--rt-font-size-base);
   line-height: 1.6;
-  transition: background-color var(--rt-transition-smooth), color var(--rt-transition-smooth);
+  transition:
+    background-color var(--rt-transition-smooth),
+    color var(--rt-transition-smooth);
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--rt-font-heading);
   font-weight: var(--rt-font-weight-bold);
   line-height: 1.2;
@@ -85,12 +92,14 @@ p:last-child {
 }
 
 /* Lists */
-ul, ol {
+ul,
+ol {
   margin-bottom: var(--rt-spacing-md);
   padding-left: var(--rt-spacing-lg);
 }
 
-ul li, ol li {
+ul li,
+ol li {
   margin-bottom: var(--rt-spacing-sm);
 }
 
@@ -116,7 +125,7 @@ code {
   color: var(--rt-text);
   padding: 0.25em 0.5em;
   border-radius: var(--rt-radius-sm);
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-family: Monaco, Menlo, "Ubuntu Mono", monospace;
   font-size: 0.9em;
 }
 
@@ -147,31 +156,40 @@ iframe {
 }
 
 /* Buttons Base */
-button, input[type="button"], input[type="submit"] {
+button,
+input[type="button"],
+input[type="submit"] {
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
   border: none;
 }
 
-button:focus-visible, input[type="button"]:focus-visible, input[type="submit"]:focus-visible {
+button:focus-visible,
+input[type="button"]:focus-visible,
+input[type="submit"]:focus-visible {
   outline: 2px solid var(--rt-primary);
   outline-offset: 2px;
 }
 
 /* Forms Base */
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
 }
 
-input:focus-visible, textarea:focus-visible, select:focus-visible {
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
   outline: 2px solid var(--rt-primary);
   outline-offset: 2px;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--rt-text-muted);
   opacity: 1;
 }
@@ -226,19 +244,19 @@ input::placeholder, textarea::placeholder {
 }
 
 /* Responsive Media Queries */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   h1 {
     font-size: var(--rt-font-size-3xl);
   }
-  
+
   h2 {
     font-size: var(--rt-font-size-2xl);
   }
-  
+
   h3 {
     font-size: var(--rt-font-size-xl);
   }
-  
+
   .container {
     padding: 0 var(--rt-spacing-md);
   }

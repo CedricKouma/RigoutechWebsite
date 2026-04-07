@@ -5,21 +5,21 @@
 
 :root {
   /* Colors */
-  --rt-bg: #ffffff;
+  --rt-bg: #fff;
   --rt-text: #0b1220;
   --rt-text-muted: #6b7280;
   --rt-surface: #f5f7fb;
   --rt-surface-alt: #eef2ff;
   --rt-primary: #2563eb;
-  --rt-primary-contrast: #ffffff;
+  --rt-primary-contrast: #fff;
   --rt-accent: #10b981;
   --rt-border: #e5e7eb;
-  
+
   /* Shadows */
   --rt-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
   --rt-shadow-lg: 0 18px 40px rgba(2, 6, 23, 0.12);
   --rt-shadow-sm: 0 4px 12px rgba(2, 6, 23, 0.06);
-  
+
   /* Spacing */
   --rt-spacing-xs: 0.25rem;
   --rt-spacing-sm: 0.5rem;
@@ -28,16 +28,18 @@
   --rt-spacing-xl: 2rem;
   --rt-spacing-2xl: 3rem;
   --rt-spacing-3xl: 4rem;
-  
+
   /* Border Radius */
   --rt-radius: 14px;
   --rt-radius-sm: 10px;
   --rt-radius-lg: 18px;
   --rt-radius-full: 999px;
-  
+
   /* Typography */
-  --rt-font-primary: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans';
-  --rt-font-heading: 'Poppins', 'Inter', sans-serif;
+  --rt-font-primary:
+    "Inter", system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue",
+    arial, "Noto Sans";
+  --rt-font-heading: "Poppins", "Inter", sans-serif;
   --rt-font-size-xs: 0.75rem;
   --rt-font-size-sm: 0.875rem;
   --rt-font-size-base: 1rem;
@@ -47,18 +49,17 @@
   --rt-font-size-3xl: 1.875rem;
   --rt-font-size-4xl: 2.25rem;
   --rt-font-size-5xl: 3rem;
-  
   --rt-font-weight-light: 300;
   --rt-font-weight-normal: 400;
   --rt-font-weight-medium: 500;
   --rt-font-weight-semibold: 600;
   --rt-font-weight-bold: 700;
-  
+
   /* Transitions */
   --rt-transition-fast: 0.15s ease;
   --rt-transition-normal: 0.2s ease;
   --rt-transition-smooth: 0.3s ease-in-out;
-  
+
   /* Z-index */
   --rt-z-dropdown: 99;
   --rt-z-fixed: 997;

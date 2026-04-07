@@ -45,7 +45,7 @@ jobs:
       - name: Upload preview artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./  # Static HTML/CSS files live at repo root
+          path: ./ # Static HTML/CSS files live at repo root
 
   deploy:
     if: github.event.action != 'closed'

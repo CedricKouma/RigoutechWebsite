@@ -1,6 +1,7 @@
 # Refactoring Documentation - Rigoutech Website
 
 ## Overview
+
 This document describes the comprehensive refactoring of the Rigoutech website codebase to professional standards while maintaining 100% visual and functional parity.
 
 ---
@@ -10,6 +11,7 @@ This document describes the comprehensive refactoring of the Rigoutech website c
 ### 1. **HTML Structure** (`index.html`)
 
 #### Improvements:
+
 - **Semantic HTML5**: Replaced generic divs with proper semantic tags
   - `<section>` for major content blocks
   - `<article>` for card-based content
@@ -46,6 +48,7 @@ This document describes the comprehensive refactoring of the Rigoutech website c
 ### 2. **CSS Refactoring** (New modular structure)
 
 #### Old Structure:
+
 - Single `assets/css/style.css` (1413 lines)
 - Mixed concerns (components, utilities, layout, pages)
 - Inline styles in HTML
@@ -55,12 +58,14 @@ This document describes the comprehensive refactoring of the Rigoutech website c
 #### New Structure (5 organized files):
 
 ##### a) `assets/css/variables.css`
+
 - **Design System**: Colors, shadows, spacing, typography, transitions
 - **Light & Dark Themes**: Complete CSS custom properties
 - Centralized values for consistency
 - Variables follow naming convention: `--rt-{category}-{property}`
 
 ##### b) `assets/css/base.css`
+
 - **Normalization**: Reset styles across browsers
 - **Typography**: Heading hierarchy, links, lists, code blocks
 - **Form Elements**: Inputs, buttons, textareas with focus states
@@ -68,6 +73,7 @@ This document describes the comprehensive refactoring of the Rigoutech website c
 - Foundation for all other styles
 
 ##### c) `assets/css/components.css`
+
 - **Reusable Components**: Buttons, badges, cards, icons, lists
 - **BEM Naming**: Block-element-modifier pattern
 - **Component Variants**: Primary, outline, secondary, small, large
@@ -75,6 +81,7 @@ This document describes the comprehensive refactoring of the Rigoutech website c
 - **Flexibility**: Cards, icons, quotes, grids all customizable
 
 ##### d) `assets/css/layout.css`
+
 - **Page Structure**: Header, footer, navigation, main sections
 - **Header Navigation**: Topbar, logo, nav menu, theme toggle
 - **Mobile Responsiveness**: Mobile menu patterns, breakpoints
@@ -84,6 +91,7 @@ This document describes the comprehensive refactoring of the Rigoutech website c
 - **Preloader**: Centered spinner with smooth removal
 
 ##### e) `assets/css/pages.css`
+
 - **Page-Specific Styles**: Section variations
 - **Utility Classes**: Spacing (margin, padding), display, alignment
 - **Animations**: Pulse, fade-in, spin
@@ -93,6 +101,7 @@ This document describes the comprehensive refactoring of the Rigoutech website c
 - **Accessibility**: Reduced motion preference support
 
 #### Key Improvements:
+
 - **CSS Variables**: Complete design token system (60+ variables)
 - **Modular Design**: Each file has single responsibility
 - **BEM Convention**: Clear, scalable class naming
@@ -102,6 +111,7 @@ This document describes the comprehensive refactoring of the Rigoutech website c
 - **Maintainability**: Well-organized, easy to extend
 
 #### Color System Refactoring:
+
 - Old: Hardcoded colors (#cc1616, #fff, #191919, etc.)
 - New: CSS variables with semantic naming
   - `--rt-primary` (brand color)
@@ -111,6 +121,7 @@ This document describes the comprehensive refactoring of the Rigoutech website c
   - `--rt-border`, `--rt-surface`, `--rt-shadow`
 
 #### Typography System:
+
 - Old: Inline font declarations, inconsistent sizing
 - New: Complete typographic scale
   - Font families: `--rt-font-primary`, `--rt-font-heading`
@@ -118,12 +129,14 @@ This document describes the comprehensive refactoring of the Rigoutech website c
   - 5 weight levels: light (300) to bold (700)
 
 #### Spacing System:
+
 - Old: Magic numbers (8px, 12px, 14px, etc.)
 - New: Consistent scale
   - xs (0.25rem) → 3xl (4rem)
   - All margins and paddings use scale values
 
 #### Shadow System:
+
 - Old: Single shadow value
 - New: Three shadow variants
   - `--rt-shadow` (default)
@@ -135,6 +148,7 @@ This document describes the comprehensive refactoring of the Rigoutech website c
 ### 3. **JavaScript Refactoring** (Modern patterns)
 
 #### Old (`assets/js/main.js`):
+
 - 241 lines of IIFE-based code
 - Global function declarations
 - Mixed concerns (theme, navigation, scrolling, preloader)
@@ -144,7 +158,9 @@ This document describes the comprehensive refactoring of the Rigoutech website c
 #### New Structure (2 modular files):
 
 ##### a) `assets/js/app.js` (Main Application Logic)
+
 **Features**:
+
 - **DOM Utility Object**: Clean DOM manipulation API
   - `DOM.select()`: Query single/multiple elements
   - `DOM.on()`: Event listener management
@@ -173,6 +189,7 @@ This document describes the comprehensive refactoring of the Rigoutech website c
   - Clean up functionality
 
 **Code Quality**:
+
 - Object-oriented design (Classes)
 - Single responsibility principle
 - No global state
@@ -180,7 +197,9 @@ This document describes the comprehensive refactoring of the Rigoutech website c
 - DOMContentLoaded event initialization
 
 ##### b) `assets/js/theme.js` (Theme Management)
+
 **Features**:
+
 - **ThemeManager Class**:
   - Dark/light theme toggle
   - localStorage persistence
@@ -189,12 +208,14 @@ This document describes the comprehensive refactoring of the Rigoutech website c
   - Smooth theme switching
 
 **Code Quality**:
+
 - Separation of concerns
 - localStorage management
 - System preference listener
 - Accessible button state
 
 #### Improvements Over Original:
+
 - **Removed Dead Code**: Old portfolio filter code, unused variables
 - **Modern Patterns**: Classes instead of IIFE
 - **Testability**: Separate concerns make unit testing possible
@@ -208,6 +229,7 @@ This document describes the comprehensive refactoring of the Rigoutech website c
 ## Project Structure
 
 ### Before:
+
 ```
 RigoutechWebsite/
 ├── index.html
@@ -223,6 +245,7 @@ RigoutechWebsite/
 ```
 
 ### After:
+
 ```
 RigoutechWebsite/
 ├── index.html (refactored)
@@ -245,7 +268,9 @@ RigoutechWebsite/
 ## Design System
 
 ### Colors
+
 **Light Theme:**
+
 - Primary: `#2563eb` (Blue)
 - Accent: `#10b981` (Green)
 - Background: `#ffffff` (White)
@@ -255,6 +280,7 @@ RigoutechWebsite/
 - Border: `#e5e7eb` (Very Light Gray)
 
 **Dark Theme:**
+
 - Primary: `#60a5fa` (Light Blue)
 - Accent: `#34d399` (Light Green)
 - Background: `#0b1220` (Very Dark)
@@ -264,6 +290,7 @@ RigoutechWebsite/
 - Border: `#1f2937` (Dark Gray)
 
 ### Spacing Scale
+
 - xs: 0.25rem (4px)
 - sm: 0.5rem (8px)
 - md: 1rem (16px)
@@ -273,6 +300,7 @@ RigoutechWebsite/
 - 3xl: 4rem (64px)
 
 ### Typography Scale
+
 - xs: 0.75rem (12px)
 - sm: 0.875rem (14px)
 - base: 1rem (16px)
@@ -284,6 +312,7 @@ RigoutechWebsite/
 - 5xl: 3rem (48px)
 
 ### Border Radius
+
 - sm: 10px
 - default: 14px
 - lg: 18px
@@ -294,6 +323,7 @@ RigoutechWebsite/
 ## Component Library
 
 ### Buttons
+
 - `.rt-btn` (base)
 - `.rt-btn--primary` (filled, CTA)
 - `.rt-btn--outline` (bordered)
@@ -302,6 +332,7 @@ RigoutechWebsite/
 - `.rt-btn--large` (big action)
 
 ### Cards
+
 - `.rt-card` (container)
 - `.rt-card__icon` (icon element)
 - `.rt-card__title` (heading)
@@ -311,6 +342,7 @@ RigoutechWebsite/
 - `.rt-card__ready` (flex layout for CTA)
 
 ### Sections
+
 - `.rt-section` (container)
 - `.rt-section--{name}` (variations by page section)
 - `.rt-section__header` (title area)
@@ -320,6 +352,7 @@ RigoutechWebsite/
 - `.rt-section__cta` (button container)
 
 ### Navigation
+
 - `.rt-nav` (main nav container)
 - `.rt-nav__menu` (ul list)
 - `.rt-nav__link` (a tag)
@@ -328,12 +361,14 @@ RigoutechWebsite/
 - `.rt-nav__toggle` (mobile menu button)
 
 ### Grids
+
 - `.rt-grid` (container)
 - `.rt-grid--2` (2 columns)
 - `.rt-grid--3` (3 columns)
 - Responsive: Auto-fits to 300px minimum column width
 
 ### Utilities
+
 - Text: `.rt-text--muted`, `.rt-text--small`, `.rt-text--large`
 - Spacing: `.rt-m{t|b}-{1-6}`, `.rt-p-{1-6}` (margin/padding)
 - Display: `.rt-flex`, `.rt-flex-col`, `.rt-inline-flex`, `.rt-block`
@@ -344,6 +379,7 @@ RigoutechWebsite/
 ## Accessibility Features
 
 ### HTML
+
 - Semantic tags (nav, main, section, article, footer, header)
 - Proper heading hierarchy
 - ARIA labels and roles
@@ -351,12 +387,14 @@ RigoutechWebsite/
 - aria-hidden on decorative elements
 
 ### CSS
+
 - Focus-visible states on all interactive elements
 - Color contrast ratios meet WCAG AA standards
 - Support for prefers-reduced-motion
 - Proper line-height and letter-spacing for readability
 
 ### JavaScript
+
 - Keyboard navigation support
 - ARIA states updated dynamically
 - No reliance on JavaScript for essential functionality
@@ -364,6 +402,7 @@ RigoutechWebsite/
 ---
 
 ## Browser Support
+
 - Modern browsers (Chrome, Firefox, Safari, Edge)
 - CSS Variables required
 - ES6 JavaScript (arrow functions, classes, const/let)
@@ -372,6 +411,7 @@ RigoutechWebsite/
 ---
 
 ## Performance Optimizations
+
 - CSS organized for minimal file size
 - No unused styles
 - Vendor prefixes where needed
@@ -385,28 +425,33 @@ RigoutechWebsite/
 ## Maintenance Guide
 
 ### Adding a New Section
+
 1. Add semantic HTML structure in index.html
 2. Create `.rt-section--{name}` styling in layout.css
 3. Add cards, buttons, and components as needed
 4. Import design system variables automatically
 
 ### Changing Colors
+
 1. Update only in variables.css
 2. Both light and dark themes update automatically
 3. All components inherit changes
 
 ### Adding Components
+
 1. Define in components.css
 2. Use BEM naming: `.rt-{block}`, `.rt-{block}__{element}`, `.rt-{block}--{modifier}`
 3. Include all states: default, hover, active, focus
 4. Add responsive media queries as needed
 
 ### Responsive Breakpoints
+
 - Mobile: < 768px
 - Tablet: 768px - 1024px
 - Desktop: > 1024px
 
 Use CSS Grid's auto-fit for flexibility:
+
 ```css
 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 ```
@@ -416,6 +461,7 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 ## Migration Notes
 
 ### Old vs. New Class Names
+
 - `.rt-cta` → `.rt-btn`
 - `.section-title` → `.rt-section__header`
 - `.navbar` → `.rt-nav`
@@ -424,11 +470,13 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 - `.gap-14` → `.rt-gap-lg` (design token based)
 
 ### Removed Files
+
 - Old `styles.css` (replaced by 5 modular files)
 - Inline styles in HTML
 
 ### Backward Compatibility
-- Bootstrap classes still available (.d-flex, .row, .col-*, etc.)
+
+- Bootstrap classes still available (.d-flex, .row, .col-\*, etc.)
 - Vendor libraries unchanged
 - All theme toggle functionality preserved
 
@@ -453,6 +501,7 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 ## Future Enhancements
 
 ### Possible Improvements
+
 1. Add contact form with validation
 2. Add portfolio filtering/search
 3. Add blog section with CMS integration
@@ -465,6 +514,7 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 10. Create component Storybook
 
 ### Scalability
+
 - Current structure supports 100+ sections
 - CSS scales linearly (no specificity wars)
 - JavaScript modular for easy feature adds
@@ -474,22 +524,23 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
 ## Summary of Improvements
 
-| Aspect | Before | After | Benefit |
-|--------|--------|-------|---------|
-| **HTML** | Mixed structure | Semantic HTML5 | Better accessibility, SEO, maintenance |
-| **CSS** | 1 file, 1413 lines | 5 files, organized | Easier maintenance, no duplication |
-| **Colors** | Hardcoded #values | CSS variables | Consistent, themeable, scalable |
-| **Typography** | Inline styles | Design system | Professional, consistent appearance |
-| **JavaScript** | 241 lines, IIFE | 2 files, classes | Cleaner, testable, maintainable |
-| **Naming** | Random classes | BEM convention | Predictable, scalable |
-| **Accessibility** | Basic (some ARIA) | Complete (WCAG AA) | Inclusive, better UX |
-| **Responsive** | Bootstrap only | Custom + Bootstrap | More control, better UX |
-| **Performance** | Some unused code | Optimized | Faster, cleaner |
-| **Maintainability** | Hard to extend | Easy to scale | Future-proof |
+| Aspect              | Before             | After              | Benefit                                |
+| ------------------- | ------------------ | ------------------ | -------------------------------------- |
+| **HTML**            | Mixed structure    | Semantic HTML5     | Better accessibility, SEO, maintenance |
+| **CSS**             | 1 file, 1413 lines | 5 files, organized | Easier maintenance, no duplication     |
+| **Colors**          | Hardcoded #values  | CSS variables      | Consistent, themeable, scalable        |
+| **Typography**      | Inline styles      | Design system      | Professional, consistent appearance    |
+| **JavaScript**      | 241 lines, IIFE    | 2 files, classes   | Cleaner, testable, maintainable        |
+| **Naming**          | Random classes     | BEM convention     | Predictable, scalable                  |
+| **Accessibility**   | Basic (some ARIA)  | Complete (WCAG AA) | Inclusive, better UX                   |
+| **Responsive**      | Bootstrap only     | Custom + Bootstrap | More control, better UX                |
+| **Performance**     | Some unused code   | Optimized          | Faster, cleaner                        |
+| **Maintainability** | Hard to extend     | Easy to scale      | Future-proof                           |
 
 ---
 
 ## Contact for Questions
+
 Rigoutech Inc.
 Email: info@rigoutech.com
 Location: Québec, QC, Canada
