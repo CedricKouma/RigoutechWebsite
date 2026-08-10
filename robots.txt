@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.rigoutech.com/sitemap.xml
+Sitemap: https://rigoutech.com/sitemap.xml
