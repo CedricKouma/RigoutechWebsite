@@ -39,6 +39,47 @@ document.documentElement.classList.add("js");
 })();
 
 (function () {
+  const items = document.querySelectorAll(".project, .practice");
+
+  if (!items.length) {
+    return;
+  }
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function show(item) {
+    item.classList.add("is-shown");
+  }
+
+  if (reduce || !("IntersectionObserver" in window)) {
+    items.forEach(show);
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        show(entry.target);
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.15 },
+  );
+
+  items.forEach(function (item, index) {
+    item.style.transitionDelay = (index % 4) * 70 + "ms";
+    item.addEventListener("focusin", function () {
+      show(item);
+    });
+    observer.observe(item);
+  });
+})();
+
+(function () {
   const form = document.querySelector("[data-contact-form]");
 
   if (!form) {

@@ -146,13 +146,19 @@
     </header>
     <main id="contenu">
       <section class="hero wrap">
-        <p class="kicker">Rigoutech Inc. · Montréal</p>
-        <h1>Studio technologique.</h1>
-        <p class="lede">
-          Fondée en 2021 à Montréal par Cedric Kouma. Rigoutech construit,
-          conseille, forme et mène des recherches.
-        </p>
-        <div class="founder">
+        <div class="hero-copy">
+          <p class="kicker">Rigoutech Inc. · Montréal</p>
+          <h1>Studio technologique.</h1>
+          <p class="lede">
+            On bâtit, automatise et sécurise vos systèmes sur Azure et avec
+            l’IA. On forme vos équipes. On construit nos propres produits.
+          </p>
+          <div class="actions">
+            <a class="btn" href="/projets.html">Voir les projets</a>
+            <a class="btn btn-ghost" href="/contact.html">Écrire à Rigoutech</a>
+          </div>
+        </div>
+        <figure class="hero-portrait">
           <picture>
             <source srcset="/assets/img/cedric-kouma.webp" type="image/webp" />
             <img
@@ -162,168 +168,396 @@
               height="790"
             />
           </picture>
-          <p>
-            Cedric Kouma est ingénieur DevSecOps. Il détient les certifications
-            Microsoft AZ-204 et AZ-305. La certification AZ-400 est en
-            préparation.
-          </p>
-        </div>
-        <div class="actions">
-          <a class="btn" href="/projets.html">Voir les projets</a>
-          <a class="btn btn-ghost" href="/contact.html">Écrire à Rigoutech</a>
-        </div>
+          <figcaption>
+            Cedric Kouma, fondateur. Ingénieur DevSecOps. AZ-204, AZ-305. AZ-400
+            en préparation.
+          </figcaption>
+        </figure>
       </section>
-      <section class="section wrap" aria-labelledby="ce-qu-on-fait">
-        <div class="section-head">
+      <section class="section band" aria-labelledby="ce-qu-on-fait">
+        <div class="wrap">
           <h2 id="ce-qu-on-fait">Ce qu’on fait</h2>
-          <p>
-            Quatre pratiques, tenues en même temps. Le détail de chacune est
-            dans les pages liées, et les travaux nommés sont plus bas.
-          </p>
+          <ol class="practices">
+            <li>
+              <a class="practice" href="/services.html">
+                <strong>Conseil et ingénierie cloud</strong>
+                <span class="muted"
+                  >Pipelines CI/CD, Azure, automatisation, et un diagnostic
+                  Microsoft 365 en lecture seule.</span
+                >
+              </a>
+            </li>
+            <li>
+              <a class="practice" href="/formation.html">
+                <strong>Formation</strong>
+                <span class="muted"
+                  >Une journée sur l’IA générative et la cybersécurité au
+                  travail, pour vos équipes.</span
+                >
+              </a>
+            </li>
+            <li>
+              <a class="practice" href="/projets.html#agentforge">
+                <strong>Produits</strong>
+                <span class="muted"
+                  >AgentForge, pour la pré-validation des factures
+                  Factur-X.</span
+                >
+              </a>
+            </li>
+            <li>
+              <a class="practice" href="/projets.html#rigouhealth">
+                <strong>Recherche et innovation</strong>
+                <span class="muted"
+                  >RigouHealth, et un laboratoire d’agents qui simule des
+                  hypothèses de marché.</span
+                >
+              </a>
+            </li>
+          </ol>
         </div>
-        <ol class="practices">
-          <li>
-            <a class="practice" href="/services.html">
-              <strong>Conseil et ingénierie cloud</strong>
-              <span class="muted"
-                >Azure, DevOps, pipelines CI/CD, et un diagnostic Microsoft 365
-                en lecture seule. Depuis 2021.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a class="practice" href="/formation.html">
-              <strong>Formation</strong>
-              <span class="muted"
-                >Journée en entreprise sur l’IA générative et la cybersécurité.
-                Une formation sur place, terminée en 2026, est dans les
-                projets.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a class="practice" href="/projets.html#agentforge">
-              <strong>Produits</strong>
-              <span class="muted"
-                >AgentForge, un MVP de pré-validation Factur-X, lancé en
-                2026.</span
-              >
-            </a>
-          </li>
-          <li>
-            <a class="practice" href="/projets.html#rigouhealth">
-              <strong>Recherche et innovation</strong>
-              <span class="muted"
-                >RigouHealth, un prototype sur des données publiques, et un
-                laboratoire de simulation de marché. Ni service clinique, ni
-                service financier.</span
-              >
-            </a>
-          </li>
-        </ol>
       </section>
       <section class="section wrap" aria-labelledby="projets-accueil">
         <div class="section-head">
           <h2 id="projets-accueil">Projets</h2>
-          <p>Les travaux qu’on peut décrire maintenant.</p>
         </div>
-        <div class="project-list" data-heading="h3">
-          <article class="project" id="conseil-azure">
-            <p class="project-meta">
-              <span class="statut">En cours</span>
-              <span>Conseil</span>
-              <span>2021 — aujourd’hui</span>
-            </p>
-            <div class="project-body">
-              <h3>Conseil DevOps et cloud Azure</h3>
-              <p>
-                Depuis 2021, Rigoutech conseille sur le DevOps et le cloud
-                Azure. De 2021 à 2024, des pipelines CI/CD ont été mis en place
-                pour déployer vers Azure, pour un grand client. L’offre est
-                toujours active. Cedric Kouma détient les certifications
-                Microsoft AZ-204 et AZ-305. La certification AZ-400 est en
-                préparation.
+        <div class="project-list bento" data-heading="h3" data-order="vedette">
+          <!-- projets -->
+          <article class="project span-4" id="agentforge">
+            <figure class="visual visual-ecran">
+              <p class="visual-bar">
+                <span>agentforge.rigoutech.com/factur-x</span>
               </p>
-              <p><a href="/services.html#azure">Voir le conseil</a></p>
+              <picture>
+                <source
+                  srcset="/assets/img/projets/agentforge.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/assets/img/projets/agentforge.jpg"
+                  alt="Aperçu de la page Factur-X d’AgentForge."
+                  width="1200"
+                  height="726"
+                />
+              </picture>
+            </figure>
+            <div class="project-copy">
+              <p class="project-meta">
+                <span class="statut">En cours</span>
+                <span>Produit</span>
+                <span>Lancé en 2026 · MVP</span>
+              </p>
+              <div class="project-body">
+                <h3>AgentForge</h3>
+                <p>
+                  Produit lancé en 2026, au stade MVP. API, portail et serveurs
+                  MCP pour la pré-validation de factures électroniques Factur-X
+                  B2B. Des paquets npm sont publiés.
+                </p>
+                <p>
+                  <a href="https://agentforge.rigoutech.com"
+                    >agentforge.rigoutech.com</a
+                  >
+                </p>
+              </div>
             </div>
           </article>
-          <article class="project" id="formation-factures">
-            <p class="project-meta">
-              <span class="statut">Terminé</span>
-              <span>Formation</span>
-              <span>Janvier — mars 2026</span>
-            </p>
-            <div class="project-body">
-              <h3>Approbation électronique des factures</h3>
-              <p>
-                Formation sur place, terminée, des équipes de direction d’un
-                groupe de résidences pour aînés du Québec. Le sujet était un
-                nouveau processus d’approbation électronique des factures et de
-                signature numérique. La formation comprenait la théorie, des
-                exercices, un manuel et la configuration des identités
-                numériques.
+          <article class="project span-2" id="formation-factures">
+            <figure class="visual visual-schema">
+              <svg
+                role="img"
+                aria-labelledby="formation-factures-visuel"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 480 560"
+                fill="none"
+              >
+                <title id="formation-factures-visuel">
+                  Schéma d’une formation : théorie, exercices, manuel, identités
+                  numériques.
+                </title>
+
+                <rect width="480" height="560" fill="#1c1916" />
+                <path d="M72 96V464" stroke="#3a342c" stroke-width="2" />
+                <rect x="64" y="84" width="16" height="16" fill="#e8a07a" />
+                <rect x="64" y="196" width="16" height="16" fill="#e8a07a" />
+                <rect x="64" y="308" width="16" height="16" fill="#e8a07a" />
+                <rect x="64" y="420" width="16" height="16" fill="#e8a07a" />
+                <text x="108" y="100" fill="#f3efe6" font-size="36">
+                  Th�orie
+                </text>
+                <text x="108" y="212" fill="#f3efe6" font-size="36">
+                  Exercices
+                </text>
+                <text x="108" y="324" fill="#f3efe6" font-size="36">
+                  Manuel
+                </text>
+                <text x="108" y="420" fill="#f3efe6" font-size="36">
+                  Identit�s
+                </text>
+                <text x="108" y="462" fill="#c8c0b4" font-size="28">
+                  num�riques
+                </text>
+              </svg>
+            </figure>
+            <div class="project-copy">
+              <p class="project-meta">
+                <span class="statut">Terminé</span>
+                <span>Formation</span>
+                <span>Janvier — mars 2026</span>
               </p>
+              <div class="project-body">
+                <h3>Approbation électronique des factures</h3>
+                <p>
+                  De janvier à mars 2026, formation sur place des équipes de
+                  direction d’un groupe de résidences pour aînés du Québec.
+                  Nouveau processus d’approbation électronique des factures et
+                  de signature numérique : théorie, exercices, manuel et
+                  configuration des identités numériques.
+                </p>
+              </div>
             </div>
           </article>
-          <article class="project" id="agentforge">
-            <p class="project-meta">
-              <span class="statut">En cours</span>
-              <span>Produit</span>
-              <span>Lancé en 2026 · MVP</span>
-            </p>
-            <div class="project-body">
-              <h3>AgentForge</h3>
-              <p>
-                AgentForge est un produit de Rigoutech, lancé en 2026 au stade
-                MVP. Il comprend une API, un portail et des serveurs MCP pour la
-                pré-validation de factures électroniques Factur-X B2B. Des
-                paquets npm sont publiés.
-              </p>
-              <p>
-                <a href="https://agentforge.rigoutech.com"
-                  >agentforge.rigoutech.com</a
+          <article class="project span-6" id="conseil-azure">
+            <figure class="visual visual-schema">
+              <svg
+                role="img"
+                aria-labelledby="conseil-azure-visuel"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 720 460"
+                fill="none"
+              >
+                <title id="conseil-azure-visuel">
+                  Schéma d’un pipeline : code, intégration, déploiement vers
+                  Azure.
+                </title>
+
+                <rect width="720" height="460" fill="#1c1916" />
+                <path
+                  d="M196 214H268M452 214H524"
+                  stroke="#e8a07a"
+                  stroke-width="2"
+                />
+                <path
+                  d="M258 206l12 8-12 8M514 206l12 8-12 8"
+                  stroke="#e8a07a"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                <rect
+                  x="40"
+                  y="150"
+                  width="156"
+                  height="128"
+                  stroke="#f3efe6"
+                  stroke-width="1.5"
+                />
+                <rect
+                  x="282"
+                  y="150"
+                  width="170"
+                  height="128"
+                  stroke="#e8a07a"
+                  stroke-width="1.5"
+                />
+                <rect
+                  x="524"
+                  y="150"
+                  width="156"
+                  height="128"
+                  stroke="#f3efe6"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="118"
+                  y="224"
+                  fill="#f3efe6"
+                  font-size="32"
+                  text-anchor="middle"
                 >
-              </p>
-            </div>
-          </article>
-          <article class="project" id="rigouhealth">
-            <p class="project-meta">
-              <span class="statut">Prototype</span>
-              <span>Recherche</span>
-              <span>Prototype de recherche</span>
-            </p>
-            <div class="project-body">
-              <h3>RigouHealth</h3>
-              <p>
-                RigouHealth est un prototype de recherche développé par
-                Rigoutech. Il explore la prévision à court terme de
-                l’achalandage des urgences à partir de données environnementales
-                publiques (qualité de l’air, météo). Il n’est ni validé
-                cliniquement ni utilisé par un établissement de santé.
-              </p>
-              <p>
-                <a href="https://rigouhealth.rigoutech.com"
-                  >rigouhealth.rigoutech.com</a
+                  Code
+                </text>
+                <text
+                  x="367"
+                  y="214"
+                  fill="#f3efe6"
+                  font-size="32"
+                  text-anchor="middle"
                 >
+                  CI
+                </text>
+                <text
+                  x="367"
+                  y="248"
+                  fill="#c8c0b4"
+                  font-size="18"
+                  text-anchor="middle"
+                >
+                  pipeline
+                </text>
+                <text
+                  x="602"
+                  y="224"
+                  fill="#f3efe6"
+                  font-size="32"
+                  text-anchor="middle"
+                >
+                  Azure
+                </text>
+                <text x="40" y="332" fill="#c8c0b4" font-size="20">d�p�t</text>
+                <text x="282" y="332" fill="#e8a07a" font-size="20">
+                  int�gration
+                </text>
+                <text x="524" y="332" fill="#c8c0b4" font-size="20">
+                  d�ploiement
+                </text>
+              </svg>
+            </figure>
+            <div class="project-copy">
+              <p class="project-meta">
+                <span class="statut">En cours</span>
+                <span>Conseil</span>
+                <span>2021 — aujourd’hui</span>
               </p>
+              <div class="project-body">
+                <h3>Conseil DevOps et cloud Azure</h3>
+                <p>
+                  Depuis 2021, des pipelines CI/CD déploient vers Azure. De 2021
+                  à 2024, pour un grand client. Le conseil DevOps et
+                  l’automatisation continuent. Certifications Microsoft AZ-204
+                  et AZ-305. AZ-400 en préparation.
+                </p>
+                <p><a href="/services.html#azure">Voir le conseil</a></p>
+              </div>
             </div>
           </article>
-          <article class="project" id="trading">
-            <p class="project-meta">
-              <span class="statut">En cours</span>
-              <span>Recherche</span>
-              <span>Recherche interne · 2026</span>
-            </p>
-            <div class="project-body">
-              <h3>Laboratoire de recherche en trading algorithmique</h3>
-              <p>
-                Recherche interne menée en 2026. Des agents d’IA sur Azure
-                conçoivent et testent des hypothèses de marché, en simulation
-                seulement (paper trading). Aucune gestion de fonds, aucun
-                conseil financier, aucun rendement publié.
+          <article class="project span-4" id="rigouhealth">
+            <figure class="visual visual-ecran">
+              <p class="visual-bar"><span>rigouhealth.rigoutech.com</span></p>
+              <picture>
+                <source
+                  srcset="/assets/img/projets/rigouhealth.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/assets/img/projets/rigouhealth.jpg"
+                  alt="Aperçu du site RigouHealth : prévision de l’achalandage des urgences."
+                  width="1208"
+                  height="330"
+                />
+              </picture>
+            </figure>
+            <div class="project-copy">
+              <p class="project-meta">
+                <span class="statut">Prototype</span>
+                <span>Recherche</span>
+                <span>Données publiques</span>
               </p>
+              <div class="project-body">
+                <h3>RigouHealth</h3>
+                <p>
+                  RigouHealth est un prototype de recherche développé par
+                  Rigoutech. Il explore la prévision à court terme de
+                  l’achalandage des urgences à partir de données
+                  environnementales publiques (qualité de l’air, météo). Il
+                  n’est ni validé cliniquement ni utilisé par un établissement
+                  de santé.
+                </p>
+                <p>
+                  <a href="https://rigouhealth.rigoutech.com"
+                    >rigouhealth.rigoutech.com</a
+                  >
+                </p>
+              </div>
             </div>
           </article>
+          <article class="project span-2" id="trading">
+            <figure class="visual visual-schema">
+              <svg
+                role="img"
+                aria-labelledby="trading-visuel"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 520 560"
+                fill="none"
+              >
+                <title id="trading-visuel">
+                  Schéma d’agents en boucle : signal, données, test, simulation.
+                </title>
+
+                <rect width="520" height="560" fill="#1c1916" />
+                <path
+                  d="M260 148L356 246L260 404L164 246Z"
+                  stroke="#3a342c"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="260"
+                  cy="124"
+                  r="26"
+                  stroke="#e8a07a"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="372"
+                  cy="262"
+                  r="26"
+                  stroke="#f3efe6"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="148"
+                  cy="262"
+                  r="26"
+                  stroke="#f3efe6"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="260"
+                  cy="404"
+                  r="26"
+                  stroke="#e8a07a"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="260"
+                  y="72"
+                  fill="#f3efe6"
+                  font-size="28"
+                  text-anchor="middle"
+                >
+                  Signal
+                </text>
+                <text x="410" y="272" fill="#f3efe6" font-size="28">Test</text>
+                <text x="24" y="200" fill="#f3efe6" font-size="28">
+                  Donn�es
+                </text>
+                <text
+                  x="260"
+                  y="488"
+                  fill="#e8a07a"
+                  font-size="28"
+                  text-anchor="middle"
+                >
+                  Simulation
+                </text>
+              </svg>
+            </figure>
+            <div class="project-copy">
+              <p class="project-meta">
+                <span class="statut">En cours</span>
+                <span>Recherche</span>
+                <span>Recherche interne · 2026</span>
+              </p>
+              <div class="project-body">
+                <h3>Laboratoire de recherche en trading algorithmique</h3>
+                <p>
+                  Des agents d’IA sur Azure conçoivent et testent des hypothèses
+                  de marché, en simulation seulement. Aucune gestion de fonds,
+                  aucun conseil financier, aucun rendement publié.
+                </p>
+              </div>
+            </div>
+          </article>
+          <!-- /projets -->
         </div>
         <p class="actions">
           <a class="btn btn-ghost" href="/projets.html">Page des projets</a>

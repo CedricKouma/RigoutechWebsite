@@ -6,9 +6,17 @@
       "categorie": "Conseil",
       "titre": "Conseil DevOps et cloud Azure",
       "periode": "2021 — aujourd’hui",
-      "texte": "Depuis 2021, Rigoutech conseille sur le DevOps et le cloud Azure. De 2021 à 2024, des pipelines CI/CD ont été mis en place pour déployer vers Azure, pour un grand client. L’offre est toujours active. Cedric Kouma détient les certifications Microsoft AZ-204 et AZ-305. La certification AZ-400 est en préparation.",
+      "texte": "Depuis 2021, des pipelines CI/CD déploient vers Azure. De 2021 à 2024, pour un grand client. Le conseil DevOps et l’automatisation continuent. Certifications Microsoft AZ-204 et AZ-305. AZ-400 en préparation.",
       "href": "/services.html#azure",
-      "lien": "Voir le conseil"
+      "lien": "Voir le conseil",
+      "visuel": "/assets/img/projets/conseil.svg",
+      "visuelAlt": "Schéma d’un pipeline : code, intégration, déploiement vers Azure.",
+      "cadre": "schema",
+      "barre": "",
+      "largeur": 640,
+      "hauteur": 400,
+      "span": 6,
+      "vedette": 3
     },
     {
       "id": "formation-factures",
@@ -16,9 +24,17 @@
       "categorie": "Formation",
       "titre": "Approbation électronique des factures",
       "periode": "Janvier — mars 2026",
-      "texte": "Formation sur place, terminée, des équipes de direction d’un groupe de résidences pour aînés du Québec. Le sujet était un nouveau processus d’approbation électronique des factures et de signature numérique. La formation comprenait la théorie, des exercices, un manuel et la configuration des identités numériques.",
+      "texte": "De janvier à mars 2026, formation sur place des équipes de direction d’un groupe de résidences pour aînés du Québec. Nouveau processus d’approbation électronique des factures et de signature numérique : théorie, exercices, manuel et configuration des identités numériques.",
       "href": "",
-      "lien": ""
+      "lien": "",
+      "visuel": "/assets/img/projets/formation.svg",
+      "visuelAlt": "Schéma d’une formation : théorie, exercices, manuel, identités numériques.",
+      "cadre": "schema",
+      "barre": "",
+      "largeur": 640,
+      "hauteur": 400,
+      "span": 2,
+      "vedette": 2
     },
     {
       "id": "agentforge",
@@ -26,19 +42,37 @@
       "categorie": "Produit",
       "titre": "AgentForge",
       "periode": "Lancé en 2026 · MVP",
-      "texte": "AgentForge est un produit de Rigoutech, lancé en 2026 au stade MVP. Il comprend une API, un portail et des serveurs MCP pour la pré-validation de factures électroniques Factur-X B2B. Des paquets npm sont publiés.",
+      "texte": "Produit lancé en 2026, au stade MVP. API, portail et serveurs MCP pour la pré-validation de factures électroniques Factur-X B2B. Des paquets npm sont publiés.",
       "href": "https://agentforge.rigoutech.com",
-      "lien": "agentforge.rigoutech.com"
+      "lien": "agentforge.rigoutech.com",
+      "visuel": "/assets/img/projets/agentforge.webp",
+      "repli": "/assets/img/projets/agentforge.jpg",
+      "visuelAlt": "Aperçu de la page Factur-X d’AgentForge.",
+      "cadre": "ecran",
+      "barre": "agentforge.rigoutech.com/factur-x",
+      "largeur": 1200,
+      "hauteur": 726,
+      "span": 4,
+      "vedette": 1
     },
     {
       "id": "rigouhealth",
       "statut": "Prototype",
       "categorie": "Recherche",
       "titre": "RigouHealth",
-      "periode": "Prototype de recherche",
+      "periode": "Données publiques",
       "texte": "RigouHealth est un prototype de recherche développé par Rigoutech. Il explore la prévision à court terme de l’achalandage des urgences à partir de données environnementales publiques (qualité de l’air, météo). Il n’est ni validé cliniquement ni utilisé par un établissement de santé.",
       "href": "https://rigouhealth.rigoutech.com",
-      "lien": "rigouhealth.rigoutech.com"
+      "lien": "rigouhealth.rigoutech.com",
+      "visuel": "/assets/img/projets/rigouhealth.webp",
+      "repli": "/assets/img/projets/rigouhealth.jpg",
+      "visuelAlt": "Aperçu du site RigouHealth : prévision de l’achalandage des urgences.",
+      "cadre": "ecran",
+      "barre": "rigouhealth.rigoutech.com",
+      "largeur": 1208,
+      "hauteur": 330,
+      "span": 4,
+      "vedette": 4
     },
     {
       "id": "trading",
@@ -46,9 +80,17 @@
       "categorie": "Recherche",
       "titre": "Laboratoire de recherche en trading algorithmique",
       "periode": "Recherche interne · 2026",
-      "texte": "Recherche interne menée en 2026. Des agents d’IA sur Azure conçoivent et testent des hypothèses de marché, en simulation seulement (paper trading). Aucune gestion de fonds, aucun conseil financier, aucun rendement publié.",
+      "texte": "Des agents d’IA sur Azure conçoivent et testent des hypothèses de marché, en simulation seulement. Aucune gestion de fonds, aucun conseil financier, aucun rendement publié.",
       "href": "",
-      "lien": ""
+      "lien": "",
+      "visuel": "/assets/img/projets/trading.svg",
+      "visuelAlt": "Schéma d’agents en boucle : signal, données, test, simulation.",
+      "cadre": "schema",
+      "barre": "",
+      "largeur": 640,
+      "hauteur": 400,
+      "span": 2,
+      "vedette": 5
     }
   ]
 }

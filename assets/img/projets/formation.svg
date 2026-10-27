@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" fill="none" role="img">
+  <title>Journée de formation : théorie, exercices, manuel, identités</title>
+  <rect width="480" height="560" fill="#1c1916"/>
+  <path d="M72 96V464" stroke="#3a342c" stroke-width="2"/>
+  <rect x="64" y="84" width="16" height="16" fill="#e8a07a"/>
+  <rect x="64" y="196" width="16" height="16" fill="#e8a07a"/>
+  <rect x="64" y="308" width="16" height="16" fill="#e8a07a"/>
+  <rect x="64" y="420" width="16" height="16" fill="#e8a07a"/>
+  <text x="108" y="100" fill="#f3efe6" font-size="36">Théorie</text>
+  <text x="108" y="212" fill="#f3efe6" font-size="36">Exercices</text>
+  <text x="108" y="324" fill="#f3efe6" font-size="36">Manuel</text>
+  <text x="108" y="420" fill="#f3efe6" font-size="36">Identités</text>
+  <text x="108" y="462" fill="#c8c0b4" font-size="28">numériques</text>
+</svg>

@@ -23,9 +23,32 @@ for (const projet of projets) {
 
   ids.add(projet.id);
 
-  for (const key of ["statut", "categorie", "titre", "periode", "texte"]) {
+  for (const key of [
+    "statut",
+    "categorie",
+    "titre",
+    "periode",
+    "texte",
+    "visuel",
+    "visuelAlt",
+    "cadre",
+  ]) {
     if (!projet[key] || !String(projet[key]).trim()) {
       fail(`${projet.id} : champ vide « ${key} »`);
+    }
+  }
+
+  const visuelPath = path.join(root, projet.visuel.replace(/^\//, ""));
+
+  if (projet.visuel && !fs.existsSync(visuelPath)) {
+    fail(`${projet.id} : visuel introuvable ${projet.visuel}`);
+  }
+
+  if (projet.repli) {
+    const repliPath = path.join(root, projet.repli.replace(/^\//, ""));
+
+    if (!fs.existsSync(repliPath)) {
+      fail(`${projet.id} : repli introuvable ${projet.repli}`);
     }
   }
 
@@ -46,7 +69,7 @@ for (const name of pages) {
   const file = path.join(root, name);
   const html = fs.readFileSync(file, "utf8");
   const flat = norm(html);
-  const count = (html.match(/class="project"/g) || []).length;
+  const count = (html.match(/class="project /g) || []).length;
 
   if (count !== projets.length) {
     fail(

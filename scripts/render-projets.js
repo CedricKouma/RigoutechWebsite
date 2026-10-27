@@ -18,21 +18,64 @@ function esc(value) {
     .replace(/"/g, "&quot;");
 }
 
+function schema(projet) {
+  const file = path.join(root, projet.visuel.replace(/^\//, ""));
+  const raw = fs.readFileSync(file, "utf8").trim();
+  const openEnd = raw.indexOf(">");
+  const titleId = `${projet.id}-visuel`;
+  const open = raw
+    .slice(0, openEnd)
+    .replace(/\srole="img"/, "")
+    .replace("<svg", `<svg role="img" aria-labelledby="${titleId}"`);
+  const body = raw.slice(openEnd + 1).replace(/<title>[\s\S]*?<\/title>/, "");
+
+  return `${open}>
+            <title id="${titleId}">${esc(projet.visuelAlt)}</title>
+            ${body}`;
+}
+
+function visual(projet) {
+  if (projet.cadre === "schema") {
+    return `<figure class="visual visual-schema">
+          ${schema(projet)}
+        </figure>`;
+  }
+
+  const size = `width="${esc(projet.largeur)}" height="${esc(projet.hauteur)}"`;
+  const img = projet.repli
+    ? `<picture>
+            <source srcset="${esc(projet.visuel)}" type="image/webp" />
+            <img src="${esc(projet.repli)}" alt="${esc(projet.visuelAlt)}" ${size} />
+          </picture>`
+    : `<img src="${esc(projet.visuel)}" alt="${esc(projet.visuelAlt)}" ${size} />`;
+  const bar = projet.barre
+    ? `<p class="visual-bar"><span>${esc(projet.barre)}</span></p>`
+    : "";
+
+  return `<figure class="visual visual-${esc(projet.cadre)}">
+          ${bar}
+          ${img}
+        </figure>`;
+}
+
 function renderProject(projet, heading) {
   const link = projet.href
     ? `<p><a href="${esc(projet.href)}">${esc(projet.lien)}</a></p>`
     : "";
 
-  return `        <article class="project" id="${esc(projet.id)}">
-          <p class="project-meta">
-            <span class="statut">${esc(projet.statut)}</span>
-            <span>${esc(projet.categorie)}</span>
-            <span>${esc(projet.periode)}</span>
-          </p>
-          <div class="project-body">
-            <${heading}>${esc(projet.titre)}</${heading}>
-            <p>${esc(projet.texte)}</p>
-            ${link}
+  return `        <article class="project span-${esc(projet.span)}" id="${esc(projet.id)}">
+          ${visual(projet)}
+          <div class="project-copy">
+            <p class="project-meta">
+              <span class="statut">${esc(projet.statut)}</span>
+              <span>${esc(projet.categorie)}</span>
+              <span>${esc(projet.periode)}</span>
+            </p>
+            <div class="project-body">
+              <${heading}>${esc(projet.titre)}</${heading}>
+              <p>${esc(projet.texte)}</p>
+              ${link}
+            </div>
           </div>
         </article>`;
 }
@@ -43,9 +86,14 @@ function renderList(projets, heading) {
 
 function apply(html, projets) {
   return html.replace(
-    /<div class="project-list" data-heading="(h[23])">[\s\S]*?<\/div>/g,
-    function (_match, heading) {
-      return `<div class="project-list" data-heading="${heading}">\n${renderList(projets, heading)}\n        </div>`;
+    /(<div\s+class="([^"]*project-list[^"]*)"\s+data-heading="(h[23])"\s+data-order="(vedette|liste)"\s*>)\s*<!-- projets -->[\s\S]*?<!-- \/projets -->/g,
+    function (_match, open, _className, heading, order) {
+      const list =
+        order === "vedette"
+          ? projets.slice().sort((a, b) => a.vedette - b.vedette)
+          : projets;
+
+      return `${open}\n        <!-- projets -->\n${renderList(list, heading)}\n        <!-- /projets -->`;
     },
   );
 }
@@ -68,8 +116,8 @@ function main() {
     const before = fs.readFileSync(file, "utf8");
     const after = apply(before, projets);
 
-    if (!after.includes('class="project"')) {
-      throw new Error(`Aucun conteneur .project-list dans ${file}`);
+    if (!after.includes('class="project ')) {
+      throw new Error(`Aucun projet rendu dans ${file}`);
     }
 
     if (after !== before) {

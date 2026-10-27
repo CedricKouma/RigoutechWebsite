@@ -213,7 +213,40 @@ a:hover {
 }
 
 .hero {
-  padding: 4.5rem 0 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(17rem, 26rem);
+  gap: 2rem 3.5rem;
+  align-items: end;
+  padding: 3.4rem 0 1.2rem;
+}
+
+.hero-portrait {
+  position: relative;
+  margin: 0;
+}
+
+.hero-portrait::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  width: 38%;
+  height: 22%;
+  border-top: 3px solid var(--accent);
+  border-left: 3px solid var(--accent);
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.hero-portrait figcaption {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.98rem;
 }
 
 .kicker {
@@ -328,10 +361,12 @@ a:hover {
 }
 
 .practices {
-  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.8fr);
+  gap: 0 2.75rem;
+  margin: 1.2rem 0 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid var(--line);
 }
 
 .practice {
@@ -352,22 +387,156 @@ a:hover {
   letter-spacing: -0.02em;
 }
 
+.practice:hover strong {
+  color: var(--accent);
+}
+
 .project-list {
   border-top: 1px solid var(--line);
 }
 
 .project {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.project-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1.1rem 1.15rem 1.2rem;
+}
+
+.visual {
+  margin: 0;
+  overflow: hidden;
+  background: #1c1916;
+}
+
+.visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.visual-bar {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.45rem 0.7rem;
+  color: #c8c0b4;
+  font-size: 0.82rem;
+}
+
+.visual-bar span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.visual-ecran img {
+  border-top: 1px solid #3a342c;
+}
+
+.visual-schema svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.visual-schema text {
+  font-family: var(--serif);
+}
+
+.project:hover {
+  border-color: var(--accent);
+}
+
+.bento {
   display: grid;
-  grid-template-columns: minmax(9rem, 14rem) minmax(0, 1fr);
-  gap: 1rem 2rem;
-  padding: 1.8rem 0;
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+  border-top: 0;
+}
+
+.bento .span-2 {
+  grid-column: span 2;
+}
+
+.bento .span-4 {
+  grid-column: span 4;
+}
+
+.bento .span-6 {
+  grid-column: span 6;
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.85fr) minmax(0, 1.15fr);
+}
+
+.bento .span-6 .project-copy {
+  justify-content: center;
+}
+
+.portfolio .project {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.9fr) minmax(0, 1.1fr);
+  margin-bottom: 1.25rem;
+}
+
+.band {
+  --band-line: #3a342c;
+  --band-ink: #f3efe6;
+  --band-muted: #c8c0b4;
+
+  background: #141210;
+  color: var(--band-ink);
+}
+
+.band .muted {
+  color: var(--band-muted);
+}
+
+.steps li {
+  padding: 1rem 0 0.2rem;
+  border-top: 1px solid var(--accent);
+}
+
+.band .practices > li:first-child {
+  grid-row: span 3;
+  align-self: end;
+  padding-right: 2.25rem;
+  border-right: 1px solid var(--band-line);
+}
+
+.band .practice {
+  border-bottom-color: var(--band-line);
+}
+
+.band .practices > li:first-child .practice {
+  padding-top: 0;
+  border-bottom: 0;
+}
+
+.band .practice strong {
+  color: var(--band-ink);
+}
+
+.band .practice:hover strong {
+  color: var(--accent);
+}
+
+.band .practices > li:first-child .practice strong {
+  max-width: 14ch;
+  font-size: clamp(2.15rem, 4vw, 3.4rem);
 }
 
 .project-meta {
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  flex-flow: row wrap;
+  gap: 0.35rem 0.8rem;
   margin: 0;
   color: var(--muted);
   font-size: 0.98rem;
@@ -440,11 +609,6 @@ a:hover {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.steps li {
-  padding: 1rem 0 0.2rem;
-  border-top: 1px solid var(--accent);
 }
 
 .reference {
@@ -635,10 +799,6 @@ address {
   padding-left: 0;
 }
 
-.practice:hover strong {
-  color: var(--accent);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -660,6 +820,14 @@ address {
   .brand img {
     filter: invert(1);
     mix-blend-mode: lighten;
+  }
+
+  .band {
+    --band-line: #ddd4c6;
+    --band-ink: #1c1916;
+    --band-muted: #4a433c;
+
+    background: #f3efe6;
   }
 }
 
@@ -695,7 +863,37 @@ address {
   }
 
   .hero {
+    grid-template-columns: 1fr;
     padding-top: 2.6rem;
+  }
+
+  .hero-portrait {
+    max-width: 20rem;
+  }
+
+  .practices,
+  .band .practices > li:first-child {
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .band .practices > li:first-child .practice {
+    padding: 1.15rem 0;
+    border-bottom: 1px solid var(--band-line);
+  }
+
+  .bento,
+  .bento .span-6,
+  .portfolio .project {
+    grid-template-columns: 1fr;
+  }
+
+  .bento .span-2,
+  .bento .span-4,
+  .bento .span-6 {
+    grid-column: auto;
   }
 
   .split,
@@ -703,8 +901,7 @@ address {
   .steps,
   .facts,
   .footer-grid,
-  .about-lead,
-  .project {
+  .about-lead {
     grid-template-columns: 1fr;
   }
 
@@ -719,12 +916,36 @@ address {
     animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
+  .visual img {
+    transition: transform 0.45s ease;
+  }
+
+  .project:hover .visual img {
+    transform: scale(1.025);
+  }
+
   .practice,
   .btn {
     transition:
       color 0.16s ease,
       background-color 0.16s ease,
       border-color 0.16s ease;
+  }
+
+  .js .project,
+  .js .practice {
+    opacity: 0;
+    transform: translateY(0.55rem);
+    transition:
+      opacity 0.55s ease,
+      transform 0.55s ease,
+      border-color 0.2s ease;
+  }
+
+  .js .project.is-shown,
+  .js .practice.is-shown {
+    opacity: 1;
+    transform: none;
   }
 }
 
