@@ -88,6 +88,7 @@ h3 {
   font-optical-sizing: auto;
   line-height: 1.05;
   text-wrap: balance;
+  scroll-margin-top: 6rem;
 }
 
 h1 {
@@ -362,16 +363,22 @@ a:hover {
 
 .practices {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.8fr);
-  gap: 0 2.75rem;
-  margin: 1.2rem 0 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 3.5rem;
+  margin: 1.5rem 0 0;
   padding: 0;
   list-style: none;
 }
 
+.practices > li {
+  min-width: 0;
+}
+
 .practice {
-  display: block;
-  padding: 1.45rem 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.2rem 0 1.35rem;
   border-bottom: 1px solid var(--line);
   color: inherit;
   text-decoration: none;
@@ -379,10 +386,10 @@ a:hover {
 
 .practice strong {
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: clamp(1.45rem, 2vw, 1.9rem);
+  font-size: clamp(1.65rem, 2vw, 2.25rem);
   font-weight: 560;
   letter-spacing: -0.02em;
 }
@@ -499,25 +506,12 @@ a:hover {
   color: var(--band-muted);
 }
 
-.steps li {
-  padding: 1rem 0 0.2rem;
-  border-top: 1px solid var(--accent);
-}
-
-.band .practices > li:first-child {
-  grid-row: span 3;
-  align-self: end;
-  padding-right: 2.25rem;
-  border-right: 1px solid var(--band-line);
+.band .practices {
+  border-top: 1px solid var(--band-line);
 }
 
 .band .practice {
   border-bottom-color: var(--band-line);
-}
-
-.band .practices > li:first-child .practice {
-  padding-top: 0;
-  border-bottom: 0;
 }
 
 .band .practice strong {
@@ -526,11 +520,6 @@ a:hover {
 
 .band .practice:hover strong {
   color: var(--accent);
-}
-
-.band .practices > li:first-child .practice strong {
-  max-width: 14ch;
-  font-size: clamp(2.15rem, 4vw, 3.4rem);
 }
 
 .project-meta {
@@ -609,6 +598,11 @@ a:hover {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.steps li {
+  padding: 1rem 0 0.2rem;
+  border-top: 1px solid var(--accent);
 }
 
 .reference {
@@ -871,17 +865,9 @@ address {
     max-width: 20rem;
   }
 
-  .practices,
-  .band .practices > li:first-child {
+  .practices {
     grid-template-columns: 1fr;
-    grid-row: auto;
-    padding-right: 0;
-    border-right: 0;
-  }
-
-  .band .practices > li:first-child .practice {
-    padding: 1.15rem 0;
-    border-bottom: 1px solid var(--band-line);
+    gap: 0;
   }
 
   .bento,

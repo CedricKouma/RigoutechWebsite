@@ -18,9 +18,26 @@ function esc(value) {
     .replace(/"/g, "&quot;");
 }
 
+function readUtf8(file) {
+  const bytes = fs.readFileSync(file);
+  let text;
+
+  try {
+    text = new TextDecoder("utf-8", { fatal: true }).decode(bytes);
+  } catch (error) {
+    throw new Error(`${file} n'est pas encodé en UTF-8.`, { cause: error });
+  }
+
+  if (text.includes("\uFFFD")) {
+    throw new Error(`${file} contient un caractère de remplacement.`);
+  }
+
+  return text.trim();
+}
+
 function schema(projet) {
   const file = path.join(root, projet.visuel.replace(/^\//, ""));
-  const raw = fs.readFileSync(file, "utf8").trim();
+  const raw = readUtf8(file);
   const openEnd = raw.indexOf(">");
   const titleId = `${projet.id}-visuel`;
   const open = raw

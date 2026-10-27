@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" fill="none" role="img">
-  <title>Pipeline : code, intégration, déploiement Azure</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" fill="none">
+  <title>Pipeline : code, intÃ©gration, dÃ©ploiement Azure</title>
   <rect width="720" height="460" fill="#1c1916"/>
   <path d="M196 214H268M452 214H524" stroke="#e8a07a" stroke-width="2"/>
   <path d="M258 206l12 8-12 8M514 206l12 8-12 8" stroke="#e8a07a" stroke-width="2" stroke-linejoin="round"/>
@@ -10,7 +10,7 @@
   <text x="367" y="214" fill="#f3efe6" font-size="32" text-anchor="middle">CI</text>
   <text x="367" y="248" fill="#c8c0b4" font-size="18" text-anchor="middle">pipeline</text>
   <text x="602" y="224" fill="#f3efe6" font-size="32" text-anchor="middle">Azure</text>
-  <text x="40" y="332" fill="#c8c0b4" font-size="20">dépôt</text>
-  <text x="282" y="332" fill="#e8a07a" font-size="20">intégration</text>
-  <text x="524" y="332" fill="#c8c0b4" font-size="20">déploiement</text>
+  <text x="40" y="332" fill="#c8c0b4" font-size="20">dÃ©pÃ´t</text>
+  <text x="282" y="332" fill="#e8a07a" font-size="20">intÃ©gration</text>
+  <text x="524" y="332" fill="#c8c0b4" font-size="20">dÃ©ploiement</text>
 </svg>

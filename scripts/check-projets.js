@@ -120,7 +120,13 @@ const banned = [
 ];
 
 for (const file of htmlFiles) {
-  const text = fs.readFileSync(file, "utf8").toLowerCase();
+  const source = fs.readFileSync(file, "utf8");
+
+  if (source.includes("\uFFFD")) {
+    fail(`${file} : caractère de remplacement (accent illisible).`);
+  }
+
+  const text = source.toLowerCase();
 
   for (const needle of banned) {
     if (text.includes(needle)) {
