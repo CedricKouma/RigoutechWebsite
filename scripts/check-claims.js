@@ -65,6 +65,9 @@ const needles = [
   "déplacée",
   "deplacee",
   "plus en ligne",
+  "grand client",
+  "rigouhealth.rigoutech.com",
+  "dépense admissible si inscrite",
 ];
 
 let failed = false;

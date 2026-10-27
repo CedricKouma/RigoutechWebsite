@@ -29,8 +29,6 @@ for (const projet of projets) {
     "titre",
     "periode",
     "texte",
-    "visuel",
-    "visuelAlt",
     "cadre",
   ]) {
     if (!projet[key] || !String(projet[key]).trim()) {
@@ -38,7 +36,13 @@ for (const projet of projets) {
     }
   }
 
-  const visuelPath = path.join(root, projet.visuel.replace(/^\//, ""));
+  if (projet.cadre === "schema" && !projet.visuel) {
+    fail(`${projet.id} : schéma sans visuel`);
+  }
+
+  const visuelPath = projet.visuel
+    ? path.join(root, projet.visuel.replace(/^\//, ""))
+    : "";
 
   if (projet.visuel && !fs.existsSync(visuelPath)) {
     fail(`${projet.id} : visuel introuvable ${projet.visuel}`);
@@ -69,12 +73,11 @@ for (const name of pages) {
   const file = path.join(root, name);
   const html = fs.readFileSync(file, "utf8");
   const flat = norm(html);
-  const count = (html.match(/class="project /g) || []).length;
+  const count = (html.match(/class="project"/g) || []).length;
+  const expected = name === "projets.html" ? projets.length : 0;
 
-  if (count !== projets.length) {
-    fail(
-      `${name} : ${count} fiches, ${projets.length} dans le fichier de données.`,
-    );
+  if (count !== expected) {
+    fail(`${name} : ${count} fiches, ${expected} attendues.`);
   }
 
   for (const projet of projets) {
@@ -84,8 +87,17 @@ for (const name of pages) {
       }
     }
 
-    if (projet.href && !html.includes(`href="${projet.href}"`)) {
-      fail(`${name} : lien absent pour ${projet.id}`);
+    const liens =
+      Array.isArray(projet.liens) && projet.liens.length
+        ? projet.liens
+        : projet.href
+          ? [{ href: projet.href }]
+          : [];
+
+    for (const lien of liens) {
+      if (!html.includes(`href="${lien.href}"`)) {
+        fail(`${name} : lien absent pour ${projet.id} (${lien.href})`);
+      }
     }
   }
 }
@@ -117,6 +129,8 @@ const banned = [
   "ai act",
   "petite équipe",
   "notre équipe",
+  "rigouhealth.rigoutech.com",
+  "grand client",
 ];
 
 for (const file of htmlFiles) {

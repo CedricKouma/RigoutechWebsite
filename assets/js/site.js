@@ -39,43 +39,32 @@ document.documentElement.classList.add("js");
 })();
 
 (function () {
-  const items = document.querySelectorAll(".project, .practice");
+  const bar = document.querySelector("[data-filters]");
 
-  if (!items.length) {
+  if (!bar) {
     return;
   }
 
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const cards = document.querySelectorAll(".project[data-filtre]");
 
-  function show(item) {
-    item.classList.add("is-shown");
-  }
+  bar.addEventListener("click", function (event) {
+    const button = event.target.closest("button[data-filtre]");
 
-  if (reduce || !("IntersectionObserver" in window)) {
-    items.forEach(show);
-    return;
-  }
+    if (!button) {
+      return;
+    }
 
-  const observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) {
-          return;
-        }
+    const filtre = button.getAttribute("data-filtre");
 
-        show(entry.target);
-        observer.unobserve(entry.target);
-      });
-    },
-    { rootMargin: "0px 0px -8% 0px", threshold: 0.15 },
-  );
-
-  items.forEach(function (item, index) {
-    item.style.transitionDelay = (index % 4) * 70 + "ms";
-    item.addEventListener("focusin", function () {
-      show(item);
+    bar.querySelectorAll("button").forEach(function (item) {
+      item.setAttribute("aria-pressed", item === button ? "true" : "false");
     });
-    observer.observe(item);
+
+    cards.forEach(function (card) {
+      const match =
+        filtre === "tous" || card.getAttribute("data-filtre") === filtre;
+      card.hidden = !match;
+    });
   });
 })();
 
