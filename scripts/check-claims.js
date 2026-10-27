@@ -5,14 +5,19 @@ const path = require("path");
 
 const roots = [process.cwd()];
 const files = [];
+const skipNames = new Set([
+  "node_modules",
+  ".git",
+  "audit",
+  "dist",
+  "package.json",
+  "package-lock.json",
+]);
+const extensions = new Set([".html", ".json", ".svg", ".xml", ".txt"]);
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (
-      entry.name === "node_modules" ||
-      entry.name === ".git" ||
-      entry.name === "audit"
-    ) {
+    if (skipNames.has(entry.name)) {
       continue;
     }
 
@@ -20,7 +25,11 @@ function walk(dir) {
 
     if (entry.isDirectory()) {
       walk(full);
-    } else if (entry.name.endsWith(".html")) {
+    } else if (extensions.has(path.extname(entry.name))) {
+      if (entry.name.endsWith(".txt") && entry.name !== "robots.txt") {
+        continue;
+      }
+
       files.push(full);
     }
   }
@@ -75,18 +84,44 @@ const needles = [
   "continuent",
   "on construit, on automatise",
   "we train teams",
+  "cipp",
+  "mad-xr",
+  "sacré-cœur",
+  "sacré-coeur",
+  "sacre-coeur",
+  "pilote",
+  "audit.md",
+  "design-critique",
 ];
+
+const bounded = [/\bcae\b/i, /\bhmr\b/i];
+
+const phone =
+  /(?:\+\d{1,3}[\s.-]?)?(?:\(\d{3}\)|\b\d{3}\b)[\s.-]\d{3}[\s.-]\d{4}\b/;
 
 let failed = false;
 
 for (const file of files) {
-  const text = fs.readFileSync(file, "utf8").toLowerCase();
+  const text = fs.readFileSync(file, "utf8");
+  const lower = text.toLowerCase();
 
   for (const needle of needles) {
-    if (text.includes(needle)) {
+    if (lower.includes(needle)) {
       console.error(`${file}: formulation interdite « ${needle} »`);
       failed = true;
     }
+  }
+
+  for (const pattern of bounded) {
+    if (pattern.test(text)) {
+      console.error(`${file}: formulation interdite « ${pattern} »`);
+      failed = true;
+    }
+  }
+
+  if (phone.test(text)) {
+    console.error(`${file}: numéro de téléphone`);
+    failed = true;
   }
 }
 
@@ -94,4 +129,6 @@ if (failed) {
   process.exit(1);
 }
 
-console.log(`Formulations vérifiées dans ${files.length} fichiers HTML.`);
+console.log(
+  `Formulations vérifiées dans ${files.length} fichiers HTML, JSON, SVG, sitemap et robots.txt.`,
+);

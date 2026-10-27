@@ -9,6 +9,7 @@
     "projets": "node scripts/render-projets.js",
     "lint:html": "html-validate \"*.html\" \"facturx/index.html\"",
     "lint:claims": "node scripts/check-claims.js",
+    "build": "node scripts/build-dist.js",
     "lint:css": "stylelint \"assets/css/**/*.css\"",
     "lint:js": "eslint \"assets/js/**/*.js\" \"scripts/**/*.js\"",
     "format:check": "prettier --check \"**/*.{html,css,js,json,md,yml,yaml,xml}\""

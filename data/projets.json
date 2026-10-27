@@ -9,7 +9,7 @@
       "titre": "Conseil DevOps et cloud Azure",
       "periode": "2021 — 2024",
       "ordre": 1,
-      "texte": "Rigoutech a été fondée en 2021. De 2021 à 2024, des pipelines CI/CD ont déployé vers Azure pour un mandat. Le nom du client n’est pas publié. Certifications Microsoft AZ-204 et AZ-305. AZ-400 en préparation.",
+      "texte": "Rigoutech a été fondée en 2021. Mandat de consultation DevSecOps Azure, 2021–2024 : des pipelines CI/CD ont déployé vers Azure. Le nom du client n’est pas publié. Certifications Microsoft AZ-204 et AZ-305. AZ-400 en préparation.",
       "preuve": "Sommaire anonymisé du livrable, 2021–2024 : des pipelines d’intégration continue et de déploiement vers Azure. Aucun nom de client. Aucun chiffre d’économie.",
       "href": "/services.html#azure",
       "lien": "Voir le conseil",
@@ -47,11 +47,15 @@
       "titre": "AgentForge",
       "periode": "Lancé en 2026 · MVP",
       "ordre": 3,
-      "texte": "Produit lancé en 2026, au stade MVP. API, portail et serveurs MCP pour la pré-validation de factures électroniques Factur-X B2B. Six paquets npm sont publiés sous le compte npm ckouma.",
+      "texte": "Produit lancé en 2026, au stade MVP. Agents d’IA, API, portail et serveurs MCP pour la pré-validation de factures électroniques Factur-X B2B. Six serveurs MCP agentforge-*-mcp sont sous licence Apache-2.0.",
       "preuve": "",
       "href": "https://agentforge.rigoutech.com",
       "lien": "agentforge.rigoutech.com",
       "liens": [
+        {
+          "href": "https://www.npmjs.com/~ckouma",
+          "lien": "npmjs.com/~ckouma"
+        },
         {
           "href": "https://agentforge.rigoutech.com",
           "lien": "agentforge.rigoutech.com"
