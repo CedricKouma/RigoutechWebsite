@@ -3,15 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rigoutech | Consultation informatique au Québec</title>
+    <title>Rigoutech | Studio technologique à Montréal</title>
     <meta
       name="description"
-      content="Rigoutech Inc., au Québec : formation d’une journée sur l’IA générative et la cybersécurité, diagnostic Microsoft 365 et Exchange, conseil Azure et DevOps."
+      content="Rigoutech, studio technologique fondé en 2021 à Montréal par Cedric Kouma. Conseil cloud, formation, produits et recherche."
     />
     <meta name="author" content="Rigoutech Inc." />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0f3f73" />
-    <meta name="color-scheme" content="light" />
+    <meta
+      name="theme-color"
+      content="#f3efe6"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#141210"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta name="color-scheme" content="light dark" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta
       http-equiv="Content-Security-Policy"
@@ -23,11 +32,11 @@
     <link rel="alternate" hreflang="x-default" href="https://rigoutech.com/" />
     <meta
       property="og:title"
-      content="Rigoutech | Consultation informatique au Québec"
+      content="Rigoutech | Studio technologique à Montréal"
     />
     <meta
       property="og:description"
-      content="Rigoutech Inc., au Québec : formation d’une journée sur l’IA générative et la cybersécurité, diagnostic Microsoft 365 et Exchange, conseil Azure et DevOps."
+      content="Rigoutech, studio technologique fondé en 2021 à Montréal par Cedric Kouma. Conseil cloud, formation, produits et recherche."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rigoutech.com/" />
@@ -40,7 +49,7 @@
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Rigoutech, consultation informatique au Québec"
+      content="Rigoutech, studio technologique à Montréal"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -62,7 +71,7 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": "Organization",
         "name": "Rigoutech Inc.",
         "url": "https://rigoutech.com/",
         "image": "https://rigoutech.com/assets/img/og.jpg",
@@ -93,7 +102,7 @@
           "addressCountry": "CA"
         },
         "areaServed": { "@type": "AdministrativeArea", "name": "Québec" },
-        "description": "Consultation informatique au Québec : formation en IA générative et cybersécurité, diagnostic Microsoft 365 et Exchange, conseil Azure, DevOps et automatisation.",
+        "description": "Studio technologique à Montréal, fondé en 2021 par Cedric Kouma. Conseil Azure et DevOps, formation, produits et recherche.",
         "knowsLanguage": ["fr-CA", "en"]
       }
     </script>
@@ -123,6 +132,7 @@
         >
           <ul class="nav-list">
             <li><a href="/" aria-current="page">Accueil</a></li>
+            <li><a href="/projets.html">Projets</a></li>
             <li><a href="/services.html">Services</a></li>
             <li><a href="/formation.html">Formation</a></li>
             <li><a href="/a-propos.html">À propos</a></li>
@@ -136,140 +146,188 @@
     </header>
     <main id="contenu">
       <section class="hero wrap">
-        <div>
-          <p class="kicker">Rigoutech Inc. · Montréal</p>
-          <h1>Consultation informatique pour les entreprises du Québec.</h1>
-          <p class="lede">
-            Formation d’une journée sur l’IA générative et la cybersécurité au
-            travail, diagnostic Microsoft 365 et Exchange, conseil Azure, DevOps
-            et automatisation.
-          </p>
-          <div class="founder">
-            <picture>
-              <source
-                srcset="/assets/img/cedric-kouma.webp"
-                type="image/webp"
-              />
-              <img
-                src="/assets/img/cedric-kouma.jpg"
-                alt="Cedric Kouma, fondateur de Rigoutech"
-                width="560"
-                height="790"
-              />
-            </picture>
-            <p>
-              Rigoutech Inc. est dirigée par Cedric Kouma, ingénieur DevSecOps,
-              certifié Microsoft AZ-204 et AZ-305. La firme a été fondée en mars
-              2021.
-            </p>
-          </div>
-          <div class="actions">
-            <a class="btn" href="/services.html">Voir les services</a>
-            <a class="btn btn-ghost" href="/contact.html">Écrire à Rigoutech</a>
-          </div>
-        </div>
-        <aside class="panel" aria-labelledby="offre-rapide">
-          <h2 id="offre-rapide">Trois services</h2>
-          <ol class="offer-list">
-            <li>
-              <a class="offer-link" href="/formation.html">
-                <span class="num">01</span>
-                <span>
-                  <strong>Formation IA et cybersécurité</strong><br />
-                  <span class="muted">7 h, jusqu’à 12 personnes.</span>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a class="offer-link" href="/services.html#diagnostic">
-                <span class="num">02</span>
-                <span>
-                  <strong>Diagnostic Microsoft 365 / Exchange</strong><br />
-                  <span class="muted"
-                    >Lecture seule. Retrait d’EWS en 2027.</span
-                  >
-                </span>
-              </a>
-            </li>
-            <li>
-              <a class="offer-link" href="/services.html#azure">
-                <span class="num">03</span>
-                <span>
-                  <strong>Conseil Azure, DevOps et coûts</strong><br />
-                  <span class="muted"
-                    >Mandats et revue de la facture Azure.</span
-                  >
-                </span>
-              </a>
-            </li>
-          </ol>
-        </aside>
-      </section>
-      <section class="section wrap">
-        <div class="section-head">
-          <h2>Ce que vous pouvez demander</h2>
-          <p>Les modalités se discutent par courriel.</p>
-        </div>
-        <div class="thirds">
-          <article class="card">
-            <h3><a href="/formation.html">Journée de formation</a></h3>
-            <p>
-              « IA générative et cybersécurité au travail ». Sept heures, au
-              plus 12 personnes. La journée comprend des modules sur la Loi 25
-              et le hameçonnage par IA. Un module Microsoft Copilot peut être
-              ajouté.
-            </p>
-          </article>
-          <article class="card">
-            <h3>
-              <a href="/services.html#diagnostic">Diagnostic Microsoft 365</a>
-            </h3>
-            <p>
-              Un diagnostic en lecture seule de Microsoft 365 et Exchange, lié
-              au retrait d’EWS en 2027. Votre environnement n’est pas modifié
-              pendant cette lecture.
-            </p>
-          </article>
-          <article class="card">
-            <h3><a href="/services.html#azure">Azure, DevOps, coûts</a></h3>
-            <p>
-              Conseil en Azure, DevOps et automatisation, et revue de coûts
-              Azure pour comprendre la facture et ce qui mérite un ajustement.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section class="section wrap">
-        <h2>Mandat réalisé</h2>
-        <div class="reference">
+        <p class="kicker">Rigoutech Inc. · Montréal</p>
+        <h1>Studio technologique.</h1>
+        <p class="lede">
+          Fondée en 2021 à Montréal par Cedric Kouma. Rigoutech construit,
+          conseille, forme et mène des recherches.
+        </p>
+        <div class="founder">
+          <picture>
+            <source srcset="/assets/img/cedric-kouma.webp" type="image/webp" />
+            <img
+              src="/assets/img/cedric-kouma.jpg"
+              alt="Cedric Kouma, fondateur de Rigoutech"
+              width="560"
+              height="790"
+            />
+          </picture>
           <p>
-            De janvier à mars 2026, Cedric Kouma a été formateur-conseil pour
-            Excelsoins, un groupe de résidences pour aînés à Pointe-Claire. Il a
-            formé les équipes de gestion à une nouvelle procédure d’approbation
-            et de signature électronique des factures, et a mis en place
-            l’identité numérique de chaque personne concernée.
+            Cedric Kouma est ingénieur DevSecOps. Il détient les certifications
+            Microsoft AZ-204 et AZ-305. La certification AZ-400 est en
+            préparation.
           </p>
-          <p><a href="/a-propos.html">En savoir plus sur Rigoutech</a></p>
+        </div>
+        <div class="actions">
+          <a class="btn" href="/projets.html">Voir les projets</a>
+          <a class="btn btn-ghost" href="/contact.html">Écrire à Rigoutech</a>
         </div>
       </section>
-      <section class="section wrap">
-        <h2>Comment ça se passe</h2>
-        <ol class="steps">
+      <section class="section wrap" aria-labelledby="ce-qu-on-fait">
+        <div class="section-head">
+          <h2 id="ce-qu-on-fait">Ce qu’on fait</h2>
+          <p>
+            Quatre pratiques, tenues en même temps. Le détail de chacune est
+            dans les pages liées, et les travaux nommés sont plus bas.
+          </p>
+        </div>
+        <ol class="practices">
           <li>
-            <h3>1. Vous écrivez</h3>
-            <p>Un courriel suffit. Décrivez le contexte en quelques lignes.</p>
+            <a class="practice" href="/services.html">
+              <strong>Conseil et ingénierie cloud</strong>
+              <span class="muted"
+                >Azure, DevOps, pipelines CI/CD, et un diagnostic Microsoft 365
+                en lecture seule. Depuis 2021.</span
+              >
+            </a>
           </li>
           <li>
-            <h3>2. On précise le besoin</h3>
-            <p>Formation, diagnostic en lecture seule, ou mandat de conseil.</p>
+            <a class="practice" href="/formation.html">
+              <strong>Formation</strong>
+              <span class="muted"
+                >Journée en entreprise sur l’IA générative et la cybersécurité.
+                Une formation sur place, terminée en 2026, est dans les
+                projets.</span
+              >
+            </a>
           </li>
           <li>
-            <h3>3. Le travail convenu</h3>
-            <p>
-              La journée, le diagnostic, ou l’accompagnement Azure et DevOps.
-            </p>
+            <a class="practice" href="/projets.html#agentforge">
+              <strong>Produits</strong>
+              <span class="muted"
+                >AgentForge, un MVP de pré-validation Factur-X, lancé en
+                2026.</span
+              >
+            </a>
+          </li>
+          <li>
+            <a class="practice" href="/projets.html#rigouhealth">
+              <strong>Recherche et innovation</strong>
+              <span class="muted"
+                >RigouHealth, un prototype sur des données publiques, et un
+                laboratoire de simulation de marché. Ni service clinique, ni
+                service financier.</span
+              >
+            </a>
           </li>
         </ol>
+      </section>
+      <section class="section wrap" aria-labelledby="projets-accueil">
+        <div class="section-head">
+          <h2 id="projets-accueil">Projets</h2>
+          <p>Les travaux qu’on peut décrire maintenant.</p>
+        </div>
+        <div class="project-list" data-heading="h3">
+          <article class="project" id="conseil-azure">
+            <p class="project-meta">
+              <span class="statut">En cours</span>
+              <span>Conseil</span>
+              <span>2021 — aujourd’hui</span>
+            </p>
+            <div class="project-body">
+              <h3>Conseil DevOps et cloud Azure</h3>
+              <p>
+                Depuis 2021, Rigoutech conseille sur le DevOps et le cloud
+                Azure. De 2021 à 2024, des pipelines CI/CD ont été mis en place
+                pour déployer vers Azure, pour un grand client. L’offre est
+                toujours active. Cedric Kouma détient les certifications
+                Microsoft AZ-204 et AZ-305. La certification AZ-400 est en
+                préparation.
+              </p>
+              <p><a href="/services.html#azure">Voir le conseil</a></p>
+            </div>
+          </article>
+          <article class="project" id="formation-factures">
+            <p class="project-meta">
+              <span class="statut">Terminé</span>
+              <span>Formation</span>
+              <span>Janvier — mars 2026</span>
+            </p>
+            <div class="project-body">
+              <h3>Approbation électronique des factures</h3>
+              <p>
+                Formation sur place, terminée, des équipes de direction d’un
+                groupe de résidences pour aînés du Québec. Le sujet était un
+                nouveau processus d’approbation électronique des factures et de
+                signature numérique. La formation comprenait la théorie, des
+                exercices, un manuel et la configuration des identités
+                numériques.
+              </p>
+            </div>
+          </article>
+          <article class="project" id="agentforge">
+            <p class="project-meta">
+              <span class="statut">En cours</span>
+              <span>Produit</span>
+              <span>Lancé en 2026 · MVP</span>
+            </p>
+            <div class="project-body">
+              <h3>AgentForge</h3>
+              <p>
+                AgentForge est un produit de Rigoutech, lancé en 2026 au stade
+                MVP. Il comprend une API, un portail et des serveurs MCP pour la
+                pré-validation de factures électroniques Factur-X B2B. Des
+                paquets npm sont publiés.
+              </p>
+              <p>
+                <a href="https://agentforge.rigoutech.com"
+                  >agentforge.rigoutech.com</a
+                >
+              </p>
+            </div>
+          </article>
+          <article class="project" id="rigouhealth">
+            <p class="project-meta">
+              <span class="statut">Prototype</span>
+              <span>Recherche</span>
+              <span>Prototype de recherche</span>
+            </p>
+            <div class="project-body">
+              <h3>RigouHealth</h3>
+              <p>
+                RigouHealth est un prototype de recherche développé par
+                Rigoutech. Il explore la prévision à court terme de
+                l’achalandage des urgences à partir de données environnementales
+                publiques (qualité de l’air, météo). Il n’est ni validé
+                cliniquement ni utilisé par un établissement de santé.
+              </p>
+              <p>
+                <a href="https://rigouhealth.rigoutech.com"
+                  >rigouhealth.rigoutech.com</a
+                >
+              </p>
+            </div>
+          </article>
+          <article class="project" id="trading">
+            <p class="project-meta">
+              <span class="statut">En cours</span>
+              <span>Recherche</span>
+              <span>Recherche interne · 2026</span>
+            </p>
+            <div class="project-body">
+              <h3>Laboratoire de recherche en trading algorithmique</h3>
+              <p>
+                Recherche interne menée en 2026. Des agents d’IA sur Azure
+                conçoivent et testent des hypothèses de marché, en simulation
+                seulement (paper trading). Aucune gestion de fonds, aucun
+                conseil financier, aucun rendement publié.
+              </p>
+            </div>
+          </article>
+        </div>
+        <p class="actions">
+          <a class="btn btn-ghost" href="/projets.html">Page des projets</a>
+        </p>
       </section>
     </main>
     <footer class="site-footer">
@@ -284,6 +342,7 @@
         <nav aria-label="Pied de page">
           <ul class="nav-list">
             <li><a href="/" aria-current="page">Accueil</a></li>
+            <li><a href="/projets.html">Projets</a></li>
             <li><a href="/services.html">Services</a></li>
             <li><a href="/formation.html">Formation</a></li>
             <li><a href="/a-propos.html">À propos</a></li>

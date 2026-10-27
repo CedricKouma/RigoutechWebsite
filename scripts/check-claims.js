@@ -29,7 +29,11 @@ function walk(dir) {
 walk(roots[0]);
 
 const needles = [
-  "financ",
+  "financé",
+  "financee",
+  "financée",
+  "financement",
+  "financed",
   "subvention",
   "rembours",
   "agré",

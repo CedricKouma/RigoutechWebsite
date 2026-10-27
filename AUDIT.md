@@ -42,9 +42,9 @@ Aucune de ces pages ne mentionne :
 - la journée « IA générative et cybersécurité au travail » (7 h, jusqu’à 12 personnes, modules Loi 25 et hameçonnage par IA, module Copilot optionnel) ;
 - le diagnostic Microsoft 365 / Exchange, en lecture seule, lié au retrait d’EWS en 2027 ;
 - le conseil Azure, DevOps, automatisation, et les revues de coûts Azure ;
-- le mandat Excelsoins (janvier à mars 2026, Pointe-Claire).
+- une formation sur place, de janvier à mars 2026, auprès d’un groupe de résidences pour aînés du Québec.
 
-Une PME qui cherche une formation ou un diagnostic Microsoft ne se reconnaît pas. Une personne prudente peut aussi prendre l’exemple cité sur cette page pour un client. La seule référence vérifiable est Excelsoins.
+Une PME qui cherche une formation ou un diagnostic Microsoft ne se reconnaît pas. Une personne prudente peut aussi prendre l’exemple cité sur cette page pour un client. Le mandat vérifiable ne nomme pas l’organisation.
 
 Correctif : réécrire le site autour des trois offres réelles. Si RigouHealth est mentionné, le décrire seulement comme un prototype de recherche, sans client ni usage en établissement.
 
@@ -62,11 +62,11 @@ Correctif : une politique en français simple, qui nomme Cedric Kouma, décrit l
 
 ### 3. Élevé — Le texte suggère une équipe et des preuves que le site n’a pas
 
-« Petite équipe senior », « parler à un expert », « RigouHealth renforce notre crédibilité », « ce que RigouHealth prouve ». Cedric Kouma est le seul propriétaire. La seule référence vérifiable qu’on peut écrire est Excelsoins, sans citation, sans nombre de participants et sans témoignage.
+« Petite équipe senior », « parler à un expert », « RigouHealth renforce notre crédibilité », « ce que RigouHealth prouve ». Cedric Kouma est le seul propriétaire. Le mandat de formation vérifiable ne nomme pas le client, et il n’ajoute ni citation, ni nombre de participants, ni témoignage.
 
 Le site n’invente pas de faux logos clients, et c’est bien. Le problème est dans les formulations, qui font plus gros que la réalité.
 
-Correctif : parler de Rigoutech Inc. et nommer Cedric Kouma. Décrire Excelsoins comme un fait. Retirer le registre « preuve » et « équipe ».
+Correctif : parler de Rigoutech Inc. et nommer Cedric Kouma. Décrire le mandat de formation sans nommer le client. Retirer le registre « preuve » et « équipe ».
 
 ### 4. Élevé — On ne sait pas qui répond, et une mauvaise adresse tombe sur GitHub
 
@@ -187,7 +187,7 @@ Correctif : garder une redirection courte pour les anciennes adresses, expliquer
 
 ## Ordre de travail retenu
 
-1. Dire la vérité sur l’offre, la personne et la référence Excelsoins.
+1. Dire la vérité sur l’offre, la personne et les mandats qu’on peut nommer.
 2. Publier la politique de confidentialité et nommer Cedric Kouma.
 3. Enlever les fichiers de template et les notes internes.
 4. Remettre une marque lisible, une page 404, et un partage correct.

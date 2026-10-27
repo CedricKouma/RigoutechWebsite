@@ -1,0 +1,54 @@
+{
+  "projets": [
+    {
+      "id": "conseil-azure",
+      "statut": "En cours",
+      "categorie": "Conseil",
+      "titre": "Conseil DevOps et cloud Azure",
+      "periode": "2021 — aujourd’hui",
+      "texte": "Depuis 2021, Rigoutech conseille sur le DevOps et le cloud Azure. De 2021 à 2024, des pipelines CI/CD ont été mis en place pour déployer vers Azure, pour un grand client. L’offre est toujours active. Cedric Kouma détient les certifications Microsoft AZ-204 et AZ-305. La certification AZ-400 est en préparation.",
+      "href": "/services.html#azure",
+      "lien": "Voir le conseil"
+    },
+    {
+      "id": "formation-factures",
+      "statut": "Terminé",
+      "categorie": "Formation",
+      "titre": "Approbation électronique des factures",
+      "periode": "Janvier — mars 2026",
+      "texte": "Formation sur place, terminée, des équipes de direction d’un groupe de résidences pour aînés du Québec. Le sujet était un nouveau processus d’approbation électronique des factures et de signature numérique. La formation comprenait la théorie, des exercices, un manuel et la configuration des identités numériques.",
+      "href": "",
+      "lien": ""
+    },
+    {
+      "id": "agentforge",
+      "statut": "En cours",
+      "categorie": "Produit",
+      "titre": "AgentForge",
+      "periode": "Lancé en 2026 · MVP",
+      "texte": "AgentForge est un produit de Rigoutech, lancé en 2026 au stade MVP. Il comprend une API, un portail et des serveurs MCP pour la pré-validation de factures électroniques Factur-X B2B. Des paquets npm sont publiés.",
+      "href": "https://agentforge.rigoutech.com",
+      "lien": "agentforge.rigoutech.com"
+    },
+    {
+      "id": "rigouhealth",
+      "statut": "Prototype",
+      "categorie": "Recherche",
+      "titre": "RigouHealth",
+      "periode": "Prototype de recherche",
+      "texte": "RigouHealth est un prototype de recherche développé par Rigoutech. Il explore la prévision à court terme de l’achalandage des urgences à partir de données environnementales publiques (qualité de l’air, météo). Il n’est ni validé cliniquement ni utilisé par un établissement de santé.",
+      "href": "https://rigouhealth.rigoutech.com",
+      "lien": "rigouhealth.rigoutech.com"
+    },
+    {
+      "id": "trading",
+      "statut": "En cours",
+      "categorie": "Recherche",
+      "titre": "Laboratoire de recherche en trading algorithmique",
+      "periode": "Recherche interne · 2026",
+      "texte": "Recherche interne menée en 2026. Des agents d’IA sur Azure conçoivent et testent des hypothèses de marché, en simulation seulement (paper trading). Aucune gestion de fonds, aucun conseil financier, aucun rendement publié.",
+      "href": "",
+      "lien": ""
+    }
+  ]
+}

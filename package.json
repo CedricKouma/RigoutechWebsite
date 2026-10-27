@@ -4,7 +4,9 @@
   "private": true,
   "description": "Rigoutech static website",
   "scripts": {
-    "lint": "npm run lint:html && npm run lint:css && npm run lint:js && npm run lint:claims && npm run format:check",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js && npm run lint:claims && npm run lint:projets && npm run format:check",
+    "lint:projets": "node scripts/check-projets.js",
+    "projets": "node scripts/render-projets.js",
     "lint:html": "html-validate \"*.html\" \"facturx/index.html\"",
     "lint:claims": "node scripts/check-claims.js",
     "lint:css": "stylelint \"assets/css/**/*.css\"",
