@@ -68,6 +68,13 @@ const needles = [
   "grand client",
   "rigouhealth.rigoutech.com",
   "dépense admissible si inscrite",
+  "2021 — aujourd",
+  "2021 - aujourd",
+  "toujours active",
+  "still active",
+  "continuent",
+  "on construit, on automatise",
+  "we train teams",
 ];
 
 let failed = false;

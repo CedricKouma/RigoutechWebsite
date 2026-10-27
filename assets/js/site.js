@@ -117,8 +117,11 @@ document.documentElement.classList.add("js");
       lines.push(key.replaceAll("_", " ") + " : " + String(value).trim());
     });
 
+    const selected = select && select.options[select.selectedIndex];
     const subject =
-      form.getAttribute("data-subject") || "Message depuis rigoutech.com";
+      (selected && selected.value && selected.textContent.trim()) ||
+      form.getAttribute("data-subject") ||
+      "Message depuis rigoutech.com";
     const mailto =
       "mailto:info@rigoutech.com?subject=" +
       encodeURIComponent(subject) +
