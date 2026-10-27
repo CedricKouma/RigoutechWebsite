@@ -37,6 +37,11 @@
   --accent: #8a3014;
   --accent-hover: #6e260f;
   --on-accent: #fff;
+  --domaine-conseil: #8a3014;
+  --domaine-formation: #1b5e45;
+  --domaine-agentforge: #243e78;
+  --domaine-rigouhealth: #3a5166;
+  --domaine-trading: #7a4e16;
   --footer-bg: #1c1916;
   --footer-ink: #f3efe6;
   --footer-muted: #c8c0b4;
@@ -403,11 +408,34 @@ a:hover {
 }
 
 .project {
+  --domaine: var(--accent);
+
   display: flex;
   flex-direction: column;
   min-width: 0;
   background: var(--surface);
   border: 1px solid var(--line);
+  border-top: 4px solid var(--domaine);
+}
+
+.domaine-conseil-azure {
+  --domaine: var(--domaine-conseil);
+}
+
+.domaine-formation-factures {
+  --domaine: var(--domaine-formation);
+}
+
+.domaine-agentforge {
+  --domaine: var(--domaine-agentforge);
+}
+
+.domaine-rigouhealth {
+  --domaine: var(--domaine-rigouhealth);
+}
+
+.domaine-trading {
+  --domaine: var(--domaine-trading);
 }
 
 .project-copy {
@@ -459,7 +487,7 @@ a:hover {
 }
 
 .project:hover {
-  border-color: var(--accent);
+  border-color: var(--domaine);
 }
 
 .bento {
@@ -532,7 +560,7 @@ a:hover {
 }
 
 .statut {
-  color: var(--accent);
+  color: var(--domaine, var(--accent));
   font-weight: 680;
 }
 
@@ -589,6 +617,19 @@ a:hover {
   background: transparent;
   border-top: 1px solid var(--line);
   border-radius: 0;
+}
+
+.card.domaine-conseil-azure,
+.card.domaine-formation-factures {
+  border-top: 4px solid var(--domaine);
+}
+
+body.domaine-formation-factures .kicker {
+  color: var(--domaine);
+}
+
+body.domaine-formation-factures .card {
+  border-top: 4px solid var(--domaine);
 }
 
 .steps {
@@ -651,6 +692,10 @@ a:hover {
   margin: 1.4rem 0;
   padding: 0.2rem 0 0.2rem 1rem;
   border-left: 2px solid var(--accent);
+}
+
+body.domaine-formation-factures .callout {
+  border-left-color: var(--domaine);
 }
 
 .prose {
@@ -806,6 +851,11 @@ address {
     --accent: #f0a888;
     --accent-hover: #f6c4ad;
     --on-accent: #1c1916;
+    --domaine-conseil: #f0a888;
+    --domaine-formation: #8fbfa8;
+    --domaine-agentforge: #b7c4e6;
+    --domaine-rigouhealth: #b7c9d6;
+    --domaine-trading: #e2c07a;
     --footer-bg: #0c0b0a;
     --footer-ink: #f3efe6;
     --footer-muted: #c8c0b4;

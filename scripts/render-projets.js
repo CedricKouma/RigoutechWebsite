@@ -77,10 +77,10 @@ function visual(projet) {
 
 function renderProject(projet, heading) {
   const link = projet.href
-    ? `<p><a href="${esc(projet.href)}">${esc(projet.lien)}</a></p>`
+    ? `\n              <p><a href="${esc(projet.href)}">${esc(projet.lien)}</a></p>`
     : "";
 
-  return `        <article class="project span-${esc(projet.span)}" id="${esc(projet.id)}">
+  return `        <article class="project domaine-${esc(projet.id)} span-${esc(projet.span)}" id="${esc(projet.id)}">
           ${visual(projet)}
           <div class="project-copy">
             <p class="project-meta">
@@ -90,8 +90,7 @@ function renderProject(projet, heading) {
             </p>
             <div class="project-body">
               <${heading}>${esc(projet.titre)}</${heading}>
-              <p>${esc(projet.texte)}</p>
-              ${link}
+              <p>${esc(projet.texte)}</p>${link}
             </div>
           </div>
         </article>`;

@@ -2,10 +2,10 @@
   <title>Journée de formation : théorie, exercices, manuel, identités</title>
   <rect width="480" height="560" fill="#1c1916"/>
   <path d="M72 88V468" stroke="#3a342c" stroke-width="2"/>
-  <rect x="64" y="76" width="16" height="16" fill="#e8a07a"/>
-  <rect x="64" y="196" width="16" height="16" fill="#e8a07a"/>
-  <rect x="64" y="316" width="16" height="16" fill="#e8a07a"/>
-  <rect x="64" y="436" width="16" height="16" fill="#e8a07a"/>
+  <rect x="64" y="76" width="16" height="16" fill="#8fbfa8"/>
+  <rect x="64" y="196" width="16" height="16" fill="#8fbfa8"/>
+  <rect x="64" y="316" width="16" height="16" fill="#8fbfa8"/>
+  <rect x="64" y="436" width="16" height="16" fill="#8fbfa8"/>
   <text x="108" y="92" fill="#f3efe6" font-size="34">Théorie</text>
   <text x="108" y="212" fill="#f3efe6" font-size="34">Exercices</text>
   <text x="108" y="332" fill="#f3efe6" font-size="34">Manuel</text>

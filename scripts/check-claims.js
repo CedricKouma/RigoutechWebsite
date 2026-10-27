@@ -58,6 +58,13 @@ const needles = [
   "hopital",
   "hospital",
   "bootstrapmade",
+  "ingénieur",
+  "ingenieur",
+  "ingénierie",
+  "engineer",
+  "déplacée",
+  "deplacee",
+  "plus en ligne",
 ];
 
 let failed = false;
