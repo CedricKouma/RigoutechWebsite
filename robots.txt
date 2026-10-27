@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Notes d'audit destinées au propriétaire, pas à l'index public.
+Disallow: /AUDIT.md
+Disallow: /audit/
+
 Sitemap: https://rigoutech.com/sitemap.xml

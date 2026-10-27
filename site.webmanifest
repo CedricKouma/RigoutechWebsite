@@ -4,40 +4,21 @@
   "lang": "fr-CA",
   "start_url": "/",
   "scope": "/",
-  "display": "standalone",
-  "theme_color": "#2563eb",
-  "background_color": "#ffffff",
+  "display": "browser",
+  "theme_color": "#0f3f73",
+  "background_color": "#f4f2ec",
   "icons": [
-    {
-      "src": "/assets/img/favicon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png"
-    },
-    {
-      "src": "/assets/img/favicon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png"
-    },
-    {
-      "src": "/assets/img/favicon-180x180.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
     {
       "src": "/assets/img/favicon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/assets/img/favicon-256x256.png",
-      "sizes": "256x256",
-      "type": "image/png"
+      "purpose": "any"
     },
     {
       "src": "/assets/img/favicon-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }

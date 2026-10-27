@@ -4,10 +4,11 @@
   "private": true,
   "description": "Rigoutech static website",
   "scripts": {
-    "lint": "npm run lint:html && npm run lint:css && npm run lint:js && npm run format:check",
-    "lint:html": "html-validate index.html",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js && npm run lint:claims && npm run format:check",
+    "lint:html": "html-validate \"*.html\" \"facturx/index.html\"",
+    "lint:claims": "node scripts/check-claims.js",
     "lint:css": "stylelint \"assets/css/**/*.css\"",
-    "lint:js": "eslint \"assets/js/**/*.js\"",
+    "lint:js": "eslint \"assets/js/**/*.js\" \"scripts/**/*.js\"",
     "format:check": "prettier --check \"**/*.{html,css,js,json,md,yml,yaml,xml}\""
   },
   "devDependencies": {
