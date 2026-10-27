@@ -47,7 +47,12 @@ const needles = [
   "years of experience",
   "partenaire microsoft",
   "microsoft partner",
-  "rigouhealth",
+  "partenariat",
+  "partnership",
+  "chum",
+  "hôpital",
+  "hopital",
+  "hospital",
   "bootstrapmade",
 ];
 

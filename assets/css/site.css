@@ -205,6 +205,36 @@ a:hover {
   font-size: 1.15rem;
 }
 
+.founder {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  max-width: 44rem;
+}
+
+.founder p {
+  margin: 0;
+}
+
+.founder img {
+  width: 5.5rem;
+  height: auto;
+  border-radius: 6px;
+}
+
+.about-lead {
+  display: grid;
+  grid-template-columns: minmax(11rem, 17.5rem) minmax(0, 1fr);
+  gap: 1.5rem 2rem;
+  align-items: start;
+}
+
+.portrait {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -541,7 +571,8 @@ address {
   .thirds,
   .steps,
   .facts,
-  .footer-grid {
+  .footer-grid,
+  .about-lead {
     grid-template-columns: 1fr;
   }
 

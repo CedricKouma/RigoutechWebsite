@@ -92,18 +92,30 @@
       </div>
     </header>
     <main id="contenu">
-      <!-- TODO(Cedric): portrait réel seulement si vous souhaitez en publier un. Ne pas utiliser une photo de banque présentée comme un membre du personnel. -->
-      <!-- TODO(Cedric): le NEQ peut être ajouté dans la fiche si vous voulez l’afficher. Il n’est pas sur le site actuel. -->
-      <header class="page-intro wrap prose">
-        <p class="kicker">À propos</p>
-        <h1>Rigoutech Inc.</h1>
-        <p>
-          Rigoutech Inc. est une entreprise de consultation informatique fondée
-          au Québec en mars 2021. Cedric Kouma en est le propriétaire. Il est
-          ingénieur DevSecOps et détient les certifications Microsoft AZ-204
-          (développement de solutions Azure) et AZ-305 (architecture de
-          solutions Azure).
-        </p>
+      <header class="page-intro wrap">
+        <div class="about-lead">
+          <picture>
+            <source srcset="/assets/img/cedric-kouma.webp" type="image/webp" />
+            <img
+              class="portrait"
+              src="/assets/img/cedric-kouma.jpg"
+              alt="Cedric Kouma, fondateur de Rigoutech"
+              width="560"
+              height="790"
+            />
+          </picture>
+          <div class="prose">
+            <p class="kicker">À propos</p>
+            <h1>Rigoutech Inc.</h1>
+            <p>
+              Rigoutech Inc. est une entreprise de consultation informatique
+              fondée au Québec en mars 2021. Cedric Kouma en est le
+              propriétaire. Il est ingénieur DevSecOps et détient les
+              certifications Microsoft AZ-204 (développement de solutions Azure)
+              et AZ-305 (architecture de solutions Azure).
+            </p>
+          </div>
+        </div>
       </header>
       <section class="section wrap">
         <h2>Fiche</h2>
@@ -130,7 +142,7 @@
           </div>
           <div>
             <dt>Lieu</dt>
-            <dd>Québec, QC, Canada</dd>
+            <dd>Montréal (Québec), Canada</dd>
           </div>
           <div>
             <dt>Courriel</dt>
@@ -151,13 +163,23 @@
         </div>
         <p><a class="btn" href="/contact.html">Écrire à Rigoutech</a></p>
       </section>
+      <section class="section wrap prose" aria-labelledby="projets-rd">
+        <h2 id="projets-rd">Projets de R-D</h2>
+        <p>
+          <a href="https://rigouhealth.rigoutech.com">RigouHealth</a> est un
+          prototype de recherche développé par Rigoutech. Il explore la
+          prévision à court terme de l’achalandage des urgences à partir de
+          données environnementales publiques (qualité de l’air, météo). Il
+          n’est ni validé cliniquement ni utilisé par un établissement de santé.
+        </p>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="wrap footer-grid">
         <div>
           <strong>Rigoutech Inc.</strong>
           <address>
-            Québec, QC, Canada<br />
+            Montréal (Québec), Canada<br />
             <a href="mailto:info@rigoutech.com">info@rigoutech.com</a>
           </address>
         </div>

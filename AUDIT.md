@@ -11,7 +11,7 @@ Ce document est écrit pour une lecture sans bagage de web. Les captures plus ba
 
 Le site s’affiche, il est en français, et le courriel info@rigoutech.com est cohérent. Il ne ressemble pas pour autant au cabinet que Rigoutech est aujourd’hui.
 
-Un dirigeant de PME qui arrive sur la page d’accueil lit un texte de firme « boutique » sur les systèmes critiques, puis une page produit (RigouHealth) qui parle d’urgences hospitalières et cite le CHUM comme exemple. Il ne voit ni la journée de formation, ni le diagnostic Microsoft 365 / Exchange, ni la revue de coûts Azure.
+Un dirigeant de PME qui arrive sur la page d’accueil lit un texte de firme « boutique » sur les systèmes critiques, puis une page produit (RigouHealth) présentée comme une preuve. Il ne voit ni la journée de formation, ni le diagnostic Microsoft 365 / Exchange, ni la revue de coûts Azure.
 
 Il ne voit pas non plus qui répond (Cedric Kouma), ni de politique de confidentialité. Au Québec, la Loi 25 exige cette politique dès qu’on recueille un nom et un courriel. Le formulaire de contact le fait, sans le dire clairement.
 
@@ -35,7 +35,7 @@ Chaque point indique ce qu’une personne extérieure risque de conclure, puis u
 
 ### 1. Critique — Le site ne présente pas les services réellement vendus
 
-La page d’accueil dit : « Architecture, modernisation et delivery de systèmes complexes », « petite équipe senior », « plateformes logicielles critiques ». La page Consultation (`rd.html`) répète architecture, CI/CD, observabilité. La page RigouHealth (`produits.html`) décrit une plateforme qui « anticipe la charge hospitalière » et donne « un exemple de périmètre : CHUM (Montréal) ».
+La page d’accueil dit : « Architecture, modernisation et delivery de systèmes complexes », « petite équipe senior », « plateformes logicielles critiques ». La page Consultation (`rd.html`) répète architecture, CI/CD, observabilité. La page RigouHealth (`produits.html`) présente un prototype comme s’il prouvait la firme, avec un exemple qui peut être lu comme un client.
 
 Aucune de ces pages ne mentionne :
 
@@ -44,9 +44,9 @@ Aucune de ces pages ne mentionne :
 - le conseil Azure, DevOps, automatisation, et les revues de coûts Azure ;
 - le mandat Excelsoins (janvier à mars 2026, Pointe-Claire).
 
-Une PME qui cherche une formation ou un diagnostic Microsoft ne se reconnaît pas. Une personne prudente peut aussi croire que le CHUM est un client, alors que ce n’est pas une référence que l’on peut citer.
+Une PME qui cherche une formation ou un diagnostic Microsoft ne se reconnaît pas. Une personne prudente peut aussi prendre l’exemple cité sur cette page pour un client. La seule référence vérifiable est Excelsoins.
 
-Correctif : réécrire le site autour des trois offres réelles, et retirer RigouHealth et le CHUM du site corporate. Le produit peut rester à sa propre adresse.
+Correctif : réécrire le site autour des trois offres réelles. Si RigouHealth est mentionné, le décrire seulement comme un prototype de recherche, sans client ni usage en établissement.
 
 ### 2. Critique — Il manque la politique de confidentialité exigée par la Loi 25
 
@@ -170,7 +170,7 @@ Le formulaire n’a pas de serveur derrière lui. Il ouvre le logiciel de courri
 - Pas de faux texte « lorem ipsum ».
 - Pas d’année figée et fausse dans le texte visible. L’année du bas de page est calculée.
 - `facturx/` redirige vers https://agentforge.rigoutech.com/factur-x (la page répond). Ce n’est pas un lien mort. C’est un autre produit, qui n’a pas sa place comme offre corporate, mais l’ancienne adresse doit continuer de mener quelque part.
-- https://rigouhealth.rigoutech.com/fr répond aussi. Même remarque : site à part, à ne plus mettre en vitrine ici.
+- https://rigouhealth.rigoutech.com/fr répond aussi. Ce n’est pas une offre du site vitrine. Une mention courte, comme prototype de recherche, peut renvoyer vers cette adresse.
 - L’adresse `rd.html` ne veut rien dire pour un visiteur (« R et D » ?). `produits.html` n’est pas un catalogue.
 - Le formulaire ne dit qu’après le clic que le logiciel de courriel doit s’ouvrir.
 
