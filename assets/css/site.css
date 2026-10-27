@@ -280,6 +280,10 @@ a:hover {
   letter-spacing: 0.04em;
 }
 
+.kicker-lieu {
+  white-space: nowrap;
+}
+
 .lede {
   max-width: 40rem;
   font-size: 1.35rem;
@@ -912,11 +916,15 @@ textarea {
   background: var(--accent);
 }
 
+.vitrine {
+  padding: 1.25rem 0 0 1.5rem;
+}
+
 .vignette-row {
   display: grid;
   grid-template-columns: 15rem minmax(0, 1fr);
   gap: 1.4rem 2rem;
-  align-items: center;
+  align-items: start;
 }
 
 .vignette {
@@ -1151,6 +1159,10 @@ address {
 
   .domaines {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .vignette {
+    margin-inline: auto;
   }
 
   .project-meta {

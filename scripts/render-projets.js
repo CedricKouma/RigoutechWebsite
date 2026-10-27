@@ -176,7 +176,7 @@ function apply(html, projets) {
 
   const agentforge = projets.find((projet) => projet.id === "agentforge");
   const frise = projets
-    .slice()
+    .filter((projet) => projet.id !== "agentforge")
     .sort((a, b) => a.ordre - b.ordre)
     .map((projet) => renderFrise(projet))
     .join("\n");
