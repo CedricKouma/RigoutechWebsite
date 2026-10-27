@@ -1,354 +1,463 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr-CA" class="no-js">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rigoutech | Studio technologique à Montréal</title>
     <meta
       name="description"
-      content="Rigoutech est une firme boutique de consultation technologique. Nous aidons des organisations à concevoir, moderniser et sécuriser des systèmes logiciels complexes. RigouHealth démontre notre capacité à construire un produit structurant."
+      content="Rigoutech, studio technologique à Montréal. Conseil cloud, formation, produits et recherche."
     />
-    <meta
-      name="keywords"
-      content="Rigoutech, consultation technologique, architecture logicielle, cloud, modernisation, DevOps, plateforme, fiabilité, sécurité, RigouHealth"
-    />
-    <meta name="theme-color" content="#2563eb" />
     <meta name="author" content="Rigoutech Inc." />
     <meta name="robots" content="index, follow" />
     <meta
+      name="theme-color"
+      content="#f3efe6"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#141210"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self' mailto:; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'"
+    />
+    <link rel="canonical" href="https://rigoutech.com/" />
+    <link rel="alternate" hreflang="fr-CA" href="https://rigoutech.com/" />
+    <link rel="alternate" hreflang="en" href="https://rigoutech.com/en.html" />
+    <link rel="alternate" hreflang="x-default" href="https://rigoutech.com/" />
+    <meta
       property="og:title"
-      content="Rigoutech | Consultation technologique boutique"
+      content="Rigoutech | Studio technologique à Montréal"
     />
     <meta
       property="og:description"
-      content="Petite équipe senior pour mandats complexes : architecture, modernisation, delivery, fiabilité et sécurité. RigouHealth : actif produit structurant."
+      content="Rigoutech, studio technologique à Montréal. Conseil cloud, formation, produits et recherche."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rigoutech.com/" />
+    <meta property="og:locale" content="fr_CA" />
     <meta
       property="og:image"
-      content="https://rigoutech.com/assets/img/logo-banner-light-320.png"
+      content="https://rigoutech.com/assets/img/og.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Rigoutech, studio technologique à Montréal"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>Rigoutech | Accueil</title>
-    <link rel="canonical" href="https://rigoutech.com/" />
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/img/apple-touch-icon.png"
-    />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="assets/img/favicon-32x32.png"
+      href="/assets/img/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="assets/img/favicon-16x16.png"
+      href="/assets/img/favicon-16x16.png"
     />
-    <link rel="manifest" href="site.webmanifest" />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700|Poppins:300,400,500,600,700"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/css/variables.css" rel="stylesheet" />
-    <link href="assets/css/base.css" rel="stylesheet" />
-    <link href="assets/css/components.css" rel="stylesheet" />
-    <link href="assets/css/layout.css" rel="stylesheet" />
-    <link href="assets/css/pages.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Rigoutech Inc.",
+        "url": "https://rigoutech.com/",
+        "image": "https://rigoutech.com/assets/img/og.jpg",
+        "email": "info@rigoutech.com",
+        "founder": {
+          "@type": "Person",
+          "name": "Cedric Kouma",
+          "jobTitle": "Développeur logiciel, spécialiste Azure et DevSecOps",
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "certification",
+              "name": "Microsoft AZ-204"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "certification",
+              "name": "Microsoft AZ-305"
+            }
+          ]
+        },
+        "foundingDate": "2021-03",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Montréal",
+          "addressRegion": "QC",
+          "addressCountry": "CA"
+        },
+        "areaServed": { "@type": "AdministrativeArea", "name": "Québec" },
+        "description": "Studio technologique à Montréal. Conseil Azure et DevOps, formation, produits et recherche.",
+        "knowsLanguage": ["fr-CA", "en"]
+      }
+    </script>
   </head>
   <body>
-    <header id="header" class="rt-header">
-      <div class="container">
-        <div class="rt-header__content">
-          <nav id="navbar" class="rt-nav" aria-label="Navigation principale">
-            <ul class="rt-nav__menu" id="rt-nav-menu">
-              <li>
-                <a href="/" class="rt-nav__link rt-nav__link--active"
-                  >Accueil</a
-                >
-              </li>
-              <li><a href="rd.html" class="rt-nav__link">Consultation</a></li>
-              <li>
-                <a href="produits.html" class="rt-nav__link">RigouHealth</a>
-              </li>
-              <li><a href="contact.html" class="rt-nav__link">Contact</a></li>
-            </ul>
-            <button
-              id="themeToggle"
-              class="rt-nav__theme-toggle"
-              type="button"
-              aria-label="Basculer le thème clair/sombre"
-              aria-pressed="false"
-            >
-              <i class="bi bi-moon-stars" id="themeIcon" aria-hidden="true"></i>
-            </button>
-            <button
-              class="rt-nav__toggle"
-              type="button"
-              aria-label="Ouvrir le menu mobile"
-              aria-controls="rt-nav-menu"
-              aria-expanded="false"
-              aria-haspopup="true"
-            >
-              <i class="bi bi-list" aria-hidden="true"></i>
-            </button>
-          </nav>
-        </div>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+      <div class="wrap header-bar">
+        <a class="brand" href="/">
+          <img src="/assets/img/logo-mark.png" alt="" width="44" height="44" />
+          <span>Rigoutech</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          Menu
+        </button>
+        <nav
+          class="nav-panel"
+          id="navigation"
+          data-nav-panel
+          aria-label="Navigation principale"
+        >
+          <ul class="nav-list">
+            <li><a href="/" aria-current="page">Accueil</a></li>
+            <li><a href="/projets.html">Projets</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/formation.html">Formation</a></li>
+            <li><a href="/a-propos.html">À propos</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="header-mail" href="mailto:info@rigoutech.com"
+          >info@rigoutech.com</a
+        >
       </div>
     </header>
-
-    <section id="hero" class="rt-hero" aria-label="Introduction">
-      <div class="container">
-        <div class="rt-hero__content" data-aos="fade-up" data-aos-delay="100">
-          <span class="rt-badge rt-badge--primary"
-            >Firme boutique de consultation technologique</span
-          >
-          <h1 class="rt-hero__title">
-            Architecture, modernisation et delivery de systèmes complexes.
-          </h1>
-          <p class="rt-hero__subtitle">
-            Petite équipe senior, orientée exécution : nous aidons des
-            organisations à concevoir, sécuriser et industrialiser des
-            plateformes logicielles critiques. RigouHealth renforce notre
-            crédibilité en démontrant notre capacité à construire un actif
-            produit structurant, au-delà du conseil.
-          </p>
-          <div class="rt-hero__actions">
-            <a href="rd.html" class="rt-btn rt-btn--primary"
-              ><i class="bi bi-compass" aria-hidden="true"></i> Voir notre
-              offre</a
-            >
-            <a href="produits.html" class="rt-btn rt-btn--outline"
-              ><i class="bi bi-heart-pulse" aria-hidden="true"></i> Découvrir
-              RigouHealth</a
-            >
-            <a href="contact.html" class="rt-btn rt-btn--outline"
-              ><i class="bi bi-chat-dots" aria-hidden="true"></i> Parler à un
-              expert</a
-            >
-          </div>
+    <main id="contenu">
+      <section class="hero wrap">
+        <p class="kicker">
+          Rigoutech ·
+          <span class="kicker-lieu">studio technologique · Montréal</span>
+        </p>
+        <h1>Construire, automatiser, former.</h1>
+        <p class="lede">
+          Un studio technologique montréalais, cinq domaines : consultation
+          Azure et DevSecOps, AgentForge et ses agents d’IA, recherche,
+          RigouHealth, formation.
+        </p>
+        <div class="actions">
+          <a class="btn" href="#forfaits">Voir les forfaits PME</a>
+          <a class="btn btn-ghost" href="#construit">Voir les réalisations</a>
         </div>
-      </div>
-    </section>
-
-    <main id="main">
-      <section
-        class="rt-section rt-section--expertises"
-        aria-label="Consultation"
-      >
-        <div class="container">
-          <header class="rt-section__header">
-            <span class="rt-section__label">Ce que nous vendons</span>
-            <h2 class="rt-section__title">
-              Consultation technologique orientée livrables
-            </h2>
-            <p class="rt-section__description">
-              Rigoutech intervient comme partenaire senior : cadrage,
-              architecture, exécution et transfert, sur des systèmes à forts
-              enjeux.
-            </p>
-          </header>
-
-          <div class="rt-grid rt-grid--3">
-            <article class="rt-card" data-aos="fade-up">
-              <div class="rt-card__icon">
-                <i class="bi bi-diagram-3" aria-hidden="true"></i>
-              </div>
-              <h3 class="rt-card__title">Architecture &amp; cloud</h3>
-              <p class="rt-card__description">
-                Architecture cible, trajectoire de modernisation, décisions
-                techniques (ADR) et réduction de dette sur systèmes critiques.
-              </p>
-            </article>
-
-            <article class="rt-card" data-aos="fade-up" data-aos-delay="100">
-              <div class="rt-card__icon">
-                <i class="bi bi-gear" aria-hidden="true"></i>
-              </div>
-              <h3 class="rt-card__title">Plateformes &amp; DevOps</h3>
-              <p class="rt-card__description">
-                CI/CD, infrastructure as code, automatisation, et fondations
-                platform orientées fiabilité (sans sur-architecture).
-              </p>
-            </article>
-
-            <article class="rt-card" data-aos="fade-up" data-aos-delay="200">
-              <div class="rt-card__icon">
-                <i class="bi bi-shield-check" aria-hidden="true"></i>
-              </div>
-              <h3 class="rt-card__title">Fiabilité &amp; sécurité</h3>
-              <p class="rt-card__description">
-                Observabilité, durcissement, pratiques DevSecOps pragmatiques et
-                réduction de risque en environnements sensibles.
-              </p>
-            </article>
-
-            <article class="rt-card" data-aos="fade-up">
-              <div class="rt-card__icon">
-                <i class="bi bi-code-slash" aria-hidden="true"></i>
-              </div>
-              <h3 class="rt-card__title">Développement &amp; delivery</h3>
-              <p class="rt-card__description">
-                Conception, intégration et livraison de composants critiques,
-                avec qualité, revue, et documentation utile.
-              </p>
-            </article>
-
-            <article class="rt-card" data-aos="fade-up" data-aos-delay="100">
-              <div class="rt-card__icon">
-                <i class="bi bi-people" aria-hidden="true"></i>
-              </div>
-              <h3 class="rt-card__title">Renfort senior</h3>
-              <p class="rt-card__description">
-                Revue d’architecture, coaching, accompagnement d’équipes et
-                pilotage technique sur initiatives à forts enjeux.
-              </p>
-            </article>
-
-            <article class="rt-card" data-aos="fade-up" data-aos-delay="200">
-              <div class="rt-card__icon">
-                <i class="bi bi-journal-check" aria-hidden="true"></i>
-              </div>
-              <h3 class="rt-card__title">Livrables &amp; transfert</h3>
-              <p class="rt-card__description">
-                Runbooks, recommandations actionnables, plan de mise en œuvre,
-                et transfert de connaissances pour rendre l’équipe autonome.
-              </p>
-            </article>
-          </div>
-
-          <div class="rt-section__cta">
-            <a href="rd.html" class="rt-btn rt-btn--primary"
-              ><i class="bi bi-briefcase" aria-hidden="true"></i> Détails de
-              l’offre</a
-            >
-            <a href="contact.html" class="rt-btn rt-btn--outline"
-              ><i class="bi bi-chat-dots" aria-hidden="true"></i> Discuter d’un
-              mandat</a
-            >
-          </div>
-        </div>
+        <ul class="domaines">
+          <li>
+            <a class="domaine-conseil" href="/services.html#azure">
+              <span class="puce" aria-hidden="true"></span>
+              <span>Consultation Azure et DevSecOps</span>
+            </a>
+          </li>
+          <li>
+            <a class="domaine-agentforge" href="#vitrine-agentforge">
+              <span class="puce" aria-hidden="true"></span>
+              <span>AgentForge, agents d’IA</span>
+            </a>
+          </li>
+          <li>
+            <a class="domaine-recherche" href="/projets.html#trading">
+              <span class="puce" aria-hidden="true"></span>
+              <span>Recherche</span>
+            </a>
+          </li>
+          <li>
+            <a class="domaine-rigouhealth" href="/projets.html#rigouhealth">
+              <span class="puce" aria-hidden="true"></span>
+              <span>RigouHealth</span>
+            </a>
+          </li>
+          <li>
+            <a class="domaine-formation" href="/formation.html">
+              <span class="puce" aria-hidden="true"></span>
+              <span>Formation</span>
+            </a>
+          </li>
+        </ul>
       </section>
-
-      <section class="rt-section rt-section--why-us" aria-label="Crédibilité">
-        <div class="container">
-          <header class="rt-section__header">
-            <span class="rt-section__label">Crédibilité</span>
-            <h2 class="rt-section__title">
-              Une posture boutique : claire, sobre, responsable
-            </h2>
-            <p class="rt-section__description">
-              Rigoutech assume une petite structure à haute valeur : rigueur
-              d’exécution, décisions traçables, et réduction de risque sur les
-              systèmes critiques.
+      <section class="section wrap marque" id="forfaits">
+        <h2>Forfaits PME</h2>
+        <p class="lede">
+          Quatre mandats, chacun avec un livrable et un délai. Le prix est sur
+          devis.
+        </p>
+        <div class="forfaits">
+          <article class="forfait">
+            <h3>Diagnostic Microsoft 365 / EWS</h3>
+            <p>
+              <a
+                href="https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online"
+                >Microsoft</a
+              >
+              commence à désactiver EWS dans Exchange Online en octobre 2026. La
+              coupure complète est prévue en avril 2027. Le diagnostic regarde,
+              en lecture seule, ce que votre organisation utilise encore.
             </p>
-          </header>
-
-          <div class="rt-grid rt-grid--3">
-            <article class="rt-card">
-              <h3 class="rt-card__title">Décisions documentées</h3>
-              <p class="rt-card__description">
-                On produit des décisions et des plans actionnables (ADR,
-                architecture cible, priorités), pas des promesses vagues.
-              </p>
-            </article>
-            <article class="rt-card">
-              <h3 class="rt-card__title">Qualité &amp; continuité</h3>
-              <p class="rt-card__description">
-                Revue de code, standards de livraison, observabilité et runbooks
-                : l’objectif est de rendre la plateforme opérable.
-              </p>
-            </article>
-            <article class="rt-card">
-              <h3 class="rt-card__title">Confidentialité</h3>
-              <p class="rt-card__description">
-                Approche confidentialité-by-design et réduction de surface de
-                risque. NDA possible selon le contexte.
-              </p>
-            </article>
-          </div>
-
-          <div class="rt-section__cta">
-            <a href="produits.html" class="rt-btn rt-btn--primary"
-              ><i class="bi bi-heart-pulse" aria-hidden="true"></i> RigouHealth
-              : notre actif produit</a
-            >
-            <a href="contact.html" class="rt-btn rt-btn--outline"
-              ><i class="bi bi-chat-dots" aria-hidden="true"></i> Lancer une
-              discussion</a
-            >
-          </div>
+            <p>
+              <strong>Livrable.</strong> Rapport écrit. Le locataire n’est pas
+              modifié.
+            </p>
+            <p><strong>Délai.</strong> 10 jours ouvrables.</p>
+            <p class="prix">Sur devis</p>
+            <p>
+              <a href="mailto:info@rigoutech.com?subject=Diagnostic%20EWS"
+                >Demander un diagnostic EWS</a
+              >
+            </p>
+          </article>
+          <article class="forfait">
+            <h3>Audit de coûts Azure</h3>
+            <p>
+              Lire la facture avec vous et repérer les postes qui méritent un
+              ajustement.
+            </p>
+            <p>
+              <strong>Livrable.</strong> Tableau des postes de coût et liste
+              d’ajustements possibles. Aucun pourcentage d’économie n’est
+              promis.
+            </p>
+            <p><strong>Délai.</strong> Fixé au devis.</p>
+            <p class="prix">Sur devis</p>
+            <p>
+              <a
+                href="mailto:info@rigoutech.com?subject=Audit%20de%20co%C3%BBts%20Azure"
+                >Demander un audit de coûts Azure</a
+              >
+            </p>
+          </article>
+          <article class="forfait">
+            <h3>Journée IA générative et cybersécurité</h3>
+            <p>
+              Une journée pour les équipes qui utilisent, ou vont utiliser, des
+              outils d’IA au bureau.
+            </p>
+            <p>
+              <strong>Livrable.</strong> 7 heures, jusqu’à 12 personnes. Modules
+              sur la Loi 25 et le hameçonnage assisté par l’IA. Module Microsoft
+              Copilot sur demande.
+            </p>
+            <p>
+              <strong>Durée.</strong> 7 heures. <strong>Date.</strong> Convenue
+              par courriel.
+            </p>
+            <p class="prix">Sur devis</p>
+            <p>
+              <a
+                href="mailto:info@rigoutech.com?subject=Journ%C3%A9e%20de%20formation"
+                >Demander la journée de formation</a
+              >
+            </p>
+          </article>
+          <article class="forfait">
+            <h3>Repères Loi 25</h3>
+            <p>
+              Une lecture des points de la Loi 25 qui concernent un mandat de
+              formation ou de diagnostic. Ce n’est pas une attestation de
+              conformité.
+            </p>
+            <p><strong>Livrable.</strong> Note écrite. Aucun certificat.</p>
+            <p><strong>Délai.</strong> Fixé au devis.</p>
+            <p class="prix">Sur devis</p>
+            <p>
+              <a href="mailto:info@rigoutech.com?subject=Loi%2025"
+                >Demander une note Loi 25</a
+              >
+            </p>
+          </article>
         </div>
+        <p class="note">
+          La Loi 25 peut faire partie du contenu d’une formation ou d’un
+          diagnostic. Ce n’est pas une promesse de conformité.
+        </p>
+      </section>
+      <section class="section wrap" id="construit">
+        <h2>Réalisations</h2>
+        <!-- vitrine -->
+        <article class="vitrine marque" id="vitrine-agentforge">
+          <p class="project-meta">
+            <span class="atelier">A3</span>
+            <span class="statut statut-encours">En cours</span>
+            <span>Lancé en 2026 · MVP</span>
+          </p>
+          <h3>AgentForge</h3>
+          <p>
+            Produit lancé en 2026, au stade MVP. Agents d’IA, API, portail et
+            serveurs MCP pour la pré-validation de factures électroniques
+            Factur-X B2B. Six serveurs MCP agentforge-*-mcp sont sous licence
+            Apache-2.0.
+          </p>
+          <pre class="code"><code>validate_facturx_invoice
+{
+  "pdfBase64": "…",
+  "xml": "…"
+}</code></pre>
+          <p class="note">
+            Contrat d’entrée publié dans agentforge-facturx-mcp 0.1.0. La
+            réponse vient de l’API. Elle n’est pas recopiée ici.
+          </p>
+          <ul class="lien-liste">
+            <li>
+              <a href="https://www.npmjs.com/~ckouma">npmjs.com/~ckouma</a>
+            </li>
+            <li>
+              <a href="https://agentforge.rigoutech.com"
+                >agentforge.rigoutech.com</a
+              >
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/agentforge-facturx-mcp"
+                >agentforge-facturx-mcp</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.npmjs.com/package/agentforge-schema-validate-mcp"
+                >agentforge-schema-validate-mcp</a
+              >
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/agentforge-json-repair-mcp"
+                >agentforge-json-repair-mcp</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.npmjs.com/package/agentforge-openapi-lint-mcp"
+                >agentforge-openapi-lint-mcp</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.npmjs.com/package/agentforge-fetch-extract-mcp"
+                >agentforge-fetch-extract-mcp</a
+              >
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/agentforge-url-check-mcp"
+                >agentforge-url-check-mcp</a
+              >
+            </li>
+          </ul>
+        </article>
+        <!-- /vitrine -->
+        <ol class="frise">
+          <!-- frise -->
+          <li class="frise-item" id="frise-conseil-azure">
+            <p class="project-meta">
+              <span class="atelier">A1</span>
+              <span class="statut statut-termine">Terminé</span>
+              <span class="frise-periode">2021 — 2024</span>
+            </p>
+            <h3>Conseil DevOps et cloud Azure</h3>
+            <p>
+              Rigoutech a été fondée en 2021. Mandat de consultation DevSecOps
+              Azure, 2021–2024 : des pipelines CI/CD ont déployé vers Azure. Le
+              nom du client n’est pas publié. Certifications Microsoft AZ-204 et
+              AZ-305. AZ-400 en préparation.
+            </p>
+            <div class="preuve">
+              <p>
+                Sommaire anonymisé du livrable, 2021–2024 : des pipelines
+                d’intégration continue et de déploiement vers Azure. Aucun nom
+                de client. Aucun chiffre d’économie.
+              </p>
+            </div>
+          </li>
+          <li class="frise-item" id="frise-formation-factures">
+            <p class="project-meta">
+              <span class="atelier">A2</span>
+              <span class="statut statut-termine">Terminé</span>
+              <span class="frise-periode">Janvier — mars 2026</span>
+            </p>
+            <h3>Approbation électronique des factures</h3>
+            <p>
+              De janvier à mars 2026, formation sur place des équipes de
+              direction d’un groupe de résidences pour aînés du Québec. Nouveau
+              processus d’approbation électronique des factures et de signature
+              numérique : théorie, exercices et manuel. Rigoutech a accompagné
+              les participants dans la création de leur identité numérique de
+              signature.
+            </p>
+            <div class="preuve">
+              <p>
+                Sommaire du manuel remis : théorie, exercices, manuel,
+                accompagnement pour la création de l’identité numérique de
+                signature. Ce n’est pas une reproduction de la page.
+              </p>
+            </div>
+          </li>
+          <li class="frise-item" id="frise-rigouhealth">
+            <p class="project-meta">
+              <span class="atelier">A4</span>
+              <span class="statut statut-prototype">Prototype</span>
+              <span class="frise-periode">Données publiques</span>
+            </p>
+            <h3>RigouHealth</h3>
+            <p>
+              RigouHealth est un prototype de recherche développé par Rigoutech.
+              Il explore la prévision à court terme de l’achalandage des
+              urgences à partir de données environnementales publiques (qualité
+              de l’air, météo). Il n’est ni validé cliniquement ni utilisé par
+              un établissement de santé.
+            </p>
+            <div class="preuve">
+              <p>Le site du prototype n’est pas lié ici.</p>
+            </div>
+          </li>
+          <li class="frise-item" id="frise-trading">
+            <p class="project-meta">
+              <span class="atelier">A5</span>
+              <span class="statut statut-encours">En cours</span>
+              <span class="frise-periode">Recherche interne · 2026</span>
+            </p>
+            <h3>Laboratoire de recherche en trading algorithmique</h3>
+            <p>
+              Des agents d’IA sur Azure conçoivent et testent des hypothèses de
+              marché, en simulation seulement. Aucune gestion de fonds, aucun
+              conseil financier, aucun rendement publié. Ce qu’on publie : la
+              méthode, jamais un résultat.
+            </p>
+          </li>
+          <!-- /frise -->
+        </ol>
+        <p>
+          <a class="btn" href="/projets.html">Inventaire des projets</a>
+        </p>
       </section>
     </main>
 
-    <footer id="footer" class="rt-footer">
-      <div class="rt-footer__top">
-        <div class="container">
-          <div class="rt-footer__content">
-            <article class="rt-footer__info">
-              <a
-                class="rt-footer__logo-link"
-                href="/"
-                aria-label="Rigoutech - Retour à l'accueil"
-              >
-                <img
-                  class="rt-footer__logo rt-footer__logo--light"
-                  src="assets/img/logo-banner-light-320.png"
-                  alt="Logo complet Rigoutech"
-                  width="240"
-                  height="66"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  class="rt-footer__logo rt-footer__logo--dark"
-                  src="assets/img/logo-banner-dark-320.png"
-                  alt="Logo complet Rigoutech"
-                  width="240"
-                  height="66"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </a>
-              <address class="rt-footer__contact">
-                <p>
-                  Québec, QC, Canada<br />
-                  <strong>Email:</strong>
-                  <a href="mailto:info@rigoutech.com">info@rigoutech.com</a>
-                </p>
-              </address>
-            </article>
-          </div>
-        </div>
-      </div>
-      <div class="rt-footer__bottom">
-        <div class="container">
-          <div class="rt-footer__copyright">
-            &copy; <span id="year"></span> <strong>Rigoutech Inc.</strong> -
-            Tous droits réservés.
-          </div>
-        </div>
+    <footer class="site-footer">
+      <div class="wrap footer-bar">
+        <p>
+          <strong>Rigoutech Inc.</strong><br />
+          Montréal (Québec), Canada
+        </p>
+        <p><a href="mailto:info@rigoutech.com">info@rigoutech.com</a></p>
+        <p>
+          <a href="/confidentialite.html">Confidentialité</a>
+          <a href="/en.html">English</a>
+        </p>
+        <p class="legal">© 2026 Rigoutech Inc.</p>
       </div>
     </footer>
 
-    <a href="#" class="rt-back-to-top" aria-label="Retourner au haut de la page"
-      ><i class="bi bi-arrow-up-short" aria-hidden="true"></i
-    ></a>
-    <div id="preloader" aria-hidden="true"></div>
-
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/theme.js"></script>
+    <script src="/assets/js/site.js"></script>
   </body>
 </html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 560" fill="none">
+  <title>Agents en boucle : signal, hypothèse, test, simulation</title>
+  <rect width="520" height="560" fill="#1c1916"/>
+  <path class="trace" pathLength="1" d="M260 168L356 266L260 414L164 266Z" stroke="#3a342c" stroke-width="1.5"/>
+  <circle class="trace" pathLength="1" cx="260" cy="144" r="26" stroke="#e2c07a" stroke-width="1.5"/>
+  <circle class="trace" pathLength="1" cx="372" cy="282" r="26" stroke="#f3efe6" stroke-width="1.5"/>
+  <circle class="trace" pathLength="1" cx="148" cy="282" r="26" stroke="#f3efe6" stroke-width="1.5"/>
+  <circle class="trace" pathLength="1" cx="260" cy="424" r="26" stroke="#e2c07a" stroke-width="1.5"/>
+  <text x="260" y="78" fill="#f3efe6" font-size="28" text-anchor="middle">Signal</text>
+  <text x="410" y="292" fill="#f3efe6" font-size="28">Test</text>
+  <text x="36" y="214" fill="#f3efe6" font-size="28">Données</text>
+  <text x="260" y="508" fill="#e2c07a" font-size="28" text-anchor="middle">Simulation</text>
+</svg>

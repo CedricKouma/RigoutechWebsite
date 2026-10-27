@@ -9,8 +9,9 @@ permissions:
   pages: write
   id-token: write
 
+# Groupe distinct de « pages », réservé au déploiement de production.
 concurrency:
-  group: "pages"
+  group: pr-preview-${{ github.event.pull_request.number }}
   cancel-in-progress: false
 
 jobs:
@@ -41,11 +42,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 🏗️ Upload static site files (repo root)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build public dist
+        run: node scripts/build-dist.js
+
       - name: Upload preview artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./ # Static HTML/CSS files live at repo root
+          path: ./dist
 
   deploy:
     if: github.event.action != 'closed'
